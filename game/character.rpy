@@ -1,0 +1,7 @@
+define mc = Character("mc")
+define gian = Character("Gian")
+define laeticia = Character("Laeticia")
+define cassandra = Character("Cassandra")
+define bryan = Character("Bryan")
+define viko = Character("Viko")
+define host = Character("Host")
