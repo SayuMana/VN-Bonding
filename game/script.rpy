@@ -66,13 +66,14 @@ label act_1:
     # SFX: peeling off wet paper
     mc "*Screams* OH HELL NO!-"
 
+    play sound "<from 02.0>audio/Page_turn.mp3" volume 1.0
     # SFX: turning paper around
     mc "-oh wait, what's this? A form to meet your soulmate?"
 
     mc "Well, I do still want to go to the hanami… and it'd be kinda sad going alone."
     mc "I might as well try!"
 
-    play music "audio/Form_Time.mp3" volume 0.3
+    play music "audio/Form_Time.mp3" volume 0.3 
     # MUSIC: form time (loop pls).mp3
     # (Form section!! There are 6 questions in total, and each answer relates to a specific love interest.
     # The character whose answers are chosen most often will be the MC's first date.)
@@ -134,10 +135,13 @@ label act_1:
             $ green += 1
 
     # (Still form bg, MC fills in personal info)
-    stop music
+    
     mc "Done! (kinda mumbling) Now I just need to fill in my number… and email…"
-
+    stop music
     # SFX: ping!
+    play sound "audio/harikitte_ikou_kitasan.mp3"
+    mc "....."
+    play music "audio/Opening act + flashback.mp3" volume 1.0
     mc "A text already?! It says my soulmate is nearby! I'd better head there quickly."
 
     if blue >= red and blue >= yellow and blue >= green:
