@@ -10,35 +10,51 @@ label start:
     jump act_1
 
 label act_1:
+    play music "audio/Opening act + flashback.mp3" volume 1.0
+    play sound "audio/Nature sounds.mp3" volume 1.5
     # MUSIC: Opening act + flashback.mp3
     # SFX: birds chirping and rustling leaves / Nature sounds.mp3
     mc "{i}It's a beautiful day outside…{/i}"
     mc "{i}Birds are singing…{/i}"
     mc "{i}Flowers are blooming…{/i}"
     mc "{i}On days like this, so close to the Hanami… Chuds like me should be going on dates with cuties!!!{/i}"
+    stop sound
+    stop music
 
+
+    play sound "audio/Thunder   Sound effect.mp3" volume 1.5
     # SFX: dramatic fail sound fx / Thunder Sound effect.mp3
     mc "{i}It was all going so well!{/i}"
     mc "{i}I had everything planned out, but when I finally dared to ask out senpai…{/i}"
+    stop sound
 
+    play music "<from 86.0>audio/Opening act + flashback.mp3" loop
     # MUSIC: Opening act + flashback.mp3 (from 1:26)
     # (Insert CGs of Act 1 Japanese Confession Scene)
+    play sound "audio/Nature sounds.mp3" volume 1.5
     mc "S-senpai Gian! Please go to the hanami with me! I need you bad!!!"
+    stop music
+    stop sound
+
+
 
     # SFX: wind rustling romance noises
     # SFX: record stop noise / RECORD DISC SCRATCH.mp3
-
+    play sound "<from 06.0>audio/RECORD DISC SCRATCH.mp3"
     gian "Ew, no."
 
     mc "*GASP* Wait, why?!"
+    play sound "audio/Nature sounds.mp3" volume 1.5
 
     gian "You think I want to go out with YOU?"
     gian "You are CHOPPED and BROKE, nandayo."
     gian "Even the MC from Rent-a-Girlfriend has more motion than you."
     gian "You'll be lucky if a baddie like me even BLINKS in your direction lol"
     gian "Bye loser LMFAOOOO"
-
+    stop sound
+    
     # SFX: wet crying snotty noises
+    play music "audio/Opening act + flashback.mp3" volume 1.0
     # MUSIC: continue previous opening music
     mc "..."
 
@@ -56,6 +72,7 @@ label act_1:
     mc "Well, I do still want to go to the hanami… and it'd be kinda sad going alone."
     mc "I might as well try!"
 
+    play music "audio/Form_Time.mp3" volume 0.3
     # MUSIC: form time (loop pls).mp3
     # (Form section!! There are 6 questions in total, and each answer relates to a specific love interest.
     # The character whose answers are chosen most often will be the MC's first date.)
@@ -117,6 +134,7 @@ label act_1:
             $ green += 1
 
     # (Still form bg, MC fills in personal info)
+    stop music
     mc "Done! (kinda mumbling) Now I just need to fill in my number… and email…"
 
     # SFX: ping!
