@@ -143,6 +143,7 @@ label act_1:
     mc "....."
     play music "audio/Opening act + flashback.mp3" volume 1.0
     mc "A text already?! It says my soulmate is nearby! I'd better head there quickly."
+    stop music
 
     if blue >= red and blue >= yellow and blue >= green:
         jump act_2_blue
@@ -158,6 +159,8 @@ label act_1:
 # -------------------------------------------------------
 
 label act_2_blue:
+    play music "audio/Laeticia's date.mp3"
+    play sound "audio/Crowd Talking.mp3" loop volume 0.5
     # MUSIC: Laeticia's date.mp3
     # SFX: crowd chattering
     # BG: Bazaar UMN
@@ -166,6 +169,7 @@ label act_2_blue:
     mc "Looks like there's an open booth!"
 
     # SFX: Wind chimes
+    play sound "audio/shop-bell.mp3"
     mc "{i}OH NO SHES HOT{/i}"
 
     laeticia "Oho~, another customer I see? Or perhaps, has fate finally brought me a worthy partner in crime?"
@@ -204,15 +208,21 @@ label act_2_blue:
     laeticia "Shuffle these cards for me, hmm?"
 
     # SFX: cards shuffling
+    play sound "audio/card-shuffle.mp3"
     laeticia "Let's see who you REALLY are~"
 
     # (Reveal "3 of Swords") SFX: card swap
+    play sound "audio/card-swap.mp3"
+    ""
     laeticia "Pfft…. AHAHAHAHAHAHA!"
 
     mc "(Irritated) What? What's so funny?"
 
     laeticia "Nothing! Nothing…. *chuckles*"
-
+    play sound "audio/card-swap.mp3"
+    ""
+    play sound "audio/card-swap.mp3"
+    ""
     # (Reveal "Ace of Wands") SFX: card swap
     # (Reveal "Ace of Cups") SFX: card swap
     laeticia "Hmmm… okay… okay…"
@@ -238,6 +248,8 @@ label act_2_blue:
     mc "{i}This is going great so fa—{/i}"
 
     # SFX: crash (shake screen)
+    play sound "audio/metal-pipe.mp3"
+    stop music
     # MUSIC: stops
     mc "…"
 
@@ -277,6 +289,7 @@ label act_2_blue:
     laeticia "*smirks* So I've been thinking…"
 
     # MUSIC: UMN's Awakening.mp3
+    play music "audio/UMN's Awakening.mp3"
     # (Laeticia dramatic)
     laeticia "So, you know how UMN is the best university around here?"
     laeticia "Wouldn't it be fantastic if we… could talk to UMN himself?"
@@ -320,6 +333,8 @@ label act_2_blue:
     umn "*chuckle* Who dares summon me?~"
 
     # SFX: spotlight turning on
+    play sound "audio/spotlight-sound.mp3"
+    ""
     # (spotlight)
 
     # (UMN dramatic, eldritch god ahh)
@@ -339,6 +354,7 @@ label act_2_blue:
     laeticia "—GET OUT OF MY APARTMENT! I'LL TEXT YOU LATER, THANKS FOR THE HELP, LOVE YOU, BYE!"
 
     # SFX: door slam shut
+    play sound "audio/door-slamming-sound-effect-no-repeats-or-silence-2016.mp3"
     mc "…"
     mc "{i}Did she just… kick me out…?{/i}"
     mc "{i}I wanna ask UMN questions too…{/i}"
