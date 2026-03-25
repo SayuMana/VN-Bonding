@@ -367,6 +367,7 @@ label act_2_blue:
 
 label act_2_red:
     # MUSIC: Cass's date.mp3
+    play music "audio/Cass's date.mp3" volume 0.5
     # BG: Front lobby of Episode
     # SFX: hotel lobby music
 
@@ -380,6 +381,8 @@ label act_2_red:
     mc "{i}Even the elevator smells more expensive than my rent tenfold.{/i}"
 
     # SFX: Elevator ding!!
+    play audio "audio/Elevator Ding.mp3"
+    ""
     mc "{i}I feel my feet tremble below me, whoever this date is…{/i}"
     mc "{i}Must be involved in either illegal logging or mining….{/i}"
     mc "{i}Or worse..{/i}"
@@ -387,6 +390,7 @@ label act_2_red:
     mc "{i}I reached the door and knocked on it twice.{/i}"
 
     # SFX: Knock knock
+    play audio "audio/Knock Knock.mp3"
     # (Insert CG of CHAD CASS opening the door)
 
     cassandra "Oh well well well… Hello there kitten.."
@@ -433,6 +437,8 @@ label cass_joke:
     mc "hi..hi…"
 
     # SFX: jangkrik noises
+    play audio "audio/Cricket Awkward.mp3"
+    ""
     cassandra "Do that again and I will make your name disappear from UMN's database."
 
     mc "So… uh… crazy weather we're having?"
@@ -492,13 +498,17 @@ label cass_date_continues:
     mc "{i}Am I getting picked up?! She's so strong… I think she's holding me with only her arm.{/i}"
 
     # SFX: door open
+    play audio "audio/Door Open.mp3"
     cassandra "Relax, My sweet. You're always safe with me."
 
     # SFX: heels clicking, elevator ding
+    play audio "audio/Heels.mp3"
+    play audio "audio/Elevator Ding.mp3"
     cassandra "My Kitten should never travel in such a dull way like walking."
     cassandra "No… we'll arrive in style."
 
     # SFX: crowd noise
+    play audio "audio/Mall Crowd Ambiance.mp3"
     # (CG silhouette Cass and MC looking at her bodyguards and store staff handing them clothes)
 
     mc "Is this SMS?? How did we get here so fast?? Heh- Are these clothes?"
@@ -509,21 +519,29 @@ label cass_date_continues:
     mc "I mean, i wouldn't- That's not to say i dont like- oh wow look at those ireallygottagotrythemonnow-"
 
     # SFX: fast footsteps then curtains closing, photo click
+    play audio "audio/running-footsteps-sound-effect-hd.mp3"
+    ""
+    play audio "audio/photo-click-click.mp3"
     mc "{i}Huh?? Did someone just take a picture?{/i}"
     mc "Uh… Cass… I think someone's watching us."
 
     cassandra "Watching us? Don't be ridiculous, kitten. The bodyguards will handle it."
 
     mc "I mean- they're taking pictures. Over there, near the racks. Two guys, with their phones out."
-
+    stop audio 
     cassandra "*scoffs* You shouldn't be bothered by them, they aren't worth your attention. I am."
     cassandra "So, why don't you just pay attention to me."
 
     # SFX: pushed noise
+    play audio "audio/pushing-someone.mp3"
     mc "{i}Dang I really hope it's just me overthinking.{/i}"
 
     # SFX: curtains slammed open
+    play audio "audio/household_curtains_draw_hotel_003"
+    stop music
+    ""
     # MUSIC: action bgm
+    play audio "audio/cass kidnapped!!.mp3"
     mc "*oomph* What the- hey! LET ME GO!! CASS!"
     mc "Cass! Please tell me you saw this…"
 
@@ -540,6 +558,7 @@ label cass_date_continues:
     kidnapper "You'll understand soon enough. We don't need weapons to break you. Just… this."
 
     # SFX: projector turning on
+    play audio "audio/click-sound-for-gd.mp3"
     # (Video plays)
     mc "Huh."
     mc "…"
@@ -547,17 +566,27 @@ label cass_date_continues:
     mc "{i}Oh help me Cass…! You're my only hope…!{/i}"
 
     # SFX: thundering footsteps then BAM
+    play audio "audio/heavy-footstep.mp3"
+    ""
+    play audio "audio/roblox-explosion-sound.mp3"
     # (CG of Cass bursting into the room with explosive background)
-
+    ""
     cassandra "Wassup, baby girl, I'm here to save you."
 
     mc "Cass!!"
 
     # (Same CG of Cass but her sprite jumpscares us)
+    play audio "audio/heavy-footstep.mp3" volume 1.5
     # SFX: thundering footsteps APPROACHING
+    "....."
+    stop audio 
+    play audio "audio/Thunder   Sound effect.mp3" volume 2.0
     kidnapper "BUSET!!!!!!!!!!!!!!"
 
     # (Add video of the fight scene)
+
+    stop music fadeout 2.0
+    play music "audio/Cass's date.mp3" fadein 2.0
     # MUSIC FADES BACK TO: Cass's date.mp3
 
     cassandra "Well, that's my cardio for the week…"
