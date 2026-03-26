@@ -593,6 +593,7 @@ label cass_date_continues:
     cassandra "Emcie, I'm glad you're safe. Despite the setbacks, I quite enjoyed the time we spent together."
     cassandra "However, it seems our time is up… for now."
     cassandra "Come meet me at SDC, and then I can finally make you mine."
+    stop music
 
     jump act_3
 
@@ -601,6 +602,8 @@ label cass_date_continues:
 # -------------------------------------------------------
 
 label act_2_yellow:
+    play music "audio/Bryan's date.mp3" fadein 2.0
+    play sound "audio/shop-bell.mp3"
     # MUSIC: Bryan's date.mp3
     # SFX: cafe door bell ringing
 
@@ -629,6 +632,7 @@ label act_2_yellow:
 
     # (Bryan reads a bit more of the book, flaunting the cover)
     # SFX: book being waved around
+    play sound "audio/page-flip-03.mp3"
     bryan "…*coughs*"
 
     mc "{i}Yes, I can see the cover.{/i}"
@@ -645,17 +649,22 @@ label act_2_yellow:
     bryan "*chuckles nervously* Well, if you're unsure, I'll teach you how to do it."
 
     # SFX: run/walk outside & bell noise / Bell.mp3
+    play audio "audio/running-footsteps-sound-effect-hd.mp3"
+    play audio "audio/Bell.mp3"
     bryan "Alright, here's the spot."
 
     mc "{i}He meticulously set up the scene, helped me frame his picture, and getting the angle just right.{/i}"
     mc "{i}…It was hard to ignore how his hand lingered on my waist and arms as he carefully positioned the camera.{/i}"
 
     # SFX: photo click!!
+    play audio "audio/photo-click-click.mp3"
+    ""
     # (2 bum ass photo results)
 
     bryan "Ehhhh, wait, maybe we could change the angle?"
 
     # SFX: photo click!!
+    play audio "audio/photo-click-click.mp3"
     mc "{i}We took a few more photos, but all of them were kind of buttcheeks. He seems a bit frustrated, but smiles anyway.{/i}"
 
     bryan "*sigh* God, the sun is already in a bad spot!"
@@ -669,13 +678,17 @@ label act_2_yellow:
     bryan "C'mon, give it a listen."
 
     mc "{i}He pulled out his phone and carefully tucked my hair behind my ears to slip in the earbud. What I hear next is…{/i}"
-
+    stop music
+    play music "audio/_yoru-ni-kakeru-lyric-video_50k-1-mp3cut.mp3"
+    mc "......."
     # SFX: Racing into the night by yoasobi plays
     mc "{i}This is going to be a long walk.{/i}"
+    stop music fadeout 2.0
 
     # Fade out and in black
     # SFX: crowd cheering / CROWD CHEER.mp3
     # MUSIC: competition bgm
+    play sound "audio/CROWD CHEER.mp3"
 
     bryan "Shoot, we're late! Sorry, I gotta get up on the stage right now!"
 
@@ -683,9 +696,11 @@ label act_2_yellow:
     host "It's simple. All you need to do is answer quickly for the next 4 questions. Today's topic: feminism, of course."
 
     # UI change / SFX: pop
+    play sound "audio/pop_7e9Is8L.mp3"
     mc "{i}Why did the UI change.{/i}"
 
     # SFX: Kahoot Quiz background sound
+    play music "audio/Lobby Music (Original Soundtrack).mp3"
     host "Let's begin!"
     host "First question!"
     host "A woman and a man apply for a manual labour job which requires a lot of heavy lifting. The woman can lift 20kg more than the man. Who is more qualified for the job?"
@@ -746,6 +761,7 @@ label act_2_yellow:
             host "Incorrect! The correct answer is A."
 
     # SFX: drum roll
+    play audio "audio/drum-roll-gaming-sound-effect-hd.mp3"
     host "Our winner with the most points is…"
     if bryan_score >= 3:
         jump bryan_wins
@@ -755,10 +771,12 @@ label act_2_yellow:
 label bryan_wins:
     host "Bryan!"
     # SFX: crowd cheering yayaya / CROWD CHEER.mp3
+    play audio "audio/CROWD CHEER.mp3"
 
     host "Congratulations, Bryan! Here is your humble prize of [placeholder]. Oh, and your complimentary accessories."
 
     # SFX: walking down stage
+    play audio "audio/running-footsteps-sound-effect-hd.mp3"
     bryan "Emcie! I won! And just between us, I couldn't have done it without you."
     bryan "To tell the truth, you've been such an amazing date so far, and I think… I'm in love with you."
 
@@ -783,6 +801,7 @@ label bryan_wins:
 label bryan_loses:
     host "Naoya!"
     # SFX: crowd cheering yayayay / CROWD CHEER.mp3
+    play audio "audio/CROWD CHEER.mp3"
     # MUSIC: same competition music but quieter
 
     # (Bryan walks down the stage, dejected)
