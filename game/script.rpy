@@ -4,12 +4,18 @@ default red = 0
 default yellow = 0
 default green = 0
 
+default blue_done = False
+default red_done = False
+default yellow_done = False
+default green_done = False
+
 default bryan_score = 0
 
 label start:
     jump act_1
 
 label act_1:
+    scene bg park_afternoon with fade
     play music "audio/Opening act + flashback.mp3" volume 1.0
     play sound "audio/Nature sounds.mp3" volume 1.5
     # MUSIC: Opening act + flashback.mp3
@@ -28,6 +34,7 @@ label act_1:
     mc "{i}I had everything planned out, but when I finally dared to ask out senpai…{/i}"
     stop sound
 
+    
     play music "<from 86.0>audio/Opening act + flashback.mp3" loop
     # MUSIC: Opening act + flashback.mp3 (from 1:26)
     # (Insert CGs of Act 1 Japanese Confession Scene)
@@ -145,14 +152,39 @@ label act_1:
     mc "A text already?! It says my soulmate is nearby! I'd better head there quickly."
     stop music
 
-    if blue >= red and blue >= yellow and blue >= green:
-        jump act_2_blue
-    elif red >= yellow and red >= green:
-        jump act_2_red
-    elif yellow >= green:
-        jump act_2_yellow
-    else:
-        jump act_2_green
+
+    label pathku:
+        
+        if blue >= red and blue >= yellow and blue >= green:
+            jump act_2_blue
+        elif red >= yellow and red >= green:
+            jump act_2_red
+        elif yellow >= green:
+            jump act_2_yellow
+        else:
+            jump act_2_green
+
+
+
+    label pathku2:
+        if not (blue_done and red_done and yellow_done and green_done):
+
+            menu:
+                "Who's Next ?"
+
+                "Blue" if not blue_done:
+                    jump act_2_blue
+
+                "Red" if not red_done:
+                    jump act_2_red
+
+                "Yellow" if not yellow_done:
+                    jump act_2_yellow
+
+                "Green" if not green_done:
+                    jump act_2_green
+        else:
+            jump act_3
 
 # -------------------------------------------------------
 # ACT 2: LAETICIA'S DATE
@@ -358,8 +390,9 @@ label act_2_blue:
     mc "…"
     mc "{i}Did she just… kick me out…?{/i}"
     mc "{i}I wanna ask UMN questions too…{/i}"
+    $ blue_done = True
 
-    jump act_3
+    jump pathku2
 
 # -------------------------------------------------------
 # ACT 2: CASSANDRA'S DATE
@@ -594,8 +627,11 @@ label cass_date_continues:
     cassandra "However, it seems our time is up… for now."
     cassandra "Come meet me at SDC, and then I can finally make you mine."
     stop music
+    $ red_done = True
 
-    jump act_3
+    jump pathku2
+
+    
 
 # -------------------------------------------------------
 # ACT 2: BRYAN'S DATE
@@ -807,7 +843,7 @@ label bryan_loses:
     # (Bryan walks down the stage, dejected)
     bryan "*sigh* Damn it…"
 
-    mc "Hey, don't worry about it. It's just a silly competition. The winner literally got a [placeholder] anyway."
+    mc "Hey, don't worry about it. It's just a silly competition. The winner literally got a placeholder anyway."
 
     bryan "{i}I thought I could nail this one bit properly, but I can't even do something as simple as that. I'm a failure.{/i}"
 
@@ -832,7 +868,9 @@ label bryan_loses:
 
     bryan "*chuckles* Gladly!"
 
-    jump act_3
+    $ yellow_done = True
+
+    jump pathku2
 
 # -------------------------------------------------------
 # ACT 2: VIKO'S DATE
@@ -1119,8 +1157,8 @@ label viko_grocery_shopping:
     play sound "audio/Door Slam.mp3"
     mc "{i}Before I could get a word in, Viko had already pushed me out of his apartment.{/i}"
     mc "{i}SDC huh? I'll think about it…{/i}"
-
-    jump act_3
+    $ green_done = True
+    jump pathku2
 
 # -------------------------------------------------------
 # ACT 3: FINAL DATE CHOICE
