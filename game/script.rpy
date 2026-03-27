@@ -839,9 +839,11 @@ label bryan_loses:
 # -------------------------------------------------------
 
 label act_2_green:
+    play music "audio/Viko.mp3"
     # MUSIC: Viko.mp3
     # BG: Grocery store
     # SFX: grocery store ambience (25% volume) / Grocery Store Ambience.mp3
+    play sound "audio/Grocery Store Ambience.mp3" volume 0.25
 
     mc "My date should be around here… a guy named Viko with an ita bag…"
     mc "{i}That's weird. Why would he put his name on an anonymous form?{/i}"
@@ -852,9 +854,13 @@ label act_2_green:
     viko "P-please! *sobs* G-give me my chicken!"
 
     mc "WHAT WAS THAT!!"
+    stop music
+    play music "audio/Tense Moments!.mp3"
 
     # MUSIC: Tense Moments!.mp3
+    play music "audio/Tense Moments!.mp3"
     # SFX: MC running / 1 PERSON RUNNING.mp3
+    play sound "audio/1 PERSON RUNNING.mp3"
     # (Viko is holding on to dear life (the chicken), fighting off a seasoned mother)
 
     mc "{i}That guy looks like he's in trouble!… Wait a sec….{/i}"
@@ -888,8 +894,9 @@ label viko_help:
     mc "Shh, it's okay, Viko! No one hurts my date when I'm around!!"
 
     viko "Eh-! H-how did you know my nam-"
-
+    stop music
     # UI CHANGE
+    play music "audio/Viko battle section.mp3"
     # (Announcer/host)
     announcer "A wild Enci appeared!"
 
@@ -916,9 +923,11 @@ label viko_help:
     # (Viko always loses)
     # BG: black screen
     # SFX: slapping punching / Fighting.mp3
+    play sound "audio/Fighting.mp3"
     mc "{i}That ended terribly. We both got wiped by her sandal move almost immediately.{/i}"
-
+    stop sound
     # RETURN TO MAIN MUSIC
+    play music "audio/Viko.mp3" fadein 2.0
     # BG: Grocery Store
     mc "Ow…Are you okay? Are you hurt anywhere?"
 
@@ -934,6 +943,7 @@ label viko_help:
     viko "Th-this date isn't what I had in mind…"
     viko "B-BUT, I was thinking m-maybe we cou-could uh… eat- erm, get dinner at my pl-place?"
     viko "A-after we get the groceries, of course!!"
+    
 
     jump viko_grocery_shopping
 
@@ -942,6 +952,7 @@ label viko_employees:
     mc "{i}Surely the whole store would've heard her and Viko bickering…?{/i}"
 
     # SFX: thud / THUD.mp3
+    play sound "<from 02.0>audio/THUD.mp3"
     mc "{i}…Are those staff members hiding in the shelves??{/i}"
 
     mc "Excuse me! Can you please do something about her?"
@@ -955,6 +966,8 @@ label viko_employees:
     viko "W-who…"
 
     # UI CHANGE
+    stop music
+    play music "audio/Viko battle section.mp3"
     mc "{i}I need to pick the right moves to help him from here… BUT I HAVE NO IDEA WHAT TO DO{/i}"
     mc "{i}I can't do this alone… Hey, you players!! Could you help me out?{/i}"
     mc "{i}I'm gonna show you a series of moves and you better help me by posing alright!!{/i}"
@@ -966,8 +979,10 @@ label viko_employees:
             pass
 
     # SFX: Victory! / Victory!.m4a
+    stop music
+    play sound "audio/Victory!.mp3"
     # RETURN TO MAIN MUSIC
-
+    play music "audio/Viko.mp3"
     viko "We won! Uh…who are you?"
 
     mc "Oh- sorry! I'm Emcie, we matched from a dating form."
@@ -990,6 +1005,7 @@ label viko_nah:
 
     # (Black Screen)
     # SFX: cartoonish fight sounds / Cartoon Fight.mp3
+    play audio "audio/Cartoon Fight.mp3"
     viko "Kyaahh– S-someone, anyone he-help! HELP!!"
 
     enci "THIS CHICKEN IS MINE!"
@@ -998,6 +1014,7 @@ label viko_nah:
     mc "Never mind, I should help him."
 
     # UI CHANGE
+    play music "audio/Viko battle section.mp3"
     mc "{i}I need to pick the right moves to help him from here… BUT I HAVE NO IDEA WHAT TO DO{/i}"
     mc "{i}I can't do this alone… Hey, you chuds!! Help a MC out will ya?{/i}"
     mc "{i}I'm gonna show you a series of moves and you better help me by posing alright!!{/i}"
@@ -1010,7 +1027,11 @@ label viko_nah:
 
     # BG: Grocery store
     # SFX: Victory! / Victory!.m4a
+    play sound "audio/Victory!.mp3"
     # RETURN TO MAIN MUSIC
+    stop music
+    play music "audio/Viko.mp3" fadein 2.0
+
 
     # (Enci dialogue automatically skips through)
     enci "GRRR YOU'RE LUCKY SOME DIVINE GOD IS STOPPING ME FROM RIPPING THIS CHICKEN OUT OF YOUR HAND"
@@ -1062,6 +1083,7 @@ label viko_grocery_shopping:
     viko "BUT- UM! I need to get cha- i mean, get some things from m-my bathroom."
 
     # SFX: door slam / Door Slam.mp3
+    play sound "audio/Door Slam.mp3"
     mc "Oookay…?"
 
     viko "(Muffled) Uh- Emcie? C-can you close your eyes, pl-please?"
@@ -1072,10 +1094,13 @@ label viko_grocery_shopping:
     mc "{i}I can feel the sofa shift with the added weight, is that Viko sitting down?{/i}"
 
     # SFX: bell / Bell.mp3
+    play sound "audio/BELL.mp3"
     viko "Uhm, y-you can open your eyes now…"
 
     # (Viko in an age appropriate maid outfit)
     # MUSIC: Viko's Confession.mp3
+    stop music
+    play music "audio/Viko's Confession.mp3"
 
     mc "Oh. My. God."
     mc "{i}I'm SO glad I stuck around.{/i}"
@@ -1091,6 +1116,7 @@ label viko_grocery_shopping:
     mc "I-"
 
     # SFX: door slam
+    play sound "audio/Door Slam.mp3"
     mc "{i}Before I could get a word in, Viko had already pushed me out of his apartment.{/i}"
     mc "{i}SDC huh? I'll think about it…{/i}"
 
