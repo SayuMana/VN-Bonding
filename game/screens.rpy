@@ -296,31 +296,66 @@ style quick_button_text:
 ## to other menus, and to start the game.
 
 screen navigation():
+    if main_menu:
+        # Tombol Start
+        imagebutton:
+            idle im.Scale("gui/MenuUI/Start.png", 500, 300)
+            hover im.Scale("gui/MenuUI/Start.png", 500, 300)
+            action Start()
+            xpos 100
+            ypos 400
+            
+        # Tombol Load
+        imagebutton:
+            idle im.Scale("gui/MenuUI/Load.png", 200, 200)
+            hover im.Scale("gui/MenuUI/Load.png", 200, 200)
+            action ShowMenu("load")
+            xpos 150
+            ypos 650
+            
+        # Tombol Options
+        imagebutton:
+            idle im.Scale("gui/MenuUI/Options.png", 200, 200)
+            hover im.Scale("gui/MenuUI/Options.png", 200, 200)
+            action ShowMenu("preferences")
+            xpos 200
+            ypos 750
+            
+        # Tombol Quit
+        imagebutton:
+            idle im.Scale("gui/MenuUI/Quit.png", 150, 150)
+            hover im.Scale("gui/MenuUI/Quit.png", 150, 150)
+            action Quit(confirm=True)
+            xpos 300
+            ypos 850
 
-    vbox:
-        style_prefix "navigation"
+    else:
+        vbox:
+            xpos 100      # <-- Ubah untuk geser kiri/kanan
+            ypos 300      # <-- Ubah untuk geser atas/bawah
+            spacing 15    # Jarak antar tombol
+            
+            textbutton _("Return"):
+                action Return()
+                xysize (150, 40)
+                
+            textbutton _("Save"):
+                action ShowMenu("save")
+                xysize (150, 40)
+                
+            textbutton _("Load"):
+                action ShowMenu("load")
+                xysize (150, 40)
+                
+            textbutton _("Preferences"):
+                action ShowMenu("preferences")
+                xysize (150, 40)
+                
+            textbutton _("Main Menu"):
+                action MainMenu()
+                xysize (150, 40)
 
-        xpos 160
-        yalign 0.5
-        yoffset 45
-        if main_menu:
-            xoffset -65
-        else:
-            xoffset -90
-
-        spacing gui.navigation_spacing + 40
-
-        #textbutton _("History")  action ShowMenu("history")
-
-        textbutton _("Save") action ShowMenu("save")
-
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Options") action ShowMenu("preferences")
-
-        if main_menu:
-            textbutton _("About") action ShowMenu("about")
-
+        
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -329,13 +364,7 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-
-
-        textbutton _("Help") action ShowMenu("help")
-
-        textbutton _("Quit") action Quit(confirm=not main_menu)
-
-        textbutton _("Return") action Return()
+            textbutton _("Return") action Return()
 
 
 style navigation_button is gui_button
@@ -363,7 +392,12 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    add gui.main_menu_background:
+        xalign 0.5
+        yalign 0.5
+        zoom 0.5
+
+    use navigation
 
     ## This empty frame darkens the main menu.
     frame:
@@ -373,17 +407,7 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     #use navigation
 
-    imagemap:
-        ground 'gui/overlay/main_menu.png'
-        hover 'gui/overlay/main_menu_hover.png'
-
-        hotspot (96,411,390,129) action Start()
-        hotspot (208,540,263,77) action ShowMenu('load')
-        hotspot (208,617,263,71) action ShowMenu('preferences')
-        hotspot (208,688,263,72) action ShowMenu("galleryA")
-        hotspot (208,755,263,69) action ShowMenu('about')
-        hotspot (208,824,263,71) action ShowMenu('help')
-        hotspot (208,895,263,70) action Quit(confirm=not main_menu)
+   
 
     if gui.show_name:
 
@@ -403,18 +427,7 @@ style main_menu_text is gui_text
 style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
-style main_menu_frame:
-    xsize 420
-    yfill True
 
-    background "gui/overlay/main_menu.png"
-
-style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
-    xmaximum 1200
-    yalign 1.0
-    yoffset -30
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
