@@ -356,16 +356,7 @@ screen navigation():
                 xysize (150, 40)
 
         
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
-            textbutton _("Main Menu") action MainMenu()
-
-            textbutton _("Return") action Return()
-
+        
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
