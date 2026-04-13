@@ -10,6 +10,7 @@ default yellow_done = False
 default green_done = False
 
 default bryan_score = 0
+default viko_help = False
 
 label start:
     jump act_1
@@ -43,19 +44,27 @@ label act_1:
     stop music
     stop sound
 
-
-
     # SFX: wind rustling romance noises
     # SFX: record stop noise / RECORD DISC SCRATCH.mp3
     play sound "<from 06.0>audio/RECORD DISC SCRATCH.mp3"
+    # gian line1
+    voice "audio/voiceline/act1/act1_Gian_line1.mp3"
     gian "Ew, no."
 
     mc "*GASP* Wait, why?!"
     play sound "audio/Nature sounds.mp3" volume 1.5
 
+    # gian line2
+    voice "audio/voiceline/act1/act1_Gian_line2.mp3"
     gian "You think I want to go out with YOU?"
+    # gian line3
+    voice "audio/voiceline/act1/act1_Gian_line3.mp3"
     gian "You are CHOPPED and BROKE, nandayo."
+    # gian line4
+    voice "audio/voiceline/act1/act1_Gian_line4.mp3"
     gian "You'll be lucky if a baddie like me even BLINKS in your direction lol"
+    # gian line5
+    voice "audio/voiceline/act1/act1_Gian_line5.mp3"
     gian "Bye loser LMFAOOOO"
     stop sound
 
@@ -100,41 +109,33 @@ label act_1:
     play music "audio/Opening act + flashback.mp3" volume 1.0
     mc "A text already?! It says my soulmate is nearby! I'd better head there quickly."
     stop music
+    jump pathku
 
+label pathku:
+    if blue >= red and blue >= yellow and blue >= green:
+        jump act_2_blue
+    elif red >= yellow and red >= green:
+        jump act_2_red
+    elif yellow >= green:
+        jump act_2_yellow
+    else:
+        jump act_2_green
 
-    label pathku:
-        
-        if blue >= red and blue >= yellow and blue >= green:
-            jump act_2_blue
-        elif red >= yellow and red >= green:
-            jump act_2_red
-        elif yellow >= green:
-            jump act_2_yellow
-        else:
-            jump act_2_green
-
-
-
-    label pathku2:
-        stop music 
-        if not (blue_done and red_done and yellow_done and green_done):
-
-            menu:
-                "Who's Next ?"
-
-                "Blue" if not blue_done:
-                    jump act_2_blue
-
-                "Red" if not red_done:
-                    jump act_2_red
-
-                "Yellow" if not yellow_done:
-                    jump act_2_yellow
-
-                "Green" if not green_done:
-                    jump act_2_green
-        else:
-            jump act_3
+label pathku2:
+    stop music
+    if not (blue_done and red_done and yellow_done and green_done):
+        menu:
+            "Who's Next ?"
+            "Blue" if not blue_done:
+                jump act_2_blue
+            "Red" if not red_done:
+                jump act_2_red
+            "Yellow" if not yellow_done:
+                jump act_2_yellow
+            "Green" if not green_done:
+                jump act_2_green
+    else:
+        jump act_3
 
 # -------------------------------------------------------
 # ACT 2: laeticia'S DATE
@@ -507,12 +508,20 @@ label cass_date_continues:
     mc "{i}Agh… Am I tied to a cinema XXI chair? Seriously?{/i}"
     mc "What do you want from me??"
 
+    # kidnapper line 1
+    voice "audio/voiceline/act2_red/Kidnapper_Voiceline1.wav"
     kidnapper "You were with that brat, Cassandra. That should be reason enough."
 
     mc "IT'S OUR FIRST DATE???"
 
+    # kidnapper line 2
+    voice "audio/voiceline/act2_red/Kidnapper_Voiceline2.wav"
     kidnapper "Nothing personal, kid."
+    # kidnapper line 3
+    voice "audio/voiceline/act2_red/Kidnapper_Voiceline3.wav"
     kidnapper "Now, we just need to keep you quiet. Quiet and tortured enough for a ransom."
+    # kidnapper line 4
+    voice "audio/voiceline/act2_red/Kidnapper_Voiceline4.wav"
     kidnapper "You'll understand soon enough. We don't need weapons to break you. Just… this."
 
     # SFX: projector turning on
@@ -539,6 +548,8 @@ label cass_date_continues:
     "....."
     stop audio
     play audio "audio/Thunder   Sound effect.mp3" volume 2.0
+    # kidnapper line 5
+    voice "audio/voiceline/act2_red/Kidnapper_Voiceline5.wav"
     kidnapper "BUSET!!!!!!!!!!!!!!"
 
     # (Add video of the fight scene)
@@ -593,7 +604,7 @@ label act_2_yellow:
     play sound "audio/page-flip-03.mp3"
     bryan "…*coughs*"
 
-    mc "{i}Yes, I can see the cover.{/i}"
+    mc "Yes, I can see the cover."
     mc "What are you reading?"
 
     bryan "I got distracted again, sorry. This book is just too good."
@@ -784,9 +795,6 @@ label act_2_green:
     mc "WHAT WAS THAT!!"
     stop music
     play music "audio/Tense Moments!.mp3"
-
-    # MUSIC: Tense Moments!.mp3
-    play music "audio/Tense Moments!.mp3"
     # SFX: MC running / 1 PERSON RUNNING.mp3
     play sound "audio/1 PERSON RUNNING.mp3"
     # (Viko is holding on to dear life (the chicken), fighting off a seasoned mother)
@@ -814,6 +822,7 @@ label act_2_green:
             jump viko_nah
 
 label viko_help:
+    $ viko_help = True
     mc "{i}With the grace of a giraffe, I swooped in between the two.{/i}"
 
     # (That Mercy Overwatch meme but MC standing over the fridges)
@@ -1068,6 +1077,7 @@ label act_3:
     # SFX: All LI VAs bickering
     # MUSIC: Pre-Act 3 bickering.mp3
 
+    
     laeticia "Emcie! Do you know these people?!"
 
     cassandra "Explain yourself."
