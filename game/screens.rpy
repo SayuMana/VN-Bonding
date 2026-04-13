@@ -138,6 +138,50 @@ style window:
 
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
+style MC_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/Mc_TextBox.png", xalign=0.5, yalign=1.0)
+
+
+style Laeticia_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/Laeticia_TextBox.png", xalign=0.5, yalign=1.0)
+
+
+style Cassandra_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/Cassandra_TextBox.png", xalign=0.5, yalign=1.0)
+
+style Bryan_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/Cassandra_TextBox.png", xalign=0.5, yalign=1.0)
+
+
+style Viko_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/Viko_TextBox.png", xalign=0.5, yalign=1.0)
+
+
 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign

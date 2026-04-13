@@ -55,14 +55,12 @@ label act_1:
 
     gian "You think I want to go out with YOU?"
     gian "You are CHOPPED and BROKE, nandayo."
-    gian "Even the MC from Rent-a-Girlfriend has more motion than you."
     gian "You'll be lucky if a baddie like me even BLINKS in your direction lol"
     gian "Bye loser LMFAOOOO"
     stop sound
-    
+
     # SFX: wet crying snotty noises
     play music "audio/Opening act + flashback.mp3" volume 1.0
-    # MUSIC: continue previous opening music
     mc "..."
 
     mc "Haiyahh… what the heck should I do now, all those plans wasted."
@@ -74,63 +72,14 @@ label act_1:
     mc "*Screams* OH HELL NO!-"
 
     play sound "<from 02.0>audio/Page_turn.mp3" volume 1.0
-    # SFX: turning paper around
     mc "-oh wait, what's this? A form to meet your soulmate?"
 
     mc "Well, I do still want to go to the hanami… and it'd be kinda sad going alone."
     mc "I might as well try!"
 
-    play music "audio/Form_Time.mp3" volume 0.3 
-    # MUSIC: form time (loop pls).mp3
-    # (Form section!! There are 6 questions in total, and each answer relates to a specific love interest.
-    # The character whose answers are chosen most often will be the MC's first date.)
-    # Blue = Laeticia, Red = Cassandra, Yellow = Bryan, Green = Viko
+    play music "audio/Form_Time.mp3" volume 0.3
 
-    "Q1! What is your love language?"
-    menu:
-        "Physical touch, quality time":
-            $ blue += 1
-        "Receiving/giving gifts":
-            $ red += 1
-        "Acts of Service":
-            $ yellow += 1
-        "Words of Affirmation":
-            $ green += 1
-
-    "Q2! What's your ideal partner like?"
-    menu:
-        "Mysterious and Eccentric":
-            $ blue += 1
-        "Strong and Dominant":
-            $ red += 1
-        "Popular and Flirty":
-            $ yellow += 1
-        "Submissive and Agreeable":
-            $ green += 1
-
-    "Q3! Where would you go for a first date?"
-    menu:
-        "Haunted house":
-            $ blue += 1
-        "Fancy dinner":
-            $ red += 1
-        "Coffee date":
-            $ yellow += 1
-        "Watch a movie at home!":
-            $ green += 1
-
-    "Q4! What is your favorite story genre?"
-    menu:
-        "Horror/Thriller":
-            $ blue += 1
-        "Action & Adventure":
-            $ red += 1
-        "Romance Slice of Life":
-            $ yellow += 1
-        "Fantasy":
-            $ green += 1
-
-    "Q5! You're walking out at night and a 7 foot tall clown is chasing you. Whose arm are you running to?"
+    "Question! You're walking out at night and a 7 foot tall clown is chasing you. Whose arm are you running to?"
     menu:
         "A powerful witch":
             $ blue += 1
@@ -167,6 +116,7 @@ label act_1:
 
 
     label pathku2:
+        stop music 
         if not (blue_done and red_done and yellow_done and green_done):
 
             menu:
@@ -187,24 +137,21 @@ label act_1:
             jump act_3
 
 # -------------------------------------------------------
-# ACT 2: LAETICIA'S DATE
+# ACT 2: laeticia'S DATE
 # -------------------------------------------------------
 
 label act_2_blue:
     play music "audio/Laeticia's date.mp3"
     play sound "audio/Crowd Talking.mp3" loop volume 0.5
-    # MUSIC: Laeticia's date.mp3
-    # SFX: crowd chattering
     # BG: Bazaar UMN
 
-    mc "My date should be around here… a tarot reader…"
     mc "Looks like there's an open booth!"
 
     # SFX: Wind chimes
     play sound "audio/shop-bell.mp3"
     mc "{i}OH NO SHES HOT{/i}"
 
-    laeticia "Oho~, another customer I see? Or perhaps, has fate finally brought me a worthy partner in crime?"
+    laeticia "Oho~, another customer I see?"
 
     mc "Ah, I'm actually here because we matched on the soulmate form thing."
 
@@ -215,8 +162,7 @@ label act_2_blue:
     mc "{i}We shook hands on it. Her hands are cold.{/i}"
     mc "{i}The thought of it is ridiculous when she's so hot.{/i}"
 
-    laeticia "Emcie hmm…? You look like someone who has a lot going on than just your looks~"
-    laeticia "I LOVE guessing games. Would you like me to do a tarot reading? Free of charge, just for you~"
+    laeticia "Emcie hmm…? Would you like me to do a tarot reading? Free of charge, just for you~"
 
     mc "Oh… um, sorry, I don't think this whole thing is for me."
 
@@ -226,7 +172,7 @@ label act_2_blue:
     mc "What— that's not what I meant—"
 
     # (Laeticia dramatic)
-    laeticia "What a tragedy~ All that money I spent on these tarot cards could've gone for nirmana supplies… or printing my custom hot and sexy UMN-kun merch…. What a shame~"
+    laeticia "What a tragedy~ All that money I spent on these tarot cards could've gone for nirmana supplies… or printing my custom UMN-kun merch…. What a shame~"
 
     # (Smirks seductively)
     laeticia "If only this cute… adorable Emcie… could help me out~"
@@ -236,34 +182,23 @@ label act_2_blue:
     mc "FINE, I'LL DO IT!"
 
     # (Laeticia smirks mischievously)
-    laeticia "Awesome! Glad I could trigger a reaction from you. You look adorable~, haha!"
+    laeticia "You look adorable~, haha!"
     laeticia "Shuffle these cards for me, hmm?"
 
     # SFX: cards shuffling
     play sound "audio/card-shuffle.mp3"
     laeticia "Let's see who you REALLY are~"
 
-    # (Reveal "3 of Swords") SFX: card swap
+    # (Reveal all 3 cards, Laeticia eyes closed) SFX: card swap
     play sound "audio/card-swap.mp3"
     ""
-    laeticia "Pfft…. AHAHAHAHAHAHA!"
 
-    mc "(Irritated) What? What's so funny?"
-
-    laeticia "Nothing! Nothing…. *chuckles*"
-    play sound "audio/card-swap.mp3"
-    ""
-    play sound "audio/card-swap.mp3"
-    ""
-    # (Reveal "Ace of Wands") SFX: card swap
-    # (Reveal "Ace of Cups") SFX: card swap
     laeticia "Hmmm… okay… okay…"
-    laeticia "In all seriousness, looks like you'll go through whatever disaster you went through. Considering a certain event coming up… you just got rejected, didn't you~? Poor Emcie…"
+    laeticia "In all seriousness, you just went through a disaster didn't you. Considering a certain event coming up… you just got rejected, didn't you~? Poor Emcie…"
 
     laeticia "How did I do?"
 
-    mc "I…"
-    mc "{i}I'm both impressed and creeped out.{/i}"
+    mc "I'm both impressed and creeped out."
 
     laeticia "Hehe~ I read you like a book, didn't I?"
     laeticia "Oh! It's almost 5 PM. I should start packing up."
@@ -282,12 +217,11 @@ label act_2_blue:
     # SFX: crash (shake screen)
     play sound "audio/metal-pipe.mp3"
     stop music
-    # MUSIC: stops
     mc "…"
 
     # (Laeticia shocked)
-    laeticia "MY NIRMANA! NOOOO! IT'S DUE TOMORROW!"
-    laeticia "That took me 2 weeks…"
+    laeticia "My nirmana…that's due tomorrow…"
+    laeticia "That took me 2 weeks."
 
     # (Open dialogue box asking the audience to apologize loudly)
     menu:
@@ -329,8 +263,7 @@ label act_2_blue:
     mc "…What—"
 
     # (Laeticia absolute psycho)
-    laeticia "Come on, Emcie, who else would be able to help me recreate my nirmana overnight? Who'd bless me with answering questions that have never been asked before?!"
-    laeticia "I NEED THIS, Emcie. Can you help poor little ol' me~?"
+    laeticia "Come on, Emcie, I NEED THIS. Can you help poor little ol' me~?"
 
     # (MC down BAD)
     mc "…"
@@ -342,6 +275,7 @@ label act_2_blue:
     # (Laeticia absolute psycho)
     laeticia "PERFECT! Let's prep for everything!"
     laeticia "So, I found this super old book in our library, tucked under the BI corner sofas…"
+    # (ENCHIRIDION item popup)
     laeticia "It tells us that if two students do a ritual together in unison, UMN will manifest into human form!"
     laeticia "I'll teach you the moves real quick. Watch me, kay?"
 
@@ -350,7 +284,7 @@ label act_2_blue:
         "Got it!":
             pass
 
-    laeticia "Remember that, alright? We need to do it at the same time! I don't know what'll happen if we fail…"
+    laeticia "Remember that, alright?"
 
     # (Open dialogue box saying the ritual will start, and the audience needs to do the poses again in a specific countdown)
     menu:
@@ -361,21 +295,19 @@ label act_2_blue:
     laeticia "I- I think it worked!!"
 
     # (black screen)
-    # (UMN amused)
     umn "*chuckle* Who dares summon me?~"
 
     # SFX: spotlight turning on
     play sound "audio/spotlight-sound.mp3"
     ""
-    # (spotlight)
 
-    # (UMN dramatic, eldritch god ahh)
     umn "In me, students dedicate their work to their country through the Three Pillars of Education! Allowing them to take their steps towards success through MY alma mater…"
 
     # (CG of UMN doing a dramatic pose under the spotlight)
     umn "I, Universitas Multimedia Nusantara, in flesh and bone, have waited for this day to come!"
     umn "Why have you summoned me here? To learn? I must warn you, knowledge comes with a price…. and that doesn't include SKS."
 
+    # (Normal screen, laeticia and mc on left, umn on right)
     # (Laeticia lovestruck)
     laeticia "Oh…. Oh my god…"
     laeticia "Thanks for the help, Emcie… umm… get out of here right now…"
@@ -399,16 +331,14 @@ label act_2_blue:
 # -------------------------------------------------------
 
 label act_2_red:
-    # MUSIC: Cass's date.mp3
     play music "audio/Cass's date.mp3" volume 0.5
     # BG: Front lobby of Episode
-    # SFX: hotel lobby music
 
     mc "Whoa, so.. Fancy? This whole lobby can pay for all 4 years of uni…"
 
     staff "SHE has been waiting for you.. Better not mess it up."
 
-    mc "{i}Scary….{/i}"
+    mc "{i}That sounds scary….{/i}"
 
     # (Insert CG of Emcie admiring the elevator top down)
     mc "{i}Even the elevator smells more expensive than my rent tenfold.{/i}"
@@ -429,8 +359,7 @@ label act_2_red:
     cassandra "Oh well well well… Hello there kitten.."
 
     mc "H-hello…"
-    mc "{i}I feel a lump in my throat, my heart beats unnervingly fast…{/i}"
-    mc "{i}I can smell a scent on her, that's so.. Distinct{/i}"
+    mc "{i}my heart's beating so fast… I can smell a scent on her that's so.. Distinct{/i}"
     mc "{i}So… overwhelming{/i}"
     mc "{i}OH NO SHE'S HOT{/i}"
 
@@ -443,9 +372,9 @@ label act_2_red:
     cassandra "I need my songbird singing beautiful melodies for me."
 
     # (Cass whips her hair)
-    cassandra "Now.. Shall we indulge?"
+    cassandra "Now…Shall we indulge?"
 
-    mc "{i}Her strong, muscly, firm arm guides me gently to the couch…{/i}"
+    mc "{i}Her strong, muscly firm arm guides me gently to the couch…{/i}"
     mc "{i}Before I see her{/i}"
     mc "{i}…{/i}"
     mc "{i}…eating s-sushi on the couch..??{/i}"
@@ -459,8 +388,8 @@ label act_2_red:
             jump cass_joke
         "Squeeze her bicep (feed ego)":
             jump cass_bicep
-        "Stare at her lovingly, then at her car keys (flirt)":
-            jump cass_flirt
+        "Chat with her":
+            jump cass_chat
 
 label cass_joke:
     mc "I-if you.. Go around Bundaran HI 2 times… what would it be..?"
@@ -474,6 +403,9 @@ label cass_joke:
     ""
     cassandra "Do that again and I will make your name disappear from UMN's database."
 
+    jump cass_date_continues
+
+label cass_chat:
     mc "So… uh… crazy weather we're having?"
 
     cassandra "Weather is irrelevant. I control three climate-tech subsidiaries."
@@ -482,7 +414,7 @@ label cass_joke:
 
     cassandra "Precisely."
 
-    mc "Have you.. Thought of ruining a film student's day with it..?"
+    mc "Have you thought of ruining a film student's day with it..?"
 
     cassandra "Hm?"
 
@@ -497,25 +429,17 @@ label cass_joke:
 
 label cass_bicep:
     mc "{i}She's just sitting there, menacingly.{/i}"
-    mc "{i}I wonder what goes on in her head…{/i}"
-    mc "{i}Suddenly…{/i}"
-    mc "{i}My body moves as if pulled closer just by her dominant aura.{/i}"
-    mc "{i}Before my silly brain can react, I give her strong, juicy arm a little squeeze, feeling the firmness of its bulging muscles.{/i}"
+    mc "{i}I wonder what's going on inside her head…{/i}"
+    mc "{i}Before my silly brain can react, I give her strong, juicy arm a little squeeze.{/i}"
     mc "{i}My hand stays there…{/i}"
     mc "{i}For just a little longer…{/i}"
 
     cassandra "hm?~"
 
-    mc "{i}She pulls me into a soft embrace, with a gaze that can turn me into mush in seconds.{/i}"
-
     mc "*yelps* S-sorry it's just…"
     mc "Your arms look like it can crush both of my ba- no.. both of UMN's energy efficient buildings.."
     mc "Respectfully…"
 
-    jump cass_date_continues
-
-label cass_flirt:
-    # TODO: flirt dialogue TBD
     jump cass_date_continues
 
 label cass_date_continues:
@@ -527,7 +451,8 @@ label cass_date_continues:
     cassandra "Very good kitten."
     cassandra "Now, won't you close your eyes and trust me?"
 
-    mc "{i}I closed my eyes instinctively and felt a blind fold- what the heck is she going to do?!{/i}"
+    # (Cass' sprite moves closer to MC)
+    mc "{i}I closed my eyes and felt a blindfold- what the heck is she going to do?!{/i}"
     mc "{i}Am I getting picked up?! She's so strong… I think she's holding me with only her arm.{/i}"
 
     # SFX: door open
@@ -545,7 +470,7 @@ label cass_date_continues:
     # (CG silhouette Cass and MC looking at her bodyguards and store staff handing them clothes)
 
     mc "Is this SMS?? How did we get here so fast?? Heh- Are these clothes?"
-    mc "Do you really expect me to try all of that on?"
+    mc "Do you really expect me to try all of that?"
 
     cassandra "Of course, Kitten. Unless you're bold enough to resist me… then I'll have no choice but to discipline you."
 
@@ -561,7 +486,7 @@ label cass_date_continues:
     cassandra "Watching us? Don't be ridiculous, kitten. The bodyguards will handle it."
 
     mc "I mean- they're taking pictures. Over there, near the racks. Two guys, with their phones out."
-    stop audio 
+    stop audio
     cassandra "*scoffs* You shouldn't be bothered by them, they aren't worth your attention. I am."
     cassandra "So, why don't you just pay attention to me."
 
@@ -575,7 +500,7 @@ label cass_date_continues:
     ""
     # MUSIC: action bgm
     play audio "audio/cass kidnapped!!.mp3"
-    mc "*oomph* What the- hey! LET ME GO!! CASS!"
+    mc "*oomph* What the- hey! LET ME GO!! CASS! (muffled)"
     mc "Cass! Please tell me you saw this…"
 
     # BG: Cinema (eye blink animation?)
@@ -598,7 +523,7 @@ label cass_date_continues:
     mc "{i}I can feel my brain bleeding out of my ears.{/i}"
     mc "{i}Oh help me Cass…! You're my only hope…!{/i}"
 
-    # SFX: thundering footsteps then BAM
+    # SFX: thundering footsteps then BAM (SHAKE SCREEN)
     play audio "audio/heavy-footstep.mp3"
     ""
     play audio "audio/roblox-explosion-sound.mp3"
@@ -612,15 +537,15 @@ label cass_date_continues:
     play audio "audio/heavy-footstep.mp3" volume 1.5
     # SFX: thundering footsteps APPROACHING
     "....."
-    stop audio 
+    stop audio
     play audio "audio/Thunder   Sound effect.mp3" volume 2.0
     kidnapper "BUSET!!!!!!!!!!!!!!"
 
     # (Add video of the fight scene)
 
+    # (Cinema bg again with hole in the back, Cass on right side MC on left)
     stop music fadeout 2.0
     play music "audio/Cass's date.mp3" fadein 2.0
-    # MUSIC FADES BACK TO: Cass's date.mp3
 
     cassandra "Well, that's my cardio for the week…"
     cassandra "Emcie, I'm glad you're safe. Despite the setbacks, I quite enjoyed the time we spent together."
@@ -630,8 +555,6 @@ label cass_date_continues:
     $ red_done = True
 
     jump pathku2
-
-    
 
 # -------------------------------------------------------
 # ACT 2: BRYAN'S DATE
@@ -643,23 +566,22 @@ label act_2_yellow:
     # MUSIC: Bryan's date.mp3
     # SFX: cafe door bell ringing
 
-    mc "My date should be around here… a guy wearing earbuds and drinking matcha…"
-    mc "…Well, there's actually only one guy in here."
-    mc "{i}He seems pretty busy… and awfully stylish. I wonder what he's reading.{/i}"
+    mc "My date should be around here…"
+    mc "…there's actually only one guy in here."
     mc "Um, excuse me?"
 
     bryan "…"
 
     mc "{i}Maybe he didn't hear me?{/i}"
+    # (Labubu item popup)
     mc "{i}…Is that a goddamn labubu on his totebag.{/i}"
-    mc "Um… I like your green grape labubu. Is that from the Labubu Exciting Macaron V1 drop in 2023?"
+    mc "Um… I like your green grape labubu."
 
     # (Bryan looks up at MC)
     bryan "Oh- Oh! You were talking to me! Thank you so much, and yeah! This green one was a limited edition."
     bryan "I'm so sorry about that. I was too engrossed in this feminist literature that I didn't hear you. You need something?"
 
-    mc "I'm from the dating form, it said we're a match."
-    mc "My name is Emcie. Sorry for startling you."
+    mc "I'm from a dating form, it said we're a match. My name is Emcie, sorry for startling you."
 
     bryan "*chuckles* It's alright, I don't mind, especially not when it's someone as cute as you~"
     bryan "I'm Bryan, it's nice to meet you too."
@@ -676,35 +598,15 @@ label act_2_yellow:
 
     bryan "I got distracted again, sorry. This book is just too good."
     bryan "It's called Nana by Ai Yazawa, it's such a touching story about… *shaky voice* female friendship."
-    bryan "Ah! I ordered an extra drink for you, it's my favorite. Here!"
+    bryan "Ah! I ordered an extra drink for you, it's my favourite. Here!"
+    # (Matcha item popup)
     bryan "I was thinking we could take a walk outside together, since it's almost golden hour."
-    bryan "And while we're on that topic… *coughs* …mind if you take some pics for my Insta, babe? It'll only take a sec, promise!"
-
-    mc "Uh… I'll try."
-
-    bryan "*chuckles nervously* Well, if you're unsure, I'll teach you how to do it."
 
     # SFX: run/walk outside & bell noise / Bell.mp3
+    # BG: Outdoor
     play audio "audio/running-footsteps-sound-effect-hd.mp3"
     play audio "audio/Bell.mp3"
-    bryan "Alright, here's the spot."
 
-    mc "{i}He meticulously set up the scene, helped me frame his picture, and getting the angle just right.{/i}"
-    mc "{i}…It was hard to ignore how his hand lingered on my waist and arms as he carefully positioned the camera.{/i}"
-
-    # SFX: photo click!!
-    play audio "audio/photo-click-click.mp3"
-    ""
-    # (2 bum ass photo results)
-
-    bryan "Ehhhh, wait, maybe we could change the angle?"
-
-    # SFX: photo click!!
-    play audio "audio/photo-click-click.mp3"
-    mc "{i}We took a few more photos, but all of them were kind of buttcheeks. He seems a bit frustrated, but smiles anyway.{/i}"
-
-    bryan "*sigh* God, the sun is already in a bad spot!"
-    bryan "W-well, thanks anyway for trying. There's always a next time."
     bryan "That reminds me, there's this competition I wanted to compete in today! It'd be nice if we could walk there together."
     bryan "It's an hour away."
 
@@ -782,23 +684,10 @@ label act_2_yellow:
         "Cause a scene and flee when she's distracted.":
             host "Incorrect! The correct answer is B."
 
-    host "Last question!"
-    host "In order, what are the phases of the menstrual cycle?"
-
-    menu:
-        "Menstrual, Follicular, Ovulation, Luteal":
-            $ bryan_score += 1
-            host "Correct!"
-        "Menstrual, Ovulation, Follicular, Luteal":
-            host "Incorrect! The correct answer is A."
-        "Menstrual, Luteal, Ovulation, Follicular":
-            host "Incorrect! The correct answer is A."
-        "Menstrual, Ovulation, Luteal, Follicular":
-            host "Incorrect! The correct answer is A."
-
     # SFX: drum roll
     play audio "audio/drum-roll-gaming-sound-effect-hd.mp3"
     host "Our winner with the most points is…"
+
     if bryan_score >= 3:
         jump bryan_wins
     else:
@@ -809,7 +698,8 @@ label bryan_wins:
     # SFX: crowd cheering yayaya / CROWD CHEER.mp3
     play audio "audio/CROWD CHEER.mp3"
 
-    host "Congratulations, Bryan! Here is your humble prize of [placeholder]. Oh, and your complimentary accessories."
+    host "Congratulations, Bryan! Here is your humble prize of a peter griffin plushie! Oh, and your complimentary accessories."
+    # (peter griffin plushie pic popup)
 
     # SFX: walking down stage
     play audio "audio/running-footsteps-sound-effect-hd.mp3"
@@ -825,14 +715,15 @@ label bryan_wins:
     bryan "Will you go to the hanami with me?"
     bryan "You don't have to answer today. I'll wait for your answer at SDC if you need time."
 
-    mc "I-"
+    mc "I'll-"
 
-    bryan "Sorry, I need to go now! I have to learn FLStudio, Bandlab, Reaper, Melodyne and also cover Bakamitai by Yakuza tonight!"
+    bryan "Sorry, I need to go now! I have to learn FLStudio, Bandlab, Reaper, Melodyne and also make a women's history month post!"
     bryan "See you soon, sweetheart~"
 
     mc "{i}Damn, didn't even get to say my 7th sentence.{/i}"
 
-    jump act_3
+    $ yellow_done = True
+    jump pathku2
 
 label bryan_loses:
     host "Naoya!"
@@ -843,12 +734,12 @@ label bryan_loses:
     # (Bryan walks down the stage, dejected)
     bryan "*sigh* Damn it…"
 
-    mc "Hey, don't worry about it. It's just a silly competition. The winner literally got a placeholder anyway."
+    mc "Hey, don't worry about it. It's just a silly competition."
 
     bryan "{i}I thought I could nail this one bit properly, but I can't even do something as simple as that. I'm a failure.{/i}"
 
-    mc "D-don't say that…"
-    mc "Why don't you just be yourself? You don't need to build a personal brand outside of social media. You can just be you."
+    mc "Don't say that…"
+    mc "You don't need to build a personal brand outside of social media. You can just be you."
 
     bryan "You have a point."
     bryan "Gosh, why does it feel like we're finally having our first conversation? Even though we hung out the entire day…"
@@ -864,12 +755,11 @@ label bryan_loses:
     bryan "You don't need to answer now. I'll wait for your answer at SDC?"
 
     mc "Yeah, I'll let you know."
-    mc "It's getting pretty late, wanna head back? I can show you my playlist instead this time."
+    mc "Do you wanna head back? I can show you my playlist instead this time."
 
     bryan "*chuckles* Gladly!"
 
     $ yellow_done = True
-
     jump pathku2
 
 # -------------------------------------------------------
@@ -971,7 +861,7 @@ label viko_help:
 
     viko "I don't think so… Thanks- uh I appreciate y-you asking, um…"
 
-    mc "I'm Emcie, and I didn't mean it to get out of hand… We even lost the chicken, I'm sorry, Viko.."
+    mc "I'm Emcie, and I didn't mean for it to get out of hand… We even lost the chicken, I'm sorry, Viko.."
 
     viko "Nh-no, really, th-thank you Emcie."
     viko "You chose to help me even th-though you knew you'd get in trouble- and hurt too! That was very kind of you…"
@@ -994,7 +884,7 @@ label viko_employees:
     mc "{i}…Are those staff members hiding in the shelves??{/i}"
 
     mc "Excuse me! Can you please do something about her?"
-    mc "Are you letting that defenseless string-bean fight her off all alone??"
+    mc "Are you letting that defenceless string-bean fight her off all alone??"
 
     mc "{i}They both nod in tandem, so much for great customer service.{/i}"
 
@@ -1007,7 +897,7 @@ label viko_employees:
     stop music
     play music "audio/Viko battle section.mp3"
     mc "{i}I need to pick the right moves to help him from here… BUT I HAVE NO IDEA WHAT TO DO{/i}"
-    mc "{i}I can't do this alone… Hey, you players!! Could you help me out?{/i}"
+    mc "{i}I can't do this alone… Hey, you chuds!! Help an MC out, will ya?{/i}"
     mc "{i}I'm gonna show you a series of moves and you better help me by posing alright!!{/i}"
     mc "Here goes nothing!"
 
@@ -1165,6 +1055,7 @@ label viko_grocery_shopping:
 # -------------------------------------------------------
 
 label act_3:
+    stop music
     # MUSIC: Silence, for now
     # SFX: Heartbeat sounds
 
@@ -1173,9 +1064,6 @@ label act_3:
 
     # SFX: Short drumroll
     mc "{i}Hopefully… everyone I don't choose is a good sport about it.{/i}"
-    mc "{i}I mean- they probably would since I told them they'd be going against each other for my final pick{/i}"
-    mc "{i}…{/i}"
-    mc "{i}Wait- I DID do that right-{/i}"
 
     # SFX: All LI VAs bickering
     # MUSIC: Pre-Act 3 bickering.mp3
@@ -1184,7 +1072,10 @@ label act_3:
 
     cassandra "Explain yourself."
 
-    bryan "Ladies, calm down. I'm sure Emcie here will explain everything. Right, babe?"
+    if bryan_score >= 3:
+        bryan "Ladies, calm down. I'm sure Emcie here will explain everything. Right, babe?"
+    else:
+        bryan "Calm down, guys. I'm sure Emcie here will explain everything. Right, Emcie?"
 
     viko "I'm incredibly uncomfortable."
 
@@ -1203,25 +1094,17 @@ label act_3:
     laeticia "Hah! Well, that doesn't matter."
     laeticia "Emcie, you're going with me, right? You basically already promised me!"
 
-    umn "Yea me too man"
-
     cassandra "Foolish. Emcie already has reservations with me."
-    cassandra "They have proved themselves to be mine."
 
     viko "H-hey, that's not fair. I also invited them! Don't Emcie get a say in all t-this…"
 
     bryan "That's right. Emcie should be the one to decide who they want to go with."
 
-    laeticia "So, who are you choosing?"
-    cassandra "So, who are you choosing?"
-    bryan "So, who are you choosing?"
-    viko "So, who are you choosing?"
+    # (All of them in harmony)
+    everyone "So, who are you choosing?"
 
     menu:
         "Laeticia":
-            # cassandra "…" (she's already heading towards a very long limo)
-            # bryan "Well, I don't mind, as long as you're happy." (performative)
-            # viko "I should've stayed at home…"
             jump act3_choose_laeticia
         "Cassandra":
             jump act3_choose_cassandra
@@ -1230,27 +1113,7 @@ label act_3:
         "Viko":
             jump act3_choose_viko
 
-# -------------------------------------------------------
-# ACT 3: REJECTION LINES (called before each ending)
-# -------------------------------------------------------
-
-# NOTE TO DEV: trigger the unchosen characters' rejection lines
-# before jumping to the chosen route. Suggested approach:
-# use a variable to track chosen LI and show others' lines first.
-
-# Rejection lines:
-# laeticia "Seriously?! This is totally unfair! Whatever, I'm going."
-# laeticia (if UMN summoned) "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
-# cassandra "…" (she's already heading towards a very long limo)
-# bryan "Well, I don't mind, as long as you're happy." (performative)
-# viko "I should've stayed at home…"
-
-# -------------------------------------------------------
-# ACT 3 ENDINGS
-# -------------------------------------------------------
-
 label act3_choose_laeticia:
-    # (rejection lines for cassandra, bryan, viko here)
     cassandra "…"
     bryan "*sigh* Well, I don't mind, as long as you're happy."
     viko "I should've stayed at home…"
@@ -1268,11 +1131,10 @@ label act3_choose_laeticia:
 
     mc "I'll look forward to it~~"
 
-    return
+    jump ending_laeticia
 
 label act3_choose_cassandra:
-    # (rejection lines for laeticia, bryan, viko here)
-    laeticia "Seriously?! This is totally unfair! Whatever, I'm going."
+    laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     bryan "*sigh* Well, I don't mind, as long as you're happy."
     viko "I should've stayed at home…"
 
@@ -1284,26 +1146,20 @@ label act3_choose_cassandra:
 
     cassandra "I already made reservations, naturally."
     cassandra "And trust me, I only reserved the best for you, my sweet."
-
-    mc "{i}She grabs me by my waist tightly, and leans down to whisper something in my ear!{/i}"
-
-    cassandra "I'll show you the time of your life."
     cassandra "I'll pick you up at 9. I already have a hold of your home address."
     cassandra "Wear something pretty for me, won't you?"
 
-    mc "Gulp. Y-yes, maam…"
+    mc "Gulp. Yes, maam…"
 
-    return
+    jump ending_cassandra
 
 label act3_choose_bryan:
-    # (rejection lines for laeticia, cassandra, viko here)
-    laeticia "Seriously?! This is totally unfair! Whatever, I'm going."
+    laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     cassandra "…"
     viko "I should've stayed at home…"
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
 
-    # Bryan wins path (performative)
     if bryan_score >= 3:
         bryan "Thank you. I never doubted you for a second."
         bryan "Sorry, guys, you heard them! Haha~"
@@ -1317,12 +1173,12 @@ label act3_choose_bryan:
 
         mc "I'll see you."
 
-    # Bryan loses path (normal)
+        jump ending_bryan_performative
+
     else:
         bryan "W-wait, me? Really? After that mess yesterday?"
 
         mc "You promised me you'll show me the real you, right?"
-        mc "I'm looking forward to it, Bryan."
 
         bryan "*chuckles* I'm so happy."
         bryan "Thank you so much."
@@ -1331,11 +1187,10 @@ label act3_choose_bryan:
 
         mc "Yeah. I'll see you."
 
-    return
+        jump ending_bryan_normal
 
 label act3_choose_viko:
-    # (rejection lines for laeticia, cassandra, bryan here)
-    laeticia "Seriously?! This is totally unfair! Whatever, I'm going."
+    laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     cassandra "…"
     bryan "*sigh* Well, I don't mind, as long as you're happy."
 
@@ -1350,11 +1205,461 @@ label act3_choose_viko:
     viko "I've never really been to one before… Do we, um, picnic?"
 
     mc "We can do that, but I think I have a better idea."
-    mc "{i}I lean closer to him and whisper something into his ear,{/i}"
-    mc "{i}He immediately turns red, and looks at me with wide eyes before nodding really frantically.{/i}"
+    mc "I lean closer to him and whisper something into his ear,"
 
+    # (Viko blushing sprite)
     mc "I'll see you tomorrow at 9 then?"
 
     viko "Y-YEAH! I- i'll see you! Hehe.."
+
+    jump ending_viko
+
+# -------------------------------------------------------
+# ENDINGS
+# -------------------------------------------------------
+
+# BRYAN PERFORMATIVE ENDING
+label ending_bryan_performative:
+    # MUSIC: ending music
+    # SFX: Crowd noises
+    bryan "This is great! I luckily got the best spot for pictures too~"
+    bryan "You look amazing, by the way."
+
+    mc "Thanks. You look…like usual (hot)"
+
+    bryan "I set up a picnic for us. We should take some pictures before digging in!"
+    bryan "C'mon, pretty, scoot closer to me."
+
+    mc "{i}He pulls me by my waist, holding me tight by his side as he aims his digicam at us.{/i}"
+    mc "{i}He's so warm…{/i}"
+    mc "{i}Ah, he's looking at me now.{/i}"
+
+    bryan "!"
+    bryan "I think this is the part where we kiss. *(make ts real sultry zerrin)*"
+
+    mc "{i}He's leaning in… What should I do?{/i}"
+
+    menu:
+        "Smooch him":
+            jump ending_bryan_performative_smooch
+        "Smack the digicam away":
+            jump ending_bryan_performative_smack
+
+label ending_bryan_performative_smooch:
+    # Black screen
+    # SFX: smooch
+
+    bryan "*chuckles* I'm so happy, Emcie."
+    bryan "I promise I'll make you so so happy, too."
+    bryan "…Can I soft launch you on my Instagram, please?"
+
+    # FADE TO BLACK, THEN ENDING CG
+    mc "{i}After our date, he immediately made 10 posts about it. Thankfully, his normal fans outweighed the parasocial ones, so I didn't get doxxed for dating him.{/i}"
+    mc "{i}Surprisingly, more people began following him for our couple's content, and he convinced me to make a public account too.{/i}"
+    mc "{i}Now, we both post mukbangs on our shared YouTube channel.{/i}"
+    mc "{i}We script out some drama here and there, but the money is really good. Who knew you could get a retirement plan from larping online?{/i}"
+    mc "{i}Anyways, Bryan and I are planning our 5th trip to Tokyo next week, so I gotta go.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
+label ending_bryan_performative_smack:
+    # SFX: Smack noise
+
+    bryan "Wh- Hey! What's that for??"
+
+    mc "We're about to share a passionate kiss, but you still had the camera pointed at us, really?"
+    mc "I'm not willing to be your social media lover! I'm getting outta here…"
+
+    bryan "What?! Emcie, babe, come back, please! *pathetic*"
+
+    # FADE TO BLACK, THEN ENDING CG
+    # MUSIC: after non-kiss option music
+    mc "{i}After I got home from that date, I saw notifications on my phone that Bryan had posted something.{/i}"
+    mc "{i}Well, I got a bit nervous, but it turns out it's just his usual 30 selfies at the hanami.{/i}"
+    mc "{i}I unfollowed him, naturally. Yet I did stalk him once in a while, though.{/i}"
+    mc "{i}That's how I found out, a few weeks later, he got cancelled on Twitter for trying to smooch and record me at the hanami.{/i}"
+    mc "{i}And you will not believe what his response was…{/i}"
+
+    # (Insert CG of Bryan doing ukelele apology)
+    mc "{i}Well, that was a disaster.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
+# -------------------------------------------------------
+
+# BRYAN NORMAL ENDING
+label ending_bryan_normal:
+    # MUSIC: ending music
+    # SFX: Crowd noises
+    bryan "How's the view? I made sure to get the best spot, just for you."
+    bryan "You look amazing, by the way."
+
+    mc "Thank you. You're looking pretty good yourself!"
+
+    bryan "*chuckle* I'm trying out a new style…"
+    bryan "Ah, you should try these dishes I made!"
+    bryan "I wanted to get rid of all the matcha powder I had at home, so I cooked up a feast! Try them, please?"
+
+    mc "{i}He's looking at me expectantly. I should try this, um, really green meal.{/i}"
+    mc "{i}I gave him a nod and had a REALLY big bite of what seems to be a matcha burger.{/i}"
+    mc "{i}I take a bite of almost every single dish Bryan made. Pastries, ramen, takoyaki, and even fried chicken. All made with matcha flavour.{/i}"
+    mc "{i}Well, they're not that bad, but it does get kinda boring after a-{/i}"
+
+    # SFX: loud grumble
+
+    mc "Oh god."
+    mc "MY STOMACH"
+    mc "{i}Bryan is having the time of his life right now… how strong is his gut????{/i}"
+    mc "{i}I really, really, REALLY need to go!!!{/i}"
+
+    bryan "Hm? What's up?"
+    bryan "There's crumbs on your lip, Emcie. Let me get that for you."
+
+    mc "{i}He got really close and wiped the crumbs gently with his thumb.{/i}"
+    mc "{i}He's staring at me really intensely. Is he… leaning in?{/i}"
+
+    bryan "I think I missed a spot~"
+
+    mc "WAIT I REALLY NEED TO GO THOUGH"
+
+    menu:
+        "Hold it in!!!":
+            jump ending_bryan_normal_holdit
+        "RELEASE THE BEAST":
+            jump ending_bryan_normal_release
+
+label ending_bryan_normal_holdit:
+    mc "LORD GIVE ME STRENGTH"
+
+    # Black screen
+    # SFX: aggressive smooch/bonk
+
+    bryan "Ouch! Eh? Emcie, where are you going??"
+
+    mc "I-I'LL BE BACK, DON'T WORRY!! I CAN STILL MAKE IT!!"
+
+    # FADE TO BLACK, THEN ENDING CG
+    # MUSIC: after non-kiss option music
+    mc "{i}Fortunately, I had enough willpower to hold it all in, and not traumatize him.{/i}"
+    mc "{i}I took a concerning amount of time in the bathroom, but to my surprise Bryan was still there, waiting for me.{/i}"
+    mc "{i}I made a vague lie about seeing a horse girl, and I think he believed me.{/i}"
+    mc "{i}Anyway, I've been regularly going on more dates with Bryan, and he's so much more honest and self-assured now.{/i}"
+    mc "{i}Tomorrow will be our 6-month anniversary. Or is it 7 months?{/i}"
+    mc "{i}Thank you for playing with us!{/i}"
+
+    return
+
+label ending_bryan_normal_release:
+    mc "Yea it's coming out"
+
+    # SFX: incredibly loud disgusting fart noise
+
+    bryan "…Uh-"
+
+    mc "………."
+
+    bryan "…"
+
+    mc "…"
+
+    bryan "…"
+    bryan "What the f-"
+
+    # CUT TO BLACK, THEN ENDING CG fades in
+    # MUSIC: after non-kiss option music
+    mc "{i}(Sigh) Well, that was embarrassing.{/i}"
+    mc "{i}I had to urgently excuse myself, and as you can guess, I didn't come back, I mean, what would YOU do???{/i}"
+    mc "{i}After that disaster, I haven't spoken another word to Bryan. I don't know how I could ever come back after that.{/i}"
+    mc "{i}That's until, I suddenly see a notification from a very familiar username…{/i}"
+    mc "{i}Thank you for playing with us!{/i}"
+
+    return
+
+# -------------------------------------------------------
+
+# LAETICIA ENDING
+label ending_laeticia:
+    # MUSIC: ending music
+    # SFX: Crowd noises
+
+    laeticia "I got an awesome spot, didn't I?"
+
+    mc "{i}We're on an incredibly small bench.{/i}"
+    mc "{i}Well, I don't mind sitting so close next to her. I'm just a bit distracted from where we're touching…{/i}"
+    mc "{i}Yeah, this is more than I could ever ask for.{/i}"
+
+    laeticia "It's the least I can do for you after that whole ritual at my place~"
+    laeticia "Hope it's not too tight on this bench with both UMN-kun and me here…"
+
+    mc "Nah, It's all good."
+    mc "{i}I look towards UMN-kun.{/i}"
+
+    umn "…"
+
+    mc "{i}His lack of words really disturbs me.{/i}"
+    mc "So… you've read my texts right?"
+
+    # (Laeticia confused)
+    laeticia "What texts?"
+
+    # (MC annoyed)
+    mc "You know… I wanted to ask UMN some questions too! You left me on read."
+
+    # (Laeticia pouting)
+    laeticia "Oh, those texts? It totally didn't go through~"
+
+    # (MC laughing)
+    mc "You did it on purpose, didn't you? Let me see that phone!"
+
+    # (Laeticia laugh)
+    laeticia "Hahaha! You can't have it!"
+
+    # (MC laughing)
+    # SFX: Thud
+    mc "{i}We wrestled on the bench until she pushed too hard, and I fell backwards on UMN's lap.{/i}"
+
+    # (Laeticia smirk)
+    laeticia "Hehe, I got you."
+
+    # (MC blush)
+    mc "{i}She's leaning in… What should I do?{/i}"
+
+    menu:
+        "Smooch her":
+            jump ending_laeticia_smooch
+        "Smooch UMN instead":
+            jump ending_laeticia_umn
+
+label ending_laeticia_smooch:
+    # SFX: Smooch
+
+    # (MC blush)
+    mc "{i}She softly pecked me on the lips.{/i}"
+
+    # (Laeticia smirk)
+    laeticia "I really like you, Emcie."
+    laeticia "Will you go out with me?"
+    laeticia "…And UMN-kun?"
+
+    # FADE TO BLACK, THEN ENDING CG
+    mc "{i}After that, Laeticia and I became official.{/i}"
+    mc "{i}Right off the bat, she already told me how much she wanted us to live together.{/i}"
+    mc "{i}Which should be a red flag, but we did summon a University on our first date, so I'm used to it.{/i}"
+    mc "{i}After saving up together for years, we finally bought our first house.{/i}"
+    mc "{i}It's a small cottage in Jogja, but it's comfortable. We often just eat the veggies we grow in our garden.{/i}"
+    mc "{i}Me, Laeticia, and uh- UMN couldn't be happier.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
+label ending_laeticia_umn:
+    # (MC neutral)
+    mc "Hold on, I…!"
+    mc "{i}Without thinking, I grabbed UMN's tie and pulled down REALLY hard.{/i}"
+
+    # SFX: Smooch
+    mc "{i}I smooched his… face? Logo? Either way, he looks really embarrassed.{/i}"
+
+    # (UMN blush)
+    umn "Y-you!!"
+
+    # (Laeticia smirk)
+    laeticia "…Well, I can't say I'm against it!"
+    laeticia "Room for one more?"
+
+    # FADE TO BLACK, THEN ENDING CG
+    # MUSIC: after non-kiss option music
+    mc "{i}And that's how me, UMN, and Laeticia became a throuple.{/i}"
+    mc "{i}There's not much to say here, but just know we both went through University REALLY smoothly.{/i}"
+    mc "{i}After graduating, UMN-kun bought us a cosy place in Jogja, where we all lived a comfortable life.{/i}"
+    mc "{i}I couldn't be any happier than this.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
+# -------------------------------------------------------
+
+# CASSANDRA ENDING
+label ending_cassandra:
+    # MUSIC: ending music
+
+    mc "{i}I hope these clothes are good enough to show Cass.{/i}"
+    mc "{i}…Wait, did I ever tell her where I live?{/i}"
+
+    # SFX: car tires screeching and people marching
+
+    mc "What is going on out there??"
+
+    # (CG Window view)
+    mc "{i}Wait, aren't those the bodyguards from our date??{/i}"
+    mc "{i}What the heck are they doing blocking the road?{/i}"
+
+    # (CG Window view but there's an angry old lady)
+    mc "{i}Whose grandma is that{/i}"
+
+    # (Enci muffled)
+    enci "WHAT DO YOU BOYS THINK YOU'RE DOING! I CAN'T BELIEVE THE AUDACITY OF YOU YOUNGINS. DON'T YOU KNOW WHAT PUBLIC SPACES ARE FOR??? PUBLIC. ACTIVITIES. YOUR DAMN CARS ARE BLOCKING MY WAY-"
+
+    # SFX: helicopter sounds (constant, quieter after first 3 seconds)
+
+    mc "What the freak???"
+    mc "{i}I immediately look out the window to see…{/i}"
+    mc "{i}Cass hanging from the helicopter ladder??{/i}"
+
+    cassandra "Emcie, it's time for our sweet getaway."
+
+    mc "Isn't this kind of dangerous??"
+
+    cassandra "Come now, dear, won't you trust me? Won't you show your devotion and jump into my arms?"
+
+    mc "{i}She's right. Compared to kidnapping, this is nothing. I open the window and jump into her arms.{/i}"
+
+    cassandra "Very good, Kitten."
+
+    mc "So where are we going? You're taking me to the hanami, right?"
+
+    cassandra "The hanami? Of course. After that, we will go somewhere better."
+    cassandra "Does it matter, though? You're mine now. You can't escape me, Emcie. You belong to me."
+    cassandra "Why don't you give me a kiss, Kitten?"
+
+    menu:
+        "Smooch Cass":
+            jump ending_cassandra_smooch
+        "Jump out the Helicopter":
+            jump ending_cassandra_jump
+
+label ending_cassandra_smooch:
+    # SFX: smooch
+
+    mc "{i}How could I ever refuse?{/i}"
+    mc "{i}I can smell her alpha scent.{/i}"
+    mc "{i}I gave her a small peck on the lips and then…{/i}"
+
+    # CUT TO BLACK, THEN ENDING CG
+    mc "{i}In the end, I became Cass's trophy wife and lived in luxury.{/i}"
+    mc "{i}I had to get used to some very public displays of affection…{/i}"
+    mc "{i}All promo banners for Cass and her company now include me, too.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
+label ending_cassandra_jump:
+    # MUSIC: after non-kiss option music
+
+    mc "{i}Oh god, is she going to lock me down in her mansion? I don't want to be kept as her asset!!!{/i}"
+    mc "{i}I gotta get outta here!{/i}"
+    mc "{i}I shove Cass back… not that it would do anything, but in a moment of weakness, Cass lets me go.{/i}"
+    mc "{i}I access the door and jump out towards freedom.{/i}"
+    mc "{i}Thankfully, a sakura tree cushioned my fall. Not that I was OK after that.{/i}"
+
+    # (CG of MC working at McDonald's)
+    mc "{i}The doctors told me I broke 5 ribs.{/i}"
+    mc "{i}Since my BPJS didn't cover my fees, I had to get a job to pay them off…{/i}"
+    mc "{i}After sending in around 100 applications, the only place that hired me was the McDonald's at SDC.{/i}"
+    mc "{i}…And apparently, this location is owned by Cass too.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
+# -------------------------------------------------------
+
+# VIKO ENDING
+label ending_viko:
+    # MUSIC: ending music
+    # SFX: Crowd noises
+
+    mc "{i}The day of the Hanami…{/i}"
+    mc "{i}It's about 38° Celsius right now, I feel like I'm melting, but I promised Viko that we would be wearing…{/i}"
+
+    # (MC in Loid Forger cosplay)
+    mc "Matching cosplays!"
+    mc "{i}People have been staring at me but if it makes him happy I'll gladly do it! Especially when he tailored it to fit me!{/i}"
+    mc "{i}Hmmm, he said to meet under the cardboard cherry trees, somewhere towards the middle of the festival.{/i}"
+    mc "{i}Oh! I think I see him over there.{/i}"
+
+    # (CG: make Viko look beautiful from far away)
+    mc "{i}Goodness gracious.{/i}"
+    mc "{i}My jaw immediately dropped to the floor.{/i}"
+    mc "{i}He looks… So stunning, so captivating, he looks beautiful in that Yor cosplay…{/i}"
+    mc "{i}As if he could hear my thoughts, he locked eyes with me.{/i}"
+
+    viko "Ah- Emcie over here!!"
+
+    mc "{i}Viko is waving his hand to gesture at me to come over.{/i}"
+    mc "{i}Without a second thought, I immediately rushed over to him.{/i}"
+
+    viko "E-eh!? Em-Emcie, what are you-!"
+    viko "KY-KYAHHHHH!!"
+
+    mc "{i}My body moved by itself, picking Viko up in a swift motion.{/i}"
+
+    # (The CG.)
+    # SFX: bone cracking / Ouchie.mp3
+
+    mc "URGH- MY BACK"
+
+    viko "O-oh gosh, I didn't know that you're this strong! Y-you always surprise me, Emcie."
+    viko "Hehe. You know, this is kinda silly but…"
+    viko "Thanks to you, I changed for the better… I feel a little bit more like myself now and I'm a lot more comfortable doing what I love…"
+    viko "M-my.. A-actually this is exactly like that scene in that anime I liked…"
+
+    # (MC straining)
+    mc "V-viko…"
+    mc "{i}He's looking at me expectantly… I think- I think this is our moment to-!{/i}"
+
+    # SFX: more bone cracking / Ouchie.mp3
+
+    mc "UHHH BETTER MAKE THAT DECISION QUICK!!"
+
+    menu:
+        "Smooch Viko":
+            jump ending_viko_smooch
+        "MY SPINEEEE!!!":
+            jump ending_viko_spine
+
+label ending_viko_smooch:
+    mc "{i}With all of my remaining strength, I manage to pull Viko closer to me.{/i}"
+    mc "{i}We both close our eyes in anticipation.{/i}"
+
+    # SFX: Smooch
+
+    mc "{i}When it happened, it felt like the spirit of slice of life romance anime bloomed between us.{/i}"
+
+    # SFX: Anime sound / ANIME WOW.mp3
+
+    # GOOD ENDING CG
+    mc "{i}Well, my life after that has been a non-stop whirlwind.{/i}"
+    mc "{i}Apparently there was a famous cosplayer photographer on site that got to snap our very lovely moment together…{/i}"
+    mc "{i}He said that we had a lot of chemistry together in cosplay, so he invited us to take some more photos in his studio.{/i}"
+    mc "{i}Viko was a bit hesitant but somehow he was the one that managed to convince me to go at the end.{/i}"
+    mc "{i}Before you know it, Viko and I became one of the top couple cosplayers of the year! Our next event is apparently in May at Comic Frontier 22.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
+label ending_viko_spine:
+    mc "ICANTHOLDHIMMUCHLONGER–!"
+    mc "VIKO I'M SORRY!!!"
+
+    viko "WAHH–"
+
+    # SFX: thud / THUD.mp3
+    # SFX: church bell / CHURCH BELL.mp3
+
+    # BAD ENDING CG
+    # MUSIC: after non-kiss option music
+    mc "{i}I couldn't face Viko after that, or anyone in campus.{/i}"
+    mc "{i}I never really got to return that outfit he made… It gave me a brilliant idea though!{/i}"
+    mc "{i}That cosplay he tailored was so good, I got enough money from renting it online to move to Slovenia, where I lived out my life as a humble farmer.{/i}"
+    mc "{i}What? No way in heck I'm coming back from that okay…{/i}"
+    mc "{i}Sometimes, when the internet signal allows me, I like to check back to what Viko is doing, just for fun.{/i}"
+
+    # SECRET ENDING CG — only if picked "Hey where did the employees go?" OR "Nah he got this!"
+    if not viko_help:
+        mc "{i}Seems like he's doing just fine…{/i}"
+
+    mc "{i}Thanks for playing with us!{/i}"
 
     return
