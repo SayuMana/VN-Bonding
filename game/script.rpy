@@ -147,6 +147,12 @@ label pathku2:
 # -------------------------------------------------------
 
 label act_2_blue:
+    image lae neutral = "images/CGs/Act2/laeticia/Sitting Lae_neutral.png"
+    image lae smile = "images/CGs/Act2/laeticia/Sitting Lae_smile.png"
+    image lae talk = "images/CGs/Act2/laeticia/Sitting Lae_talk.png"
+    image lae tease = "images/CGs/Act2/laeticia/Sitting Lae_tease.png"
+    image lae thinking = "images/CGs/Act2/laeticia/Sitting Lae_thinking.png"
+    image lae upset = "images/CGs/Act2/laeticia/Sitting Lae_upset.png"
     play music "audio/Laeticia's date.mp3"
     play sound "audio/Crowd Talking.mp3" loop volume 0.5
     # BG: Bazaar UMN
@@ -155,18 +161,20 @@ label act_2_blue:
 
     # SFX: Wind chimes
     scene booth_bg with fade
-    image lae neutral = "images/CGs/Act2/laeticia/Sitting_Lae_neutral.png"
+    
     show lae neutral
     play sound "audio/shop-bell.mp3"
     mc "{i}OH NO SHES HOT{/i}"
-
+    show lae talk
     laeticia "Oho~, another customer I see?"
 
     mc "Ah, I'm actually here because we matched on the soulmate form thing."
 
+    show lae smile
     laeticia "Oh! I'm glad we got to meet then."
+    show lae talk
     laeticia "I'm Laeticia. A pleasure to meet you~"
-
+    show lae neutral
     mc "Thanks. I'm… Emcie…"
     mc "{i}We shook hands on it. Her hands are cold.{/i}"
     mc "{i}The thought of it is ridiculous when she's so hot.{/i}"
