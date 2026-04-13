@@ -40,6 +40,8 @@ label act_1:
     # MUSIC: Opening act + flashback.mp3 (from 1:26)
     # (Insert CGs of Act 1 Japanese Confession Scene)
     play sound "audio/Nature sounds.mp3" volume 1.5
+    
+    scene mc1 with fade
     mc "S-senpai Gian! Please go to the hanami with me! I need you bad!!!"
     stop music
     stop sound
@@ -49,6 +51,7 @@ label act_1:
     play sound "<from 06.0>audio/RECORD DISC SCRATCH.mp3"
     # gian line1
     voice "audio/voiceline/act1/act1_Gian_line1.mp3"
+    scene mc2
     gian "Ew, no."
 
     mc "*GASP* Wait, why?!"
@@ -56,6 +59,7 @@ label act_1:
 
     # gian line2
     voice "audio/voiceline/act1/act1_Gian_line2.mp3"
+    scene mc3
     gian "You think I want to go out with YOU?"
     # gian line3
     voice "audio/voiceline/act1/act1_Gian_line3.mp3"
@@ -65,13 +69,14 @@ label act_1:
     gian "You'll be lucky if a baddie like me even BLINKS in your direction lol"
     # gian line5
     voice "audio/voiceline/act1/act1_Gian_line5.mp3"
+    scene mc4
     gian "Bye loser LMFAOOOO"
     stop sound
 
     # SFX: wet crying snotty noises
     play music "audio/Opening act + flashback.mp3" volume 1.0
     mc "..."
-
+    scene bg park_afternoon with fade
     mc "Haiyahh… what the heck should I do now, all those plans wasted."
 
     # SFX: wet slapping noise
@@ -149,6 +154,9 @@ label act_2_blue:
     mc "Looks like there's an open booth!"
 
     # SFX: Wind chimes
+    scene booth_bg with fade
+    image lae neutral = "images/CGs/Act2/laeticia/Sitting_Lae_neutral.png"
+    show lae neutral
     play sound "audio/shop-bell.mp3"
     mc "{i}OH NO SHES HOT{/i}"
 
