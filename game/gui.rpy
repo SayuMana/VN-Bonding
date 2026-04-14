@@ -59,6 +59,8 @@ define gui.text_font = "DejaVuSans.ttf"
 
 ## The font used for character names.
 define gui.name_text_font = "gui/font/SouciSansNF.ttf"
+define gui.name_text_color = "#681c1c"
+ 
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "DejaVuSans.ttf"

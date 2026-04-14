@@ -138,13 +138,74 @@ style window:
 
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
+style NPC_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Transform("gui/NPC_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+
+
+
+
+style NPC1_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Transform("gui/NPC_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+
+style NPC2_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Transform("gui/NPC_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+
+style NPC3_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Transform("gui/NPC_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+
+style NPC4_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Transform("gui/NPC_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+
+style NPC5_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Transform("gui/NPC_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+
+style NPC6_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Transform("gui/NPC_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+
+style NPC7_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Transform("gui/NPC_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+
+    
+
 style MC_window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/Mc_TextBox.png", xalign=0.5, yalign=1.0)
+    background Transform("gui/Mc_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
 
 
 style Laeticia_window:
@@ -153,7 +214,7 @@ style Laeticia_window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/Laeticia_TextBox.png", xalign=0.5, yalign=1.0)
+    background Transform("gui/Laeticia_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
 
 
 style Cassandra_window:
@@ -162,7 +223,7 @@ style Cassandra_window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/Cassandra_TextBox.png", xalign=0.5, yalign=1.0)
+    background Transform("gui/Cassandra_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
 
 style Bryan_window:
     xalign 0.5
@@ -170,7 +231,7 @@ style Bryan_window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/Cassandra_TextBox.png", xalign=0.5, yalign=1.0)
+    background Transform("gui/Bryan_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
 
 
 style Viko_window:
@@ -179,7 +240,9 @@ style Viko_window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/Viko_TextBox.png", xalign=0.5, yalign=1.0)
+    background Transform("gui/Viko_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+
+
 
 
 style namebox:
@@ -199,6 +262,7 @@ style say_label:
     yoffset 10
 
 style say_dialogue:
+    outlines [(2, "#000000", 0, 0)]
     properties gui.text_properties("dialogue")
 
     xpos gui.dialogue_xpos
