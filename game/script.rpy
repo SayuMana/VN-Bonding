@@ -413,7 +413,7 @@ label cass_joke:
 
     # SFX: jangkrik noises
     play audio "audio/Cricket Awkward.mp3"
-    ""
+    "..."
     cassandra "Do that again and I will make your name disappear from UMN's database."
 
     jump cass_date_continues
@@ -588,7 +588,7 @@ label act_2_yellow:
     play sound "audio/shop-bell.mp3"
 
     voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
-voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     mc "My date should be around here…"
     voice "audio/voiceline/act2_yellow/MC bryan voiceline2 act_2.mp3"
     mc "…there's actually only one guy in here."
@@ -669,7 +669,7 @@ voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     voice "audio/voiceline/act2_yellow/Host_Voiceline2.wav"
     host "Let's begin!"
     voice "audio/voiceline/act2_yellow/Host_Voiceline3.wav"
-    host "First question!..."
+    host "First question!... A woman and a man apply for a manual labour job which requires a lot of heavy lifting. The woman can lift 20kg more than the man. Who is more qualified for the job?"
 
     voice "audio/voiceline/act2_yellow/MC bryan voiceline12 act_2.mp3"
     mc "{i}Bryan is staring at me. Is he asking for help? Maybe I should send a signal…{/i}"
@@ -686,7 +686,7 @@ voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
             host "Incorrect! The correct answer is B."
 
     voice "audio/voiceline/act2_yellow/Host_Voiceline4.wav"
-    host "Second question!..."
+    host "Second question!... Who is the most feminist character of all fiction?"
 
     menu:
         "Shinji Ikari from Evangelion":
@@ -700,7 +700,7 @@ voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
             host "Correct!"
 
     voice "audio/voiceline/act2_yellow/Host_Voiceline5.wav"
-    host "Third question!..."
+    host "Third question!... You're on a date with a woman, and she orders the deluxe sushi package all by herself without sharing, while you had a single bowl of miso soup. She then tells you she forgot her wallet and asks you to pay. What do you do?"
 
     menu:
         "Pay, but ask her to pay for the next date.":
@@ -1097,14 +1097,13 @@ label act_3:
 
     # SFX: All LI VAs bickering
     # MUSIC: Pre-Act 3 bickering.mp3
-
     
     laeticia "Emcie! Do you know these people?!"
 
     cassandra "Explain yourself."
 
     if bryan_score >= 3:
-        bryan "Ladies, calm down. I'm sure Emcie here will explain everything. Right, babe?"
+        bryan "Ladies! Ladies!, calm down. I'm sure Emcie here will explain everything. Right, babe?"
     else:
         bryan "Calm down, guys. I'm sure Emcie here will explain everything. Right, Emcie?"
 
@@ -1191,30 +1190,25 @@ label act3_choose_bryan:
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
 
+    # perform
     if bryan_score >= 3:
-        bryan "Thank you. I never doubted you for a second."
-        bryan "Sorry, guys, you heard them! Haha~"
+        bryan "Thank you. I never doubted you for a second. Sorry, guys, you heard them! Haha~"
 
         mc "Sorry for all that… I really didn't know how to avoid it."
         mc "But anyway, what are we doing tomorrow?"
 
-        bryan "Well~ It's more of a surprise. *chuckle*"
-        bryan "Don't worry your pretty little head about it, just make sure to wear something stylish, alright? I'll do the rest."
-        bryan "See you tomorrow at 9?"
-
+        bryan "Well~ It's more of a surprise. *chuckle* Don't worry your pretty little head about it, just make sure to wear something stylish, alright? I'll do the rest. See you tomorrow at 9?"
         mc "I'll see you."
 
         jump ending_bryan_performative
 
+    # normal
     else:
         bryan "W-wait, me? Really? After that mess yesterday?"
 
         mc "You promised me you'll show me the real you, right?"
 
-        bryan "*chuckles* I'm so happy."
-        bryan "Thank you so much."
-        bryan "Ah, I actually did have something in mind for our date, but I want to keep it as a surprise."
-        bryan "Would you be alright meeting me tomorrow at 9?"
+        bryan "*chuckles* I'm so happy. Thank you so much. Ah, I actually did have something in mind for our date, but I want to keep it as a surprise. Would you be alright meeting me tomorrow at 9?"
 
         mc "Yeah. I'll see you."
 
@@ -1249,89 +1243,15 @@ label act3_choose_viko:
 # ENDINGS
 # -------------------------------------------------------
 
-# BRYAN PERFORMATIVE ENDING
-label ending_bryan_performative:
-    # MUSIC: ending music
-    # SFX: Crowd noises
-    bryan "This is great! I luckily got the best spot for pictures too~"
-    bryan "You look amazing, by the way."
-
-    mc "Thanks. You look…like usual (hot)"
-
-    bryan "I set up a picnic for us. We should take some pictures before digging in!"
-    bryan "C'mon, pretty, scoot closer to me."
-
-    mc "{i}He pulls me by my waist, holding me tight by his side as he aims his digicam at us.{/i}"
-    mc "{i}He's so warm…{/i}"
-    mc "{i}Ah, he's looking at me now.{/i}"
-
-    bryan "!"
-    bryan "I think this is the part where we kiss. *(make ts real sultry zerrin)*"
-
-    mc "{i}He's leaning in… What should I do?{/i}"
-
-    menu:
-        "Smooch him":
-            jump ending_bryan_performative_smooch
-        "Smack the digicam away":
-            jump ending_bryan_performative_smack
-
-label ending_bryan_performative_smooch:
-    # Black screen
-    # SFX: smooch
-
-    bryan "*chuckles* I'm so happy, Emcie."
-    bryan "I promise I'll make you so so happy, too."
-    bryan "…Can I soft launch you on my Instagram, please?"
-
-    # FADE TO BLACK, THEN ENDING CG
-    mc "{i}After our date, he immediately made 10 posts about it. Thankfully, his normal fans outweighed the parasocial ones, so I didn't get doxxed for dating him.{/i}"
-    mc "{i}Surprisingly, more people began following him for our couple's content, and he convinced me to make a public account too.{/i}"
-    mc "{i}Now, we both post mukbangs on our shared YouTube channel.{/i}"
-    mc "{i}We script out some drama here and there, but the money is really good. Who knew you could get a retirement plan from larping online?{/i}"
-    mc "{i}Anyways, Bryan and I are planning our 5th trip to Tokyo next week, so I gotta go.{/i}"
-    mc "{i}Thanks for playing with us!{/i}"
-
-    return
-
-label ending_bryan_performative_smack:
-    # SFX: Smack noise
-
-    bryan "Wh- Hey! What's that for??"
-
-    mc "We're about to share a passionate kiss, but you still had the camera pointed at us, really?"
-    mc "I'm not willing to be your social media lover! I'm getting outta here…"
-
-    bryan "What?! Emcie, babe, come back, please! *pathetic*"
-
-    # FADE TO BLACK, THEN ENDING CG
-    # MUSIC: after non-kiss option music
-    mc "{i}After I got home from that date, I saw notifications on my phone that Bryan had posted something.{/i}"
-    mc "{i}Well, I got a bit nervous, but it turns out it's just his usual 30 selfies at the hanami.{/i}"
-    mc "{i}I unfollowed him, naturally. Yet I did stalk him once in a while, though.{/i}"
-    mc "{i}That's how I found out, a few weeks later, he got cancelled on Twitter for trying to smooch and record me at the hanami.{/i}"
-    mc "{i}And you will not believe what his response was…{/i}"
-
-    # (Insert CG of Bryan doing ukelele apology)
-    mc "{i}Well, that was a disaster.{/i}"
-    mc "{i}Thanks for playing with us!{/i}"
-
-    return
-
-# -------------------------------------------------------
-
 # BRYAN NORMAL ENDING
 label ending_bryan_normal:
     # MUSIC: ending music
     # SFX: Crowd noises
-    bryan "How's the view? I made sure to get the best spot, just for you."
-    bryan "You look amazing, by the way."
+    bryan "How's the view? I made sure to get the best spot, just for you. You look amazing, by the way."
 
     mc "Thank you. You're looking pretty good yourself!"
 
-    bryan "*chuckle* I'm trying out a new style…"
-    bryan "Ah, you should try these dishes I made!"
-    bryan "I wanted to get rid of all the matcha powder I had at home, so I cooked up a feast! Try them, please?"
+    bryan "*chuckle* I'm trying out a new style… Ah, you should try these dishes I made! I wanted to get rid of all the matcha powder I had at home, so I cooked up a feast! Try them, please?"
 
     mc "{i}He's looking at me expectantly. I should try this, um, really green meal.{/i}"
     mc "{i}I gave him a nod and had a REALLY big bite of what seems to be a matcha burger.{/i}"
@@ -1345,8 +1265,7 @@ label ending_bryan_normal:
     mc "{i}Bryan is having the time of his life right now… how strong is his gut????{/i}"
     mc "{i}I really, really, REALLY need to go!!!{/i}"
 
-    bryan "Hm? What's up?"
-    bryan "There's crumbs on your lip, Emcie. Let me get that for you."
+    bryan "Hm? What's up? There's crumbs on your lip, Emcie. Let me get that for you."
 
     mc "{i}He got really close and wiped the crumbs gently with his thumb.{/i}"
     mc "{i}He's staring at me really intensely. Is he… leaning in?{/i}"
@@ -1391,10 +1310,12 @@ label ending_bryan_normal_release:
 
     mc "………."
 
+    #ignore line
     bryan "…"
 
     mc "…"
 
+    # ignore line
     bryan "…"
     bryan "What the f-"
 
@@ -1405,6 +1326,71 @@ label ending_bryan_normal_release:
     mc "{i}After that disaster, I haven't spoken another word to Bryan. I don't know how I could ever come back after that.{/i}"
     mc "{i}That's until, I suddenly see a notification from a very familiar username…{/i}"
     mc "{i}Thank you for playing with us!{/i}"
+
+    return
+
+
+# BRYAN PERFORMATIVE ENDING
+label ending_bryan_performative:
+    # MUSIC: ending music
+    # SFX: Crowd noises
+    bryan "This is great! I luckily got the best spot for pictures too~ You look amazing, by the way."
+
+    mc "Thanks. You look…like usual (hot)"
+
+    bryan "I set up a picnic for us. We should take some pictures before digging in! C'mon, pretty, scoot closer to me."
+
+    mc "{i}He pulls me by my waist, holding me tight by his side as he aims his digicam at us.{/i}"
+    mc "{i}He's so warm…{/i}"
+    mc "{i}Ah, he's looking at me now.{/i}"
+
+    bryan "*Shock*I think this is the part where we kiss. *(make ts real sultry zerrin)*"
+
+    mc "{i}He's leaning in… What should I do?{/i}"
+
+    menu:
+        "Smooch him":
+            jump ending_bryan_performative_smooch
+        "Smack the digicam away":
+            jump ending_bryan_performative_smack
+
+label ending_bryan_performative_smooch:
+    # Black screen
+    # SFX: smooch
+
+    bryan "*chuckles* I'm so happy, Emcie. I promise I'll make you so so happy, too. Can I soft launch you on my Instagram, please?"
+
+    # FADE TO BLACK, THEN ENDING CG
+    mc "{i}After our date, he immediately made 10 posts about it. Thankfully, his normal fans outweighed the parasocial ones, so I didn't get doxxed for dating him.{/i}"
+    mc "{i}Surprisingly, more people began following him for our couple's content, and he convinced me to make a public account too.{/i}"
+    mc "{i}Now, we both post mukbangs on our shared YouTube channel.{/i}"
+    mc "{i}We script out some drama here and there, but the money is really good. Who knew you could get a retirement plan from larping online?{/i}"
+    mc "{i}Anyways, Bryan and I are planning our 5th trip to Tokyo next week, so I gotta go.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
+label ending_bryan_performative_smack:
+    # SFX: Smack noise
+
+    bryan "Wh- Hey! What's that for??"
+
+    mc "We're about to share a passionate kiss, but you still had the camera pointed at us, really?"
+    mc "I'm not willing to be your social media lover! I'm getting outta here…"
+
+    bryan "What?! Emcie, babe, come back, please!"
+
+    # FADE TO BLACK, THEN ENDING CG
+    # MUSIC: after non-kiss option music
+    mc "{i}After I got home from that date, I saw notifications on my phone that Bryan had posted something.{/i}"
+    mc "{i}Well, I got a bit nervous, but it turns out it's just his usual 30 selfies at the hanami.{/i}"
+    mc "{i}I unfollowed him, naturally. Yet I did stalk him once in a while, though.{/i}"
+    mc "{i}That's how I found out, a few weeks later, he got cancelled on Twitter for trying to smooch and record me at the hanami.{/i}"
+    mc "{i}And you will not believe what his response was…{/i}"
+
+    # (Insert CG of Bryan doing ukelele apology)
+    mc "{i}Well, that was a disaster.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
 
     return
 
