@@ -19,8 +19,6 @@ label act_1:
     scene bg park_afternoon with fade
     play music "audio/Opening act + flashback.mp3" volume 1.0
     play sound "audio/Nature sounds.mp3" volume 1.5
-    # MUSIC: Opening act + flashback.mp3
-    # SFX: birds chirping and rustling leaves / Nature sounds.mp3
     mc "{i}It's a beautiful day outside…{/i}"
     mc "{i}Birds are singing…{/i}"
     mc "{i}Flowers are blooming…{/i}"
@@ -30,14 +28,12 @@ label act_1:
 
 
     play sound "audio/Thunder   Sound effect.mp3" volume 1.5
-    # SFX: dramatic fail sound fx / Thunder Sound effect.mp3
     mc "{i}It was all going so well!{/i}"
     mc "{i}I had everything planned out, but when I finally dared to ask out senpai…{/i}"
     stop sound
 
     
     play music "<from 86.0>audio/Opening act + flashback.mp3" loop
-    # MUSIC: Opening act + flashback.mp3 (from 1:26)
     # (Insert CGs of Act 1 Japanese Confession Scene)
     play sound "audio/Nature sounds.mp3" volume 1.5
     
@@ -590,86 +586,92 @@ label cass_date_continues:
 label act_2_yellow:
     play music "audio/Bryan's date.mp3" fadein 2.0
     play sound "audio/shop-bell.mp3"
-    # MUSIC: Bryan's date.mp3
-    # SFX: cafe door bell ringing
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
+voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     mc "My date should be around here…"
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline2 act_2.mp3"
     mc "…there's actually only one guy in here."
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline3 act_2.mp3"
     mc "Um, excuse me?"
 
     bryan "…"
 
+    # ignore
     mc "{i}Maybe he didn't hear me?{/i}"
-    # (Labubu item popup)
+    # ignore
     mc "{i}…Is that a goddamn labubu on his totebag.{/i}"
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline4 act_2.mp3"
     mc "Um… I like your green grape labubu."
 
-    # (Bryan looks up at MC)
-    bryan "Oh- Oh! You were talking to me! Thank you so much, and yeah! This green one was a limited edition."
-    bryan "I'm so sorry about that. I was too engrossed in this feminist literature that I didn't hear you. You need something?"
+    voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 1.wav"
+    bryan "Oh- Oh! You were talking to me!..."
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline5 act_2.mp3"
     mc "I'm from a dating form, it said we're a match. My name is Emcie, sorry for startling you."
 
-    bryan "*chuckles* It's alright, I don't mind, especially not when it's someone as cute as you~"
-    bryan "I'm Bryan, it's nice to meet you too."
-    bryan "I totally didn't expect to go on a date today. Luckily, I stop by this cafe every day to read."
-    bryan "Ah, I was actually at a really good part."
+    voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 2.wav"
+    bryan "*chuckles* It's alright..."
 
-    # (Bryan reads a bit more of the book, flaunting the cover)
-    # SFX: book being waved around
+    voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 3.wav"
+    bryan "I'm Bryan, it's nice to meet you too...."
+
     play sound "audio/page-flip-03.mp3"
+    voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 4.wav"
     bryan "…*coughs*"
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline6 act_2.mp3"
     mc "Yes, I can see the cover."
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline7 act_2.mp3"
     mc "What are you reading?"
 
-    bryan "I got distracted again, sorry. This book is just too good."
-    bryan "It's called Nana by Ai Yazawa, it's such a touching story about… *shaky voice* female friendship."
-    bryan "Ah! I ordered an extra drink for you, it's my favourite. Here!"
-    # (Matcha item popup)
-    bryan "I was thinking we could take a walk outside together, since it's almost golden hour."
+    voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 5.wav"
+    bryan "I got distracted again, sorry...."
 
-    # SFX: run/walk outside & bell noise / Bell.mp3
-    # BG: Outdoor
+    voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 6.wav"
+    bryan "I was thinking we could take a walk outside..."
+
     play audio "audio/running-footsteps-sound-effect-hd.mp3"
     play audio "audio/Bell.mp3"
 
-    bryan "That reminds me, there's this competition I wanted to compete in today! It'd be nice if we could walk there together."
-    bryan "It's an hour away."
+    voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 7.wav"
+    bryan "That reminds me, there's this competition..."
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline8 act_2.mp3"
     mc "An hour?!"
 
-    bryan "Don't worry. I got a real feel-good playlist for times like this."
-    bryan "C'mon, give it a listen."
+    voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 8.wav"
+    bryan "Don't worry. I got a real feel-good playlist..."
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline9 act_2.mp3"
     mc "{i}He pulled out his phone and carefully tucked my hair behind my ears to slip in the earbud. What I hear next is…{/i}"
     stop music
     play music "audio/_yoru-ni-kakeru-lyric-video_50k-1-mp3cut.mp3"
+    # ignore
     mc "......."
-    # SFX: Racing into the night by yoasobi plays
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline10 act_2.mp3"
     mc "{i}This is going to be a long walk.{/i}"
     stop music fadeout 2.0
 
-    # Fade out and in black
-    # SFX: crowd cheering / CROWD CHEER.mp3
-    # MUSIC: competition bgm
     play sound "audio/CROWD CHEER.mp3"
 
+    voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 9.wav"
     bryan "Shoot, we're late! Sorry, I gotta get up on the stage right now!"
 
-    host "Alright, ladies and men! It's time for the part you've all been waiting for: our competitive quiz!"
-    host "It's simple. All you need to do is answer quickly for the next 4 questions. Today's topic: feminism, of course."
+    voice "audio/voiceline/act2_yellow/Host_Voiceline1.wav"
+    host "Alright, ladies and men!..."
 
-    # UI change / SFX: pop
     play sound "audio/pop_7e9Is8L.mp3"
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline11 act_2.mp3"
     mc "{i}Why did the UI change.{/i}"
 
-    # SFX: Kahoot Quiz background sound
     play music "audio/Lobby Music (Original Soundtrack).mp3"
+    voice "audio/voiceline/act2_yellow/Host_Voiceline2.wav"
     host "Let's begin!"
-    host "First question!"
-    host "A woman and a man apply for a manual labour job which requires a lot of heavy lifting. The woman can lift 20kg more than the man. Who is more qualified for the job?"
+    voice "audio/voiceline/act2_yellow/Host_Voiceline3.wav"
+    host "First question!..."
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline12 act_2.mp3"
     mc "{i}Bryan is staring at me. Is he asking for help? Maybe I should send a signal…{/i}"
 
     menu:
@@ -683,8 +685,8 @@ label act_2_yellow:
         "Both are equally qualified.":
             host "Incorrect! The correct answer is B."
 
-    host "Second question!"
-    host "Who is the most feminist character of all fiction?"
+    voice "audio/voiceline/act2_yellow/Host_Voiceline4.wav"
+    host "Second question!..."
 
     menu:
         "Shinji Ikari from Evangelion":
@@ -697,8 +699,8 @@ label act_2_yellow:
             $ bryan_score += 1
             host "Correct!"
 
-    host "Third question!"
-    host "You're on a date with a woman, and she orders the deluxe sushi package all by herself without sharing, while you had a single bowl of miso soup. She then tells you she forgot her wallet and asks you to pay. What do you do?"
+    voice "audio/voiceline/act2_yellow/Host_Voiceline5.wav"
+    host "Third question!..."
 
     menu:
         "Pay, but ask her to pay for the next date.":
@@ -711,9 +713,7 @@ label act_2_yellow:
         "Cause a scene and flee when she's distracted.":
             host "Incorrect! The correct answer is B."
 
-    # SFX: drum roll
     play audio "audio/drum-roll-gaming-sound-effect-hd.mp3"
-    host "Our winner with the most points is…"
 
     if bryan_score >= 3:
         jump bryan_wins
@@ -721,69 +721,74 @@ label act_2_yellow:
         jump bryan_loses
 
 label bryan_wins:
-    host "Bryan!"
-    # SFX: crowd cheering yayaya / CROWD CHEER.mp3
+    voice "audio/voiceline/act2_yellow/Host_Winner_Voiceline.wav"
+    host "Our winner with the most points is… Bryan!"
     play audio "audio/CROWD CHEER.mp3"
 
+    voice "audio/voiceline/act2_yellow/Host_Voiceline6.wav"
     host "Congratulations, Bryan! Here is your humble prize of a peter griffin plushie! Oh, and your complimentary accessories."
-    # (peter griffin plushie pic popup)
 
-    # SFX: walking down stage
     play audio "audio/running-footsteps-sound-effect-hd.mp3"
-    bryan "Emcie! I won! And just between us, I couldn't have done it without you."
-    bryan "To tell the truth, you've been such an amazing date so far, and I think… I'm in love with you."
+    voice "audio/voiceline/act2_yellow/Date_performative_Bryan_Voiceline 1.wav"
+    bryan "Emcie! I won! And just between us, I couldn't have done it without you. To tell the truth, you've been such an amazing date so far, and I think… I'm in love with you."
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline13 act_2.mp3"
     mc "{i}I feel like I've only said 6 sentences this entire date, but he's hot, so I'll let it slide.{/i}"
 
+    voice "audio/voiceline/act2_yellow/Date_performative_Bryan_Voiceline 2.wav"
     bryan "*clears throat* I've been thinking about it, and I wanted to give you this."
 
-    # Love pokeball card insert
-    bryan "Emcie… This is my proposal."
-    bryan "Will you go to the hanami with me?"
-    bryan "You don't have to answer today. I'll wait for your answer at SDC if you need time."
+    voice "audio/voiceline/act2_yellow/Date_performative_Bryan_Voiceline 3.wav"
+    bryan "Emcie… This is my proposal. Will you go to the hanami with me? You don't have to answer today. I'll wait for your answer at SDC if you need time."
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline14 act_2.mp3"
     mc "I'll-"
 
-    bryan "Sorry, I need to go now! I have to learn FLStudio, Bandlab, Reaper, Melodyne and also make a women's history month post!"
-    bryan "See you soon, sweetheart~"
+    voice "audio/voiceline/act2_yellow/Date_performative_Bryan_Voiceline 4.wav"
+    bryan "Sorry, I need to go now! I have to learn FLStudio, Bandlab, Reaper, Melodyne and also make a women's history month post! See you soon, sweetheart~"
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline15 act_2.mp3"
     mc "{i}Damn, didn't even get to say my 7th sentence.{/i}"
 
     $ yellow_done = True
     jump pathku2
 
 label bryan_loses:
-    host "Naoya!"
-    # SFX: crowd cheering yayayay / CROWD CHEER.mp3
+    voice "audio/voiceline/act2_yellow/Host_Lose_Voiceline.wav"
+    host "Our winner with the most points is… Naoya!"
     play audio "audio/CROWD CHEER.mp3"
-    # MUSIC: same competition music but quieter
 
-    # (Bryan walks down the stage, dejected)
+    voice "audio/voiceline/act2_yellow/Date_normal_Bryan_Voiceline 1.wav"
     bryan "*sigh* Damn it…"
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline16 act_2.mp3"
     mc "Hey, don't worry about it. It's just a silly competition."
 
+    voice "audio/voiceline/act2_yellow/Date_normal_Bryan_Voiceline 2.wav"
     bryan "{i}I thought I could nail this one bit properly, but I can't even do something as simple as that. I'm a failure.{/i}"
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline17 act_2.mp3"
     mc "Don't say that…"
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline18 act_2.mp3"
     mc "You don't need to build a personal brand outside of social media. You can just be you."
 
-    bryan "You have a point."
-    bryan "Gosh, why does it feel like we're finally having our first conversation? Even though we hung out the entire day…"
+    voice "audio/voiceline/act2_yellow/Date_normal_Bryan_Voiceline 3.wav"
+    bryan "You have a point. Gosh, why does it feel like we're finally having our first conversation? Even though we hung out the entire day…"
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline19 act_2.mp3"
     mc "I meannn, you didn't really let me talk."
 
-    bryan "Gosh, you're right."
-    bryan "I'm so sorry, Emcie. Maybe we can have a second date?"
-    bryan "There's a hanami coming up this week, and I'd love to go with you. I'll try being myself this time, for real."
-    bryan "Also, um… this was for you…"
+    voice "audio/voiceline/act2_yellow/Date_normal_Bryan_Voiceline 4.wav"
+    bryan "Gosh, you're right. I'm so sorry, Emcie. Maybe we can have a second date? There's a hanami coming up this week, and I'd love to go with you. I'll try being myself this time, for real. Also, um… this was for you…"
 
-    # Love pokeball card insert
+    voice "audio/voiceline/act2_yellow/Date_normal_Bryan_Voiceline 5.wav"
     bryan "You don't need to answer now. I'll wait for your answer at SDC?"
 
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline20 act_2.mp3"
     mc "Yeah, I'll let you know."
     mc "Do you wanna head back? I can show you my playlist instead this time."
 
+    voice "audio/voiceline/act2_yellow/Date_normal_Bryan_Voiceline 6.wav"
     bryan "*chuckles* Gladly!"
 
     $ yellow_done = True
