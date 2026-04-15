@@ -317,8 +317,16 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
-        for i in items:
-            textbutton i.caption action i.action
+        $ colors = ["#46b2ff", "#ff8282", "#ffff53", "#64ff7b"]
+
+        for idx, i in enumerate(items):
+            textbutton i.caption:
+                text_size 40
+                action i.action
+                text_color colors[idx % len(colors)]
+                text_hover_color "#FFFFFF"
+                text_outlines [(2, "#c5c5c5", 0, 0)]
+            
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
