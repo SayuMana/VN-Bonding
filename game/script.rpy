@@ -584,6 +584,7 @@ label cass_date_continues:
 # -------------------------------------------------------
 
 label act_2_yellow:
+    image Bryan date cafe = "images/background/Act2//Bryan/Bryan date cafe.png"
     play music "audio/Bryan's date.mp3" fadein 2.0 volume 0.5
     play sound "audio/shop-bell.mp3"
     scene Bryan date cafe with fade
