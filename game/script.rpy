@@ -1097,14 +1097,16 @@ label act_3:
 
     # SFX: All LI VAs bickering
     # MUSIC: Pre-Act 3 bickering.mp3
-    
+
     laeticia "Emcie! Do you know these people?!"
 
     cassandra "Explain yourself."
 
     if bryan_score >= 3:
+        voice "audio/voiceline/act3/Final Choice_performative_Bryan_Voiceline.wav"
         bryan "Ladies! Ladies!, calm down. I'm sure Emcie here will explain everything. Right, babe?"
     else:
+        voice "audio/voiceline/act3/Final Choice_normal_Bryan_Voiceline.wav"
         bryan "Calm down, guys. I'm sure Emcie here will explain everything. Right, Emcie?"
 
     viko "I'm incredibly uncomfortable."
@@ -1119,6 +1121,7 @@ label act_3:
 
     viko "I do remember being the one to invite you here…"
 
+    voice "audio/voiceline/act3/Final Choice_performative&normal_Bryan_Voiceline.wav"
     bryan "Yeah, I did the same thing!"
 
     laeticia "Hah! Well, that doesn't matter."
@@ -1128,9 +1131,11 @@ label act_3:
 
     viko "H-hey, that's not fair. I also invited them! Don't Emcie get a say in all t-this…"
 
+    voice "audio/voiceline/act3/Final Choice_harmony_Bryan_Voiceline.wav"
     bryan "That's right. Emcie should be the one to decide who they want to go with."
 
     # (All of them in harmony)
+    voice "audio/voiceline/act3/Final Choice_harmony_Bryan_Voiceline.wav"
     everyone "So, who are you choosing?"
 
     menu:
@@ -1190,24 +1195,27 @@ label act3_choose_bryan:
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
 
-    # perform
     if bryan_score >= 3:
+        voice "audio/voiceline/act3/Chosen_performative_Bryan_Voiceline 1.wav"
         bryan "Thank you. I never doubted you for a second. Sorry, guys, you heard them! Haha~"
 
         mc "Sorry for all that… I really didn't know how to avoid it."
         mc "But anyway, what are we doing tomorrow?"
 
+        voice "audio/voiceline/act3/Chosen_performative_Bryan_Voiceline 2.wav"
         bryan "Well~ It's more of a surprise. *chuckle* Don't worry your pretty little head about it, just make sure to wear something stylish, alright? I'll do the rest. See you tomorrow at 9?"
+
         mc "I'll see you."
 
         jump ending_bryan_performative
 
-    # normal
     else:
+        voice "audio/voiceline/act3/Chosen_normal_Bryan_Voiceline 1.wav"
         bryan "W-wait, me? Really? After that mess yesterday?"
 
         mc "You promised me you'll show me the real you, right?"
 
+        voice "audio/voiceline/act3/Chosen_normal_Bryan_Voiceline 2.wav"
         bryan "*chuckles* I'm so happy. Thank you so much. Ah, I actually did have something in mind for our date, but I want to keep it as a surprise. Would you be alright meeting me tomorrow at 9?"
 
         mc "Yeah. I'll see you."
@@ -1247,10 +1255,12 @@ label act3_choose_viko:
 label ending_bryan_normal:
     # MUSIC: ending music
     # SFX: Crowd noises
+    voice "audio/voiceline/act3/Ending_normal_Bryan_Voiceline 1.wav"
     bryan "How's the view? I made sure to get the best spot, just for you. You look amazing, by the way."
 
     mc "Thank you. You're looking pretty good yourself!"
 
+    voice "audio/voiceline/act3/Ending_normal_Bryan_Voiceline 2.wav"
     bryan "*chuckle* I'm trying out a new style… Ah, you should try these dishes I made! I wanted to get rid of all the matcha powder I had at home, so I cooked up a feast! Try them, please?"
 
     mc "{i}He's looking at me expectantly. I should try this, um, really green meal.{/i}"
@@ -1265,11 +1275,13 @@ label ending_bryan_normal:
     mc "{i}Bryan is having the time of his life right now… how strong is his gut????{/i}"
     mc "{i}I really, really, REALLY need to go!!!{/i}"
 
+    voice "audio/voiceline/act3/Ending_normal_Bryan_Voiceline 3.wav"
     bryan "Hm? What's up? There's crumbs on your lip, Emcie. Let me get that for you."
 
     mc "{i}He got really close and wiped the crumbs gently with his thumb.{/i}"
     mc "{i}He's staring at me really intensely. Is he… leaning in?{/i}"
 
+    voice "audio/voiceline/act3/Ending_normal_Bryan_Voiceline 4.wav"
     bryan "I think I missed a spot~"
 
     mc "WAIT I REALLY NEED TO GO THOUGH"
@@ -1283,9 +1295,9 @@ label ending_bryan_normal:
 label ending_bryan_normal_holdit:
     mc "LORD GIVE ME STRENGTH"
 
-    # Black screen
     # SFX: aggressive smooch/bonk
 
+    voice "audio/voiceline/act3/Ending1_normal_Bryan_Voiceline 1.wav"
     bryan "Ouch! Eh? Emcie, where are you going??"
 
     mc "I-I'LL BE BACK, DON'T WORRY!! I CAN STILL MAKE IT!!"
@@ -1297,6 +1309,37 @@ label ending_bryan_normal_holdit:
     mc "{i}I made a vague lie about seeing a horse girl, and I think he believed me.{/i}"
     mc "{i}Anyway, I've been regularly going on more dates with Bryan, and he's so much more honest and self-assured now.{/i}"
     mc "{i}Tomorrow will be our 6-month anniversary. Or is it 7 months?{/i}"
+    mc "{i}Thank you for playing with us!{/i}"
+
+    return
+
+label ending_bryan_normal_release:
+    mc "Yea it's coming out"
+
+    # SFX: incredibly loud disgusting fart noise
+
+    voice "audio/voiceline/act3/Ending2_normal_Bryan_Voiceline 1.wav"
+    bryan "…Uh-"
+
+    mc "………."
+
+    # ignore line
+    bryan "…"
+
+    mc "…"
+
+    # ignore line
+    bryan "…"
+
+    voice "audio/voiceline/act3/Ending2_normal_Bryan_Voiceline 2.wav"
+    bryan "What the f-"
+
+    # CUT TO BLACK, THEN ENDING CG fades in
+    # MUSIC: after non-kiss option music
+    mc "{i}(Sigh) Well, that was embarrassing.{/i}"
+    mc "{i}I had to urgently excuse myself, and as you can guess, I didn't come back, I mean, what would YOU do???{/i}"
+    mc "{i}After that disaster, I haven't spoken another word to Bryan. I don't know how I could ever come back after that.{/i}"
+    mc "{i}That's until, I suddenly see a notification from a very familiar username…{/i}"
     mc "{i}Thank you for playing with us!{/i}"
 
     return
@@ -1330,21 +1373,23 @@ label ending_bryan_normal_release:
     return
 
 
-# BRYAN PERFORMATIVE ENDING
 label ending_bryan_performative:
     # MUSIC: ending music
     # SFX: Crowd noises
+    voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 1.wav"
     bryan "This is great! I luckily got the best spot for pictures too~ You look amazing, by the way."
 
     mc "Thanks. You look…like usual (hot)"
 
+    voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 2.wav"
     bryan "I set up a picnic for us. We should take some pictures before digging in! C'mon, pretty, scoot closer to me."
 
     mc "{i}He pulls me by my waist, holding me tight by his side as he aims his digicam at us.{/i}"
     mc "{i}He's so warm…{/i}"
     mc "{i}Ah, he's looking at me now.{/i}"
 
-    bryan "*Shock*I think this is the part where we kiss. *(make ts real sultry zerrin)*"
+    voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 3.wav"
+    bryan "*Shock* I think this is the part where we kiss. *(make ts real sultry zerrin)*"
 
     mc "{i}He's leaning in… What should I do?{/i}"
 
@@ -1355,9 +1400,9 @@ label ending_bryan_performative:
             jump ending_bryan_performative_smack
 
 label ending_bryan_performative_smooch:
-    # Black screen
     # SFX: smooch
 
+    voice "audio/voiceline/act3/Ending1_performative_Bryan_Voiceline 1.wav"
     bryan "*chuckles* I'm so happy, Emcie. I promise I'll make you so so happy, too. Can I soft launch you on my Instagram, please?"
 
     # FADE TO BLACK, THEN ENDING CG
@@ -1373,11 +1418,13 @@ label ending_bryan_performative_smooch:
 label ending_bryan_performative_smack:
     # SFX: Smack noise
 
+    voice "audio/voiceline/act3/Ending2_performative_Bryan_Voiceline 1.wav"
     bryan "Wh- Hey! What's that for??"
 
     mc "We're about to share a passionate kiss, but you still had the camera pointed at us, really?"
     mc "I'm not willing to be your social media lover! I'm getting outta here…"
 
+    voice "audio/voiceline/act3/Ending2_performative_Bryan_Voiceline 2.wav"
     bryan "What?! Emcie, babe, come back, please!"
 
     # FADE TO BLACK, THEN ENDING CG
