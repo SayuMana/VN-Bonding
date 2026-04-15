@@ -584,12 +584,14 @@ label cass_date_continues:
 # -------------------------------------------------------
 
 label act_2_yellow:
-    play music "audio/Bryan's date.mp3" fadein 2.0
+    play music "audio/Bryan's date.mp3" fadein 2.0 volume 0.5
     play sound "audio/shop-bell.mp3"
+    scene Bryan date cafe with fade
 
     voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     mc "My date should be around here…"
+    scene Bryan date normal with fade
     voice "audio/voiceline/act2_yellow/MC bryan voiceline2 act_2.mp3"
     mc "…there's actually only one guy in here."
     voice "audio/voiceline/act2_yellow/MC bryan voiceline3 act_2.mp3"
@@ -603,6 +605,7 @@ label act_2_yellow:
     mc "{i}…Is that a goddamn labubu on his totebag.{/i}"
     voice "audio/voiceline/act2_yellow/MC bryan voiceline4 act_2.mp3"
     mc "Um… I like your green grape labubu."
+    scene Bryan date talk 
 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 1.wav"
     bryan "Oh- Oh! You were talking to me!..."
@@ -617,6 +620,7 @@ label act_2_yellow:
     bryan "I'm Bryan, it's nice to meet you too...."
 
     play sound "audio/page-flip-03.mp3"
+    scene Bryan date flaunt 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 4.wav"
     bryan "…*coughs*"
 
@@ -625,8 +629,9 @@ label act_2_yellow:
     voice "audio/voiceline/act2_yellow/MC bryan voiceline7 act_2.mp3"
     mc "What are you reading?"
 
+    scene Bryan date talk
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 5.wav"
-    bryan "I got distracted again, sorry...."
+    bryan "I got distracted again, sorry.... This book is just too good. it's called Nana by Ai Yazawa, it's such touching story about female friendship. Ah! i ordered an extra drink for you, it's my favorite. Here!"
 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 6.wav"
     bryan "I was thinking we could take a walk outside..."

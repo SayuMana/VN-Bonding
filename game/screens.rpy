@@ -223,8 +223,8 @@ style Cassandra_window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Transform("gui/Cassandra_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
-
+    background Transform("gui/Cass_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+ 
 style Bryan_window:
     xalign 0.5
     xfill True
