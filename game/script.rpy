@@ -1251,7 +1251,77 @@ label act3_choose_viko:
 # ENDINGS
 # -------------------------------------------------------
 
-# BRYAN NORMAL ENDING
+# bryan performative
+label ending_bryan_performative:
+    # MUSIC: ending music
+    # SFX: Crowd noises
+    voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 1.wav"
+    bryan "This is great! I luckily got the best spot for pictures too~ You look amazing, by the way."
+
+    mc "Thanks. You look…like usual (hot)"
+
+    voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 2.wav"
+    bryan "I set up a picnic for us. We should take some pictures before digging in! C'mon, pretty, scoot closer to me."
+
+    mc "{i}He pulls me by my waist, holding me tight by his side as he aims his digicam at us.{/i}"
+    mc "{i}He's so warm…{/i}"
+    mc "{i}Ah, he's looking at me now.{/i}"
+
+    voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 3.wav"
+    bryan "*Shock* I think this is the part where we kiss. *(make ts real sultry zerrin)*"
+
+    mc "{i}He's leaning in… What should I do?{/i}"
+
+    menu:
+        "Smooch him":
+            jump ending_bryan_performative_smooch
+        "Smack the digicam away":
+            jump ending_bryan_performative_smack
+
+label ending_bryan_performative_smooch:
+    # SFX: smooch
+
+    voice "audio/voiceline/act3/Ending1_performative_Bryan_Voiceline 1.wav"
+    bryan "*chuckles* I'm so happy, Emcie. I promise I'll make you so so happy, too. Can I soft launch you on my Instagram, please?"
+
+    # FADE TO BLACK, THEN ENDING CG
+    mc "{i}After our date, he immediately made 10 posts about it. Thankfully, his normal fans outweighed the parasocial ones, so I didn't get doxxed for dating him.{/i}"
+    mc "{i}Surprisingly, more people began following him for our couple's content, and he convinced me to make a public account too.{/i}"
+    mc "{i}Now, we both post mukbangs on our shared YouTube channel.{/i}"
+    # ignore line
+    mc "{i}We script out some drama here and there, but the money is really good. Who knew you could get a retirement plan from larping online?{/i}"
+    # ignore line
+    mc "{i}Anyways, Bryan and I are planning our 5th trip to Tokyo next week, so I gotta go.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
+label ending_bryan_performative_smack:
+    # SFX: Smack noise
+
+    voice "audio/voiceline/act3/Ending2_performative_Bryan_Voiceline 1.wav"
+    bryan "Wh- Hey! What's that for??"
+
+    mc "We're about to share a passionate kiss, but you still had the camera pointed at us, really?"
+    mc "I'm not willing to be your social media lover! I'm getting outta here…"
+
+    voice "audio/voiceline/act3/Ending2_performative_Bryan_Voiceline 2.wav"
+    bryan "What?! Emcie, babe, come back, please!"
+
+    # FADE TO BLACK, THEN ENDING CG
+    # MUSIC: after non-kiss option music
+    mc "{i}After I got home from that date, I saw notifications on my phone that Bryan had posted something.{/i}"
+    mc "{i}Well, I got a bit nervous, but it turns out it's just his usual 30 selfies at the hanami.{/i}"
+    mc "{i}I unfollowed him, naturally. Yet I did stalk him once in a while, though.{/i}"
+    mc "{i}That's how I found out, a few weeks later, he got cancelled on Twitter for trying to smooch and record me at the hanami.{/i}"
+    mc "{i}And you will not believe what his response was…{/i}"
+
+    # (Insert CG of Bryan doing ukelele apology)
+    mc "{i}Well, that was a disaster.{/i}"
+    mc "{i}Thanks for playing with us!{/i}"
+
+    return
+
 label ending_bryan_normal:
     # MUSIC: ending music
     # SFX: Crowd noises
@@ -1309,10 +1379,12 @@ label ending_bryan_normal_holdit:
     mc "{i}I made a vague lie about seeing a horse girl, and I think he believed me.{/i}"
     mc "{i}Anyway, I've been regularly going on more dates with Bryan, and he's so much more honest and self-assured now.{/i}"
     mc "{i}Tomorrow will be our 6-month anniversary. Or is it 7 months?{/i}"
+    # ignore line
     mc "{i}Thank you for playing with us!{/i}"
 
     return
 
+# Bryan Normal
 label ending_bryan_normal_release:
     mc "Yea it's coming out"
 
@@ -1321,11 +1393,13 @@ label ending_bryan_normal_release:
     voice "audio/voiceline/act3/Ending2_normal_Bryan_Voiceline 1.wav"
     bryan "…Uh-"
 
+    # ignore line
     mc "………."
 
     # ignore line
     bryan "…"
 
+    # ignore line
     mc "…"
 
     # ignore line
@@ -1341,103 +1415,6 @@ label ending_bryan_normal_release:
     mc "{i}After that disaster, I haven't spoken another word to Bryan. I don't know how I could ever come back after that.{/i}"
     mc "{i}That's until, I suddenly see a notification from a very familiar username…{/i}"
     mc "{i}Thank you for playing with us!{/i}"
-
-    return
-
-label ending_bryan_normal_release:
-    mc "Yea it's coming out"
-
-    # SFX: incredibly loud disgusting fart noise
-
-    bryan "…Uh-"
-
-    mc "………."
-
-    #ignore line
-    bryan "…"
-
-    mc "…"
-
-    # ignore line
-    bryan "…"
-    bryan "What the f-"
-
-    # CUT TO BLACK, THEN ENDING CG fades in
-    # MUSIC: after non-kiss option music
-    mc "{i}(Sigh) Well, that was embarrassing.{/i}"
-    mc "{i}I had to urgently excuse myself, and as you can guess, I didn't come back, I mean, what would YOU do???{/i}"
-    mc "{i}After that disaster, I haven't spoken another word to Bryan. I don't know how I could ever come back after that.{/i}"
-    mc "{i}That's until, I suddenly see a notification from a very familiar username…{/i}"
-    mc "{i}Thank you for playing with us!{/i}"
-
-    return
-
-
-label ending_bryan_performative:
-    # MUSIC: ending music
-    # SFX: Crowd noises
-    voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 1.wav"
-    bryan "This is great! I luckily got the best spot for pictures too~ You look amazing, by the way."
-
-    mc "Thanks. You look…like usual (hot)"
-
-    voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 2.wav"
-    bryan "I set up a picnic for us. We should take some pictures before digging in! C'mon, pretty, scoot closer to me."
-
-    mc "{i}He pulls me by my waist, holding me tight by his side as he aims his digicam at us.{/i}"
-    mc "{i}He's so warm…{/i}"
-    mc "{i}Ah, he's looking at me now.{/i}"
-
-    voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 3.wav"
-    bryan "*Shock* I think this is the part where we kiss. *(make ts real sultry zerrin)*"
-
-    mc "{i}He's leaning in… What should I do?{/i}"
-
-    menu:
-        "Smooch him":
-            jump ending_bryan_performative_smooch
-        "Smack the digicam away":
-            jump ending_bryan_performative_smack
-
-label ending_bryan_performative_smooch:
-    # SFX: smooch
-
-    voice "audio/voiceline/act3/Ending1_performative_Bryan_Voiceline 1.wav"
-    bryan "*chuckles* I'm so happy, Emcie. I promise I'll make you so so happy, too. Can I soft launch you on my Instagram, please?"
-
-    # FADE TO BLACK, THEN ENDING CG
-    mc "{i}After our date, he immediately made 10 posts about it. Thankfully, his normal fans outweighed the parasocial ones, so I didn't get doxxed for dating him.{/i}"
-    mc "{i}Surprisingly, more people began following him for our couple's content, and he convinced me to make a public account too.{/i}"
-    mc "{i}Now, we both post mukbangs on our shared YouTube channel.{/i}"
-    mc "{i}We script out some drama here and there, but the money is really good. Who knew you could get a retirement plan from larping online?{/i}"
-    mc "{i}Anyways, Bryan and I are planning our 5th trip to Tokyo next week, so I gotta go.{/i}"
-    mc "{i}Thanks for playing with us!{/i}"
-
-    return
-
-label ending_bryan_performative_smack:
-    # SFX: Smack noise
-
-    voice "audio/voiceline/act3/Ending2_performative_Bryan_Voiceline 1.wav"
-    bryan "Wh- Hey! What's that for??"
-
-    mc "We're about to share a passionate kiss, but you still had the camera pointed at us, really?"
-    mc "I'm not willing to be your social media lover! I'm getting outta here…"
-
-    voice "audio/voiceline/act3/Ending2_performative_Bryan_Voiceline 2.wav"
-    bryan "What?! Emcie, babe, come back, please!"
-
-    # FADE TO BLACK, THEN ENDING CG
-    # MUSIC: after non-kiss option music
-    mc "{i}After I got home from that date, I saw notifications on my phone that Bryan had posted something.{/i}"
-    mc "{i}Well, I got a bit nervous, but it turns out it's just his usual 30 selfies at the hanami.{/i}"
-    mc "{i}I unfollowed him, naturally. Yet I did stalk him once in a while, though.{/i}"
-    mc "{i}That's how I found out, a few weeks later, he got cancelled on Twitter for trying to smooch and record me at the hanami.{/i}"
-    mc "{i}And you will not believe what his response was…{/i}"
-
-    # (Insert CG of Bryan doing ukelele apology)
-    mc "{i}Well, that was a disaster.{/i}"
-    mc "{i}Thanks for playing with us!{/i}"
 
     return
 
