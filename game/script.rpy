@@ -149,10 +149,13 @@ label act_2_blue:
     image lae tease = "images/CGs/Act2/laeticia/Sitting Lae_tease.png"
     image lae thinking = "images/CGs/Act2/laeticia/Sitting Lae_thinking.png"
     image lae upset = "images/CGs/Act2/laeticia/Sitting Lae_upset.png"
+    image lae close = "images/CGs/Act2/laeticia/closeup.png"
+    image card reveal ="images/CGs/Act2/laeticia/Cards popup.png"
+    image card stay ="images/CGs/Act2/laeticia/Cards on table.png"
     play music "audio/Laeticia's date.mp3"
     play sound "audio/Crowd Talking.mp3" loop volume 0.5
     # BG: Bazaar UMN
-
+    scene bazaar with fade
     mc "Looks like there's an open booth!"
 
     # SFX: Wind chimes
@@ -175,19 +178,23 @@ label act_2_blue:
     mc "{i}We shook hands on it. Her hands are cold.{/i}"
     mc "{i}The thought of it is ridiculous when she's so hot.{/i}"
 
+    show lae talk
     laeticia "Emcie hmm…? Would you like me to do a tarot reading? Free of charge, just for you~"
 
     mc "Oh… um, sorry, I don't think this whole thing is for me."
 
     # (Laeticia pouts)
+    show lae upset
     laeticia "Well, that's unfortunate. People who visit this booth are always so mean~"
 
     mc "What— that's not what I meant—"
 
     # (Laeticia dramatic)
+    show lae talk
     laeticia "What a tragedy~ All that money I spent on these tarot cards could've gone for nirmana supplies… or printing my custom UMN-kun merch…. What a shame~"
 
     # (Smirks seductively)
+    show lae close  with dissolve
     laeticia "If only this cute… adorable Emcie… could help me out~"
 
     mc "{i}Zooweemama!!!{/i}"
@@ -195,7 +202,9 @@ label act_2_blue:
     mc "FINE, I'LL DO IT!"
 
     # (Laeticia smirks mischievously)
+    show lae tease with dissolve
     laeticia "You look adorable~, haha!"
+    show lae talk with dissolve
     laeticia "Shuffle these cards for me, hmm?"
 
     # SFX: cards shuffling
@@ -203,11 +212,14 @@ label act_2_blue:
     laeticia "Let's see who you REALLY are~"
 
     # (Reveal all 3 cards, Laeticia eyes closed) SFX: card swap
+    show card reveal with dissolve
     play sound "audio/card-swap.mp3"
     ""
+    show card stay with dissolve
 
     laeticia "Hmmm… okay… okay…"
     laeticia "In all seriousness, you just went through a disaster didn't you. Considering a certain event coming up… you just got rejected, didn't you~? Poor Emcie…"
+    scene bazaar no laeticia with fade
 
     laeticia "How did I do?"
 
@@ -258,6 +270,8 @@ label act_2_blue:
     mc "{i}I really… really hope I don't drop it this time…{/i}"
 
     # BG: Laeticia's apartment
+    scene bedroom with fade
+    image book ="images/background/Act2/lae/The_Enchiridion_(Adventure_Time).png"
     mc "{i}Damn girl you live like this???{/i}"
 
     laeticia "I'm so glad you're helping, Emcie. I really needed extra hands on this one."
@@ -287,9 +301,11 @@ label act_2_blue:
 
     # (Laeticia absolute psycho)
     laeticia "PERFECT! Let's prep for everything!"
+    show book with dissolve
     laeticia "So, I found this super old book in our library, tucked under the BI corner sofas…"
     # (ENCHIRIDION item popup)
     laeticia "It tells us that if two students do a ritual together in unison, UMN will manifest into human form!"
+    hide book with dissolve
     laeticia "I'll teach you the moves real quick. Watch me, kay?"
 
     # (Open dialogue box saying to remember her moves, it's 4 consecutive poses)
@@ -317,11 +333,13 @@ label act_2_blue:
     umn "In me, students dedicate their work to their country through the Three Pillars of Education! Allowing them to take their steps towards success through MY alma mater…"
 
     # (CG of UMN doing a dramatic pose under the spotlight)
+    scene jcafe vn snapshot with fade
     umn "I, Universitas Multimedia Nusantara, in flesh and bone, have waited for this day to come!"
     umn "Why have you summoned me here? To learn? I must warn you, knowledge comes with a price…. and that doesn't include SKS."
 
     # (Normal screen, laeticia and mc on left, umn on right)
     # (Laeticia lovestruck)
+    scene bedroom with fade
     laeticia "Oh…. Oh my god…"
     laeticia "Thanks for the help, Emcie… umm… get out of here right now…"
 
@@ -334,7 +352,9 @@ label act_2_blue:
     play sound "audio/door-slamming-sound-effect-no-repeats-or-silence-2016.mp3"
     mc "…"
     mc "{i}Did she just… kick me out…?{/i}"
+    stop music fadeout 2.0
     mc "{i}I wanna ask UMN questions too…{/i}"
+    
     $ blue_done = True
 
     jump pathku2
@@ -346,6 +366,12 @@ label act_2_blue:
 label act_2_red:
     play music "audio/Cass's date.mp3" volume 0.5
     # BG: Front lobby of Episode
+    scene lobby hotel:
+        xpos -0.3
+        ypos -0.3
+        zoom 1.5
+        
+    with fade
 
     mc "Whoa, so.. Fancy? This whole lobby can pay for all 4 years of uni…"
 
@@ -359,14 +385,21 @@ label act_2_red:
     # SFX: Elevator ding!!
     play audio "audio/Elevator Ding.mp3"
     ""
+    scene lift:
+        xpos -0.1
+        ypos 0.0
+        zoom 2.5
+    with fade
     mc "{i}I feel my feet tremble below me, whoever this date is…{/i}"
     mc "{i}Must be involved in either illegal logging or mining….{/i}"
     mc "{i}Or worse..{/i}"
     mc "{i}APBN. (Anggaran Pendapatan dan Belanja Negara){/i}"
+    scene black with fade
     mc "{i}I reached the door and knocked on it twice.{/i}"
 
     # SFX: Knock knock
     play audio "audio/Knock Knock.mp3"
+    scene cass appear with fade
     # (Insert CG of CHAD CASS opening the door)
 
     cassandra "Oh well well well… Hello there kitten.."
@@ -378,7 +411,11 @@ label act_2_red:
 
     # (End CG)
     # BG: Hotel room
-
+    scene hotel room:
+        xpos 0.0
+        ypos 0.0
+        zoom 2.9
+    with fade
     mc "I.."
 
     cassandra "Don't waste your breath."
@@ -465,6 +502,8 @@ label cass_date_continues:
     cassandra "Now, won't you close your eyes and trust me?"
 
     # (Cass' sprite moves closer to MC)
+
+    scene black with fade
     mc "{i}I closed my eyes and felt a blindfold- what the heck is she going to do?!{/i}"
     mc "{i}Am I getting picked up?! She's so strong… I think she's holding me with only her arm.{/i}"
 
@@ -481,7 +520,7 @@ label cass_date_continues:
     # SFX: crowd noise
     play audio "audio/Mall Crowd Ambiance.mp3"
     # (CG silhouette Cass and MC looking at her bodyguards and store staff handing them clothes)
-
+    
     mc "Is this SMS?? How did we get here so fast?? Heh- Are these clothes?"
     mc "Do you really expect me to try all of that?"
 
@@ -584,15 +623,15 @@ label cass_date_continues:
 # -------------------------------------------------------
 
 label act_2_yellow:
-    image Bryan date cafe = "images/background/Act2//Bryan/Bryan date cafe.png"
-    play music "audio/Bryan's date.mp3" fadein 2.0 volume 0.5
+    
+    play music "audio/Bryan's date.mp3" fadein 2.0 volume 0.2
     play sound "audio/shop-bell.mp3"
-    scene Bryan date cafe with fade
+    scene bryan date cafe with fade
 
     voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     mc "My date should be around here…"
-    scene Bryan date normal with fade
+    scene bryan date normal with fade
     voice "audio/voiceline/act2_yellow/MC bryan voiceline2 act_2.mp3"
     mc "…there's actually only one guy in here."
     voice "audio/voiceline/act2_yellow/MC bryan voiceline3 act_2.mp3"
@@ -606,7 +645,7 @@ label act_2_yellow:
     mc "{i}…Is that a goddamn labubu on his totebag.{/i}"
     voice "audio/voiceline/act2_yellow/MC bryan voiceline4 act_2.mp3"
     mc "Um… I like your green grape labubu."
-    scene Bryan date talk 
+    scene bryan date talk 
 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 1.wav"
     bryan "Oh- Oh! You were talking to me!..."
@@ -618,10 +657,11 @@ label act_2_yellow:
     bryan "*chuckles* It's alright..."
 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 3.wav"
-    bryan "I'm Bryan, it's nice to meet you too...."
+    bryan "I'm Bryan, it's nice to meet you too...I totally didn’t expect to go on a date today. Luckily, I stop by this cafe every day to read.
+    Ah, I was actually at a really good part"
 
     play sound "audio/page-flip-03.mp3"
-    scene Bryan date flaunt 
+    scene bryan date flaunt 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 4.wav"
     bryan "…*coughs*"
 
@@ -630,42 +670,53 @@ label act_2_yellow:
     voice "audio/voiceline/act2_yellow/MC bryan voiceline7 act_2.mp3"
     mc "What are you reading?"
 
-    scene Bryan date talk
+    scene bryan date talk
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 5.wav"
     bryan "I got distracted again, sorry.... This book is just too good. it's called Nana by Ai Yazawa, it's such touching story about female friendship. Ah! i ordered an extra drink for you, it's my favorite. Here!"
 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 6.wav"
-    bryan "I was thinking we could take a walk outside..."
+    bryan "I was thinking we could take a walk outside together, since it’s almost golden hour.
+"
+
 
     play audio "audio/running-footsteps-sound-effect-hd.mp3"
     play audio "audio/Bell.mp3"
-
+    scene bryan date outside:
+        xpos 0.0
+        ypos 0.0
+        zoom 2.2
+        
+    with fade
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 7.wav"
-    bryan "That reminds me, there's this competition..."
+    bryan "That reminds me, there’s this competition I wanted to compete in today! It’d be nice if we could walk there together.
+It’s an hour away."
 
     voice "audio/voiceline/act2_yellow/MC bryan voiceline8 act_2.mp3"
     mc "An hour?!"
 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 8.wav"
-    bryan "Don't worry. I got a real feel-good playlist..."
+    bryan "Don't worry. I got a real feel-good playlist for times like this, C'mon, give it a listen"
 
     voice "audio/voiceline/act2_yellow/MC bryan voiceline9 act_2.mp3"
     mc "{i}He pulled out his phone and carefully tucked my hair behind my ears to slip in the earbud. What I hear next is…{/i}"
     stop music
-    play music "audio/_yoru-ni-kakeru-lyric-video_50k-1-mp3cut.mp3"
+    play music "audio/_yoru-ni-kakeru-lyric-video_50k-1-mp3cut.mp3" volume 0.7
     # ignore
     mc "......."
     voice "audio/voiceline/act2_yellow/MC bryan voiceline10 act_2.mp3"
     mc "{i}This is going to be a long walk.{/i}"
     stop music fadeout 2.0
 
+    scene black with fade
     play sound "audio/CROWD CHEER.mp3"
+    scene bryan competition with fade
 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 9.wav"
     bryan "Shoot, we're late! Sorry, I gotta get up on the stage right now!"
 
     voice "audio/voiceline/act2_yellow/Host_Voiceline1.wav"
-    host "Alright, ladies and men!..."
+    host "Alright, ladies and gentlemen! It’s time for the part you’ve all been waiting for: our competitive quiz!
+It’s simple. All you need to do is answer quickly for the next 4 questions. Today’s topic: feminism, of course."
 
     play sound "audio/pop_7e9Is8L.mp3"
     voice "audio/voiceline/act2_yellow/MC bryan voiceline11 act_2.mp3"
@@ -732,7 +783,15 @@ label bryan_wins:
     play audio "audio/CROWD CHEER.mp3"
 
     voice "audio/voiceline/act2_yellow/Host_Voiceline6.wav"
+    
     host "Congratulations, Bryan! Here is your humble prize of a peter griffin plushie! Oh, and your complimentary accessories."
+    show peter:
+        xpos 0.3
+        ypos 0.4
+        zoom 1.2
+    with dissolve 
+    ""
+    hide peter with dissolve
 
     play audio "audio/running-footsteps-sound-effect-hd.mp3"
     voice "audio/voiceline/act2_yellow/Date_performative_Bryan_Voiceline 1.wav"
@@ -744,15 +803,24 @@ label bryan_wins:
     voice "audio/voiceline/act2_yellow/Date_performative_Bryan_Voiceline 2.wav"
     bryan "*clears throat* I've been thinking about it, and I wanted to give you this."
 
+    show pokeball:
+        zoom 0.7
+        xpos 0.4
+        ypos 0.4
+    
+    with dissolve
+
     voice "audio/voiceline/act2_yellow/Date_performative_Bryan_Voiceline 3.wav"
     bryan "Emcie… This is my proposal. Will you go to the hanami with me? You don't have to answer today. I'll wait for your answer at SDC if you need time."
 
     voice "audio/voiceline/act2_yellow/MC bryan voiceline14 act_2.mp3"
     mc "I'll-"
 
+    hide pokeball with dissolve
+
     voice "audio/voiceline/act2_yellow/Date_performative_Bryan_Voiceline 4.wav"
     bryan "Sorry, I need to go now! I have to learn FLStudio, Bandlab, Reaper, Melodyne and also make a women's history month post! See you soon, sweetheart~"
-
+    stop music fadeout 2.0
     voice "audio/voiceline/act2_yellow/MC bryan voiceline15 act_2.mp3"
     mc "{i}Damn, didn't even get to say my 7th sentence.{/i}"
 
@@ -808,6 +876,7 @@ label act_2_green:
     play music "audio/Viko.mp3"
     # MUSIC: Viko.mp3
     # BG: Grocery store
+    scene grocery store with fade
     # SFX: grocery store ambience (25% volume) / Grocery Store Ambience.mp3
     play sound "audio/Grocery Store Ambience.mp3" volume 0.25
 
@@ -1091,18 +1160,28 @@ label viko_grocery_shopping:
 # -------------------------------------------------------
 
 label act_3:
-    stop music
+    stop music fadeout 2.0
     # MUSIC: Silence, for now
+    scene black with fade
+    play music "audio/single-heatbeat.mp3"
     # SFX: Heartbeat sounds
 
     mc "Ooook… Here I am. It's almost time…"
     mc "To pick…. A date."
-
+    stop music
+    scene mekdi2: 
+        zoom 2.9
+        xpos 0.0
+    
+    
+    with fade
+    play sound "audio/short-drumroll.mp3"
     # SFX: Short drumroll
     mc "{i}Hopefully… everyone I don't choose is a good sport about it.{/i}"
 
     # SFX: All LI VAs bickering
     # MUSIC: Pre-Act 3 bickering.mp3
+    play music "audio/Pre3.mp3" volume 0.4
 
     laeticia "Emcie! Do you know these people?!"
 
