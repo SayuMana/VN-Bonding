@@ -1221,6 +1221,7 @@ label act_3:
 
     # (All of them in harmony)
     voice "audio/voiceline/act3/Final Choice_harmony_Bryan_Voiceline.wav"
+    stop music fadeout 2.0
     everyone "So, who are you choosing?"
 
     menu:
@@ -1240,6 +1241,7 @@ label act3_choose_laeticia:
     viko "I should've stayed at home…"
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
+    play music "audio/doki.mp3" volume 0.6
     laeticia "YES YES YES!!! Take that, randoms!"
     laeticia "Emcie! I'm so happy!"
 
@@ -1261,6 +1263,7 @@ label act3_choose_cassandra:
     viko "I should've stayed at home…"
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
+    play music "audio/doki.mp3" volume 0.6
     cassandra "I knew you'd make the right choice."
 
     mc "Sorry for all that… I really didn't know how to avoid it."
@@ -1279,6 +1282,7 @@ label act3_choose_bryan:
     laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     cassandra "…"
     viko "I should've stayed at home…"
+    play music "audio/doki.mp3" volume 0.6
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
 
@@ -1316,6 +1320,7 @@ label act3_choose_viko:
     bryan "*sigh* Well, I don't mind, as long as you're happy."
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
+    play music "audio/doki.mp3" volume 0.6
     viko "OH! Oh my god- Y-you really chose me! I- I'm so happy, wait- let me process this please!!!!"
 
     mc "Sorry for all that… I really didn't know how to avoid it."
