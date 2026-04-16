@@ -96,6 +96,9 @@ label act_1:
     play music "audio/Opening act + flashback.mp3" volume 1.0
     mc "..."
     scene bg park_afternoon with fade
+    show mc neutral at left:
+        zoom 0.4
+        ypos 1.1
     mc "Haiyahh… what the heck should I do now, all those plans wasted."
 
     # SFX: wet slapping noise
@@ -243,7 +246,13 @@ label act_2_blue:
 
     laeticia "Hmmm… okay… okay…"
     laeticia "In all seriousness, you just went through a disaster didn't you. Considering a certain event coming up… you just got rejected, didn't you~? Poor Emcie…"
-    scene bazaar no laeticia with fade
+    scene bazaar no laeticia with fade  
+    show laeticia smile at right:
+        zoom 0.53
+        ypos 1.52
+    show mc neutral at left:
+        zoom 0.4
+        ypos 1.1
 
     laeticia "So how did I do?"
 
@@ -269,7 +278,13 @@ label act_2_blue:
     mc "…"
 
     # (Laeticia shocked)
+    show laeticia angry 1 at right:
+        zoom 0.53
+        ypos 1.52
     laeticia "My nirmana…that's due tomorrow…"
+    show laeticia angry 2 at right:
+        zoom 0.53
+        ypos 1.52
     laeticia "That took me 2 weeks."
 
     # (Open dialogue box asking the audience to apologize loudly)
@@ -286,6 +301,10 @@ label act_2_blue:
             pass
 
     # (Laeticia trying to keep it together, smiling a bit)
+    show laeticia disappointed at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
     laeticia "I guess accidents just happen. It's alright…"
     laeticia "I…. Let's just… let's just clean it up…"
 
@@ -296,7 +315,15 @@ label act_2_blue:
     # BG: Laeticia's apartment
     scene bedroom with fade
     image book ="images/background/Act2/lae/The_Enchiridion_(Adventure_Time).png"
+    show mc neutral at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     mc "{i}Damn girl you live like this???{/i}"
+    show laeticia smile at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
 
     laeticia "I'm so glad you're helping, Emcie. I really needed extra hands on this one."
 
@@ -349,10 +376,16 @@ label act_2_blue:
     laeticia "I- I think it worked!!"
 
     # (black screen)
+    scene black with fade
     umn "*chuckle* Who dares summon me?~"
 
     # SFX: spotlight turning on
+    show umn:
+        zoom 0.7
+        xpos 0.3
+        ypos 0.1
     play sound "audio/spotlight-sound.mp3"
+
     ""
 
     umn "In me, students dedicate their work to their country through the Three Pillars of Education! Allowing them to take their steps towards success through MY alma mater…"
@@ -366,15 +399,28 @@ label act_2_blue:
     # (Normal screen, laeticia and mc on left, umn on right)
     # (Laeticia lovestruck)
     scene bedroom with fade
+    show laeticia surprised at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
     laeticia "Oh…. Oh my god…"
     laeticia "Thanks for the help, Emcie… umm… get out of here right now…"
 
+    show mc neutral at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     mc "Uhh what–"
 
     # (Laeticia lovestruck, rap god)
+    show laeticia sparkle at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
     laeticia "—GET OUT OF MY APARTMENT! I'LL TEXT YOU LATER, THANKS FOR THE HELP, LOVE YOU, BYE!"
 
     # SFX: door slam shut
+    scene black
     play sound "audio/door-slamming-sound-effect-no-repeats-or-silence-2016.mp3"
     mc "…"
     mc "{i}Did she just… kick me out…?{/i}"
@@ -577,7 +623,7 @@ label cass_date_continues:
     stop music
     ""
     # MUSIC: action bgm
-    play audio "audio/cass kidnapped!!.mp3"
+    play audio "audio/cass kidnapped!!.mp3" volume 0.5
     mc "*oomph* What the- hey! LET ME GO!! CASS! (muffled)"
     mc "Cass! Please tell me you saw this…"
 
@@ -609,25 +655,53 @@ label cass_date_continues:
     mc "{i}Oh help me Cass…! You're my only hope…!{/i}"
 
     # SFX: thundering footsteps then BAM (SHAKE SCREEN)
-    play audio "audio/heavy-footstep.mp3"
+    play music "audio/heavy-footstep.mp3"
     ""
+    stop music
+    scene cinema bg with fade
     play audio "audio/roblox-explosion-sound.mp3"
+    show cass cinema:
+        zoom 0.3
+        xpos 0.33
+        ypos 0.4
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 10
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 10
+    with dissolve
+        
+
     # (CG of Cass bursting into the room with explosive background)
     ""
     cassandra "Wassup, baby girl, I'm here to save you."
 
     mc "Cass!!"
 
+    show cass cinema:
+        zoom 0.3
+        xpos 0.33
+        ypos 0.4
+        easein 13 zoom 1.5  xpos -0.3 ypos -2
+    
     # (Same CG of Cass but her sprite jumpscares us)
     play audio "audio/heavy-footstep.mp3" volume 1.5
     # SFX: thundering footsteps APPROACHING
     "....."
     stop audio
+    show cass cinema:
+        zoom 3.0
+        xpos -1.05
+        ypos 0.0
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 10
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 1
+
     play audio "audio/Thunder   Sound effect.mp3" volume 2.0
     # kidnapper line 5
     voice "audio/voiceline/act2_red/Kidnapper_Voiceline5.wav"
     kidnapper "BUSET!!!!!!!!!!!!!!"
-
+    scene black with fade
     # (Add video of the fight scene)
 
     # (Cinema bg again with hole in the back, Cass on right side MC on left)
@@ -832,8 +906,7 @@ label bryan_wins:
         xpos 0.4
         ypos 0.4
     
-    with dissolve
-
+    with moveinbottom
     voice "audio/voiceline/act2_yellow/Date_performative_Bryan_Voiceline 3.wav"
     bryan "Emcie… This is my proposal. Will you go to the hanami with me? You don't have to answer today. I'll wait for your answer at SDC if you need time."
 
