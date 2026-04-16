@@ -45,6 +45,16 @@ screen choice(items):
             elif i.caption == "Cause a scene and flee when she's distracted.":
                 $ img = "gui/button/ui_bryan_competition3.png"
 
+
+            elif i.caption == "Laeticia":
+                $ img = "gui/button/ui_bryan_competition4.png"
+            elif i.caption == "Cassandra":
+                $ img = "gui/button/ui_bryan_competition2.png"
+            elif i.caption == "Bryan":
+                $ img = "gui/button/ui_bryan_competition1.png"
+            elif i.caption == "Viko":
+                $ img = "gui/button/ui_bryan_competition3.png"
+
             elif i.caption == "Help your twink":
                 $ img = "gui/button/ui_bryan_competition4.png"
             elif i.caption == "Hey where did the employees go?":

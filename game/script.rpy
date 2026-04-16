@@ -1458,6 +1458,8 @@ label ending_bryan_performative_smooch:
     bryan "*chuckles* I'm so happy, Emcie. I promise I'll make you so so happy, too. Can I soft launch you on my Instagram, please?"
 
     # FADE TO BLACK, THEN ENDING CG
+    scene black with fade
+    scene performative good with fade
     voice "audio/voiceline/ending_bryan/MC bryan voiceline6 act_3.mp3"
     mc "{i}After our date, he immediately made 10 posts about it. Thankfully, his normal fans outweighed the parasocial ones, so I didn't get doxxed for dating him.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline7 act_3.mp3"
@@ -1486,7 +1488,9 @@ label ending_bryan_performative_smack:
     bryan "What?! Emcie, babe, come back, please!"
 
     # FADE TO BLACK, THEN ENDING CG
+    scene black with fade
     # MUSIC: after non-kiss option music
+    scene performative bad with fade
     voice "audio/voiceline/ending_bryan/MC bryan voiceline12 act_3.mp3"
     mc "{i}After I got home from that date, I saw notifications on my phone that Bryan had posted something.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline13 act_3.mp3"
@@ -1569,6 +1573,8 @@ label ending_bryan_normal_holdit:
     mc "I-I'LL BE BACK, DON'T WORRY!! I CAN STILL MAKE IT!!"
 
     # FADE TO BLACK, THEN ENDING CG
+    scene black with fade
+    scene normal good with fade
     # MUSIC: after non-kiss option music
     voice "audio/voiceline/ending_bryan/MC bryan voiceline33 act_3.mp3"
     mc "{i}Fortunately, I had enough willpower to hold it all in, and not traumatize him.{/i}"
@@ -1603,6 +1609,8 @@ label ending_bryan_normal_release:
     bryan "What the f-"
 
     # CUT TO BLACK, THEN ENDING CG fades in
+    scene black with fade
+    scene normal bad with fade
     # MUSIC: after non-kiss option music
     voice "audio/voiceline/ending_bryan/MC bryan voiceline39 act_3.mp3"
     mc "{i}(Sigh) Well, that was embarrassing.{/i}"
