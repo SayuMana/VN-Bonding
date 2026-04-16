@@ -19,75 +19,76 @@ label act_1:
     scene bg park_afternoon with fade
     play music "audio/Opening act + flashback.mp3" volume 1.0
     play sound "audio/Nature sounds.mp3" volume 1.5
+    voice "audio/voiceline/act1/Act 1_MC_Line 1.wav"
     mc "{i}It's a beautiful day outside…{/i}"
+    voice "audio/voiceline/act1/Act 1_MC_Line 2.wav"
     mc "{i}Birds are singing…{/i}"
+    voice "audio/voiceline/act1/Act 1_MC_Line 3.wav"
     mc "{i}Flowers are blooming…{/i}"
+    voice "audio/voiceline/act1/Act 1_MC_Line 4.wav"
     mc "{i}On days like this, so close to the Hanami… Chuds like me should be going on dates with cuties!!!{/i}"
     stop sound
     stop music
 
-
     play sound "audio/Thunder   Sound effect.mp3" volume 1.5
+    voice "audio/voiceline/act1/Act 1_MC_Line 5.wav"
     mc "{i}It was all going so well!{/i}"
+    voice "audio/voiceline/act1/Act 1_MC_Line 6.wav"
     mc "{i}I had everything planned out, but when I finally dared to ask out senpai…{/i}"
     stop sound
 
-    
     play music "<from 86.0>audio/Opening act + flashback.mp3" loop
-    # (Insert CGs of Act 1 Japanese Confession Scene)
     play sound "audio/Nature sounds.mp3" volume 1.5
     
     scene mc1 with fade
+    voice "audio/voiceline/act1/Act 1_MC_Line 7.wav"
     mc "S-senpai Gian! Please go to the hanami with me! I need you bad!!!"
     stop music
     stop sound
 
-    # SFX: wind rustling romance noises
-    # SFX: record stop noise / RECORD DISC SCRATCH.mp3
     play sound "<from 06.0>audio/RECORD DISC SCRATCH.mp3"
-    # gian line1
-    voice "audio/voiceline/act1/act1_Gian_line1.mp3"
+    # gian line1 (ignored)
     scene mc2
     gian "Ew, no."
 
+    voice "audio/voiceline/act1/Act 1_MC_Line 8.wav"
     mc "*GASP* Wait, why?!"
     play sound "audio/Nature sounds.mp3" volume 1.5
 
-    # gian line2
-    voice "audio/voiceline/act1/act1_Gian_line2.mp3"
+    # gian line2-5 (ignored)
     scene mc3
     gian "You think I want to go out with YOU?"
-    # gian line3
-    voice "audio/voiceline/act1/act1_Gian_line3.mp3"
     gian "You are CHOPPED and BROKE, nandayo."
-    # gian line4
-    voice "audio/voiceline/act1/act1_Gian_line4.mp3"
     gian "You'll be lucky if a baddie like me even BLINKS in your direction lol"
-    # gian line5
-    voice "audio/voiceline/act1/act1_Gian_line5.mp3"
     scene mc4
     gian "Bye loser LMFAOOOO"
     stop sound
 
-    # SFX: wet crying snotty noises
     play music "audio/Opening act + flashback.mp3" volume 1.0
+    voice "audio/voiceline/act1/Act 1_MC_Line 9.wav"
     mc "..."
     scene bg park_afternoon with fade
     show mc neutral at left:
         zoom 0.4
         ypos 1.1
+    voice "audio/voiceline/act1/Act 1_MC_Line 10.wav"
     mc "Haiyahh… what the heck should I do now, all those plans wasted."
 
     # SFX: wet slapping noise
+    voice "audio/voiceline/act1/Act 1_MC_Line 11.wav"
     mc "Ew… What the Freak! Why is it so wet…"
 
     # SFX: peeling off wet paper
+    voice "audio/voiceline/act1/Act 1_MC_Line 12.wav"
     mc "*Screams* OH HELL NO!-"
 
     play sound "<from 02.0>audio/Page_turn.mp3" volume 1.0
+    voice "audio/voiceline/act1/Act 1_MC_Line 13.wav"
     mc "-oh wait, what's this? A form to meet your soulmate?"
 
+    voice "audio/voiceline/act1/Act 1_MC_Line 14.wav"
     mc "Well, I do still want to go to the hanami… and it'd be kinda sad going alone."
+    voice "audio/voiceline/act1/Act 1_MC_Line 15.wav"
     mc "I might as well try!"
 
     play music "audio/Form_Time.mp3" volume 0.3
@@ -103,14 +104,14 @@ label act_1:
         "A Catboy":
             $ green += 1
 
-    # (Still form bg, MC fills in personal info)
-    
-    mc "Done! (kinda mumbling) Now I just need to fill in my number… and email…"
+    voice "audio/voiceline/act1/Act 1_MC_Line 16.wav"
+    mc "Done! *mumbling* Now I just need to fill in my number… and email…"
     stop music
-    # SFX: ping!
     play sound "audio/harikitte_ikou_kitasan.mp3"
+    # ignore line (the "....." is not voiced)
     mc "....."
     play music "audio/Opening act + flashback.mp3" volume 1.0
+    voice "audio/voiceline/act1/Act 1_MC_Line 17.wav"
     mc "A text already?! It says my soulmate is nearby! I'd better head there quickly."
     stop music
     jump pathku
@@ -529,7 +530,7 @@ label cass_chat:
 label cass_bicep:
     mc "{i}She's just sitting there, menacingly.{/i}"
     mc "{i}I wonder what's going on inside her head…{/i}"
-    mc "{i}Before my silly brain can react, I give her strong, juicy arm a little squeeze.{/i}"
+    mc "{i}I give her strong, juicy arm a little squeeze.{/i}"
     mc "{i}My hand stays there…{/i}"
     mc "{i}For just a little longer…{/i}"
 
