@@ -74,3 +74,27 @@ screen choice(items):
                     size 30
                     color "#000000"
                     outlines [(2, "#FFFFFF", 0, 0)]
+
+# screen kahoot_menu(options):
+#     style_prefix "choice"
+#     vbox:
+#         xalign 0.5
+#         yalign 0.3
+#         spacing 10
+#         for opt in options:
+#             $ btn_color = opt[2]
+#             $ text_col = opt[3]
+#             textbutton opt[0]:
+#                 action opt[1]
+#                 background Solid(btn_color)
+#                 text_color text_col
+#                 xsize 1500
+#                 ysize 60
+
+    # # test langsung disini aja
+    # call screen kahoot_menu([
+    #     ("daoidydasiuoydfsauiydasuiyduiasyauisdyaisdi", Jump("a_end"), "#FF0000", "#FFFFFF"),
+    #     ("Option B", Jump("b_end"), "#0000FF", "#FFFFFF"),
+    #     ("Option C", Jump("c_end"), "#477a37", "#FFFFFF"),
+    #     ("Option D", Jump("d_end"), "#f2ff00", "#FFFFFF")
+    # ])
