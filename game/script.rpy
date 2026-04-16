@@ -12,7 +12,30 @@ default green_done = False
 default bryan_score = 0
 default viko_help = False
 
+# screen kahoot_menu(options):
+#     style_prefix "choice"
+#     vbox:
+#         xalign 0.5
+#         yalign 0.3
+#         spacing 10
+#         for opt in options:
+#             $ btn_color = opt[2]
+#             $ text_col = opt[3]
+#             textbutton opt[0]:
+#                 action opt[1]
+#                 background Solid(btn_color)
+#                 text_color text_col
+#                 xsize 1500
+#                 ysize 60
+
 label start:
+    # # test langsung disini aja
+    # call screen kahoot_menu([
+    #     ("daoidydasiuoydfsauiydasuiyduiasyauisdyaisdi", Jump("a_end"), "#FF0000", "#FFFFFF"),
+    #     ("Option B", Jump("b_end"), "#0000FF", "#FFFFFF"),
+    #     ("Option C", Jump("c_end"), "#477a37", "#FFFFFF"),
+    #     ("Option D", Jump("d_end"), "#f2ff00", "#FFFFFF")
+    # ])
     jump act_1
 
 label act_1:
@@ -209,6 +232,7 @@ label act_2_blue:
 
     # SFX: cards shuffling
     play sound "audio/card-shuffle.mp3"
+    # ignore line
     laeticia "Let's see who you REALLY are~"
 
     # (Reveal all 3 cards, Laeticia eyes closed) SFX: card swap
@@ -221,7 +245,7 @@ label act_2_blue:
     laeticia "In all seriousness, you just went through a disaster didn't you. Considering a certain event coming up… you just got rejected, didn't you~? Poor Emcie…"
     scene bazaar no laeticia with fade
 
-    laeticia "How did I do?"
+    laeticia "So how did I do?"
 
     mc "I'm both impressed and creeped out."
 
@@ -284,6 +308,7 @@ label act_2_blue:
     # MUSIC: UMN's Awakening.mp3
     play music "audio/UMN's Awakening.mp3"
     # (Laeticia dramatic)
+    # ignore line
     laeticia "So, you know how UMN is the best university around here?"
     laeticia "Wouldn't it be fantastic if we… could talk to UMN himself?"
 
@@ -335,6 +360,7 @@ label act_2_blue:
     # (CG of UMN doing a dramatic pose under the spotlight)
     scene jcafe vn snapshot with fade
     umn "I, Universitas Multimedia Nusantara, in flesh and bone, have waited for this day to come!"
+    # ignore
     umn "Why have you summoned me here? To learn? I must warn you, knowledge comes with a price…. and that doesn't include SKS."
 
     # (Normal screen, laeticia and mc on left, umn on right)
@@ -565,7 +591,6 @@ label cass_date_continues:
 
     mc "IT'S OUR FIRST DATE???"
 
-    # kidnapper line 2
     voice "audio/voiceline/act2_red/Kidnapper_Voiceline2.wav"
     kidnapper "Nothing personal, kid."
     # kidnapper line 3
@@ -628,7 +653,6 @@ label act_2_yellow:
     play sound "audio/shop-bell.mp3"
     scene bryan date cafe with fade
 
-    voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     mc "My date should be around here…"
     scene bryan date normal with fade
@@ -772,7 +796,7 @@ It’s simple. All you need to do is answer quickly for the next 4 questions. To
 
     play audio "audio/drum-roll-gaming-sound-effect-hd.mp3"
 
-    if bryan_score >= 3:
+    if bryan_score >= 2:
         jump bryan_wins
     else:
         jump bryan_loses
@@ -849,7 +873,7 @@ label bryan_loses:
     voice "audio/voiceline/act2_yellow/Date_normal_Bryan_Voiceline 3.wav"
     bryan "You have a point. Gosh, why does it feel like we're finally having our first conversation? Even though we hung out the entire day…"
 
-    voice "audio/voiceline/act2_yellow/MC bryan voiceline19 act_2.mp3"
+    voice "audio/voiceline/act2_yellow/MC bryan voiceline19 act_2.mp3   "
     mc "I meannn, you didn't really let me talk."
 
     voice "audio/voiceline/act2_yellow/Date_normal_Bryan_Voiceline 4.wav"
@@ -890,13 +914,14 @@ label act_2_green:
 
     mc "WHAT WAS THAT!!"
     stop music
-    play music "audio/Tense Moments!.mp3"
+    play music "audio/Tense Moments!.mp3" volume 0.35
     # SFX: MC running / 1 PERSON RUNNING.mp3
     play sound "audio/1 PERSON RUNNING.mp3"
     # (Viko is holding on to dear life (the chicken), fighting off a seasoned mother)
-
+    scene cg chicken with fade
     mc "{i}That guy looks like he's in trouble!… Wait a sec….{/i}"
     mc "{i}Is THAT my date???????{/i}"
+    stop sound fadeout 2.
 
     # (Enci dialogue automatically skips through)
     enci "KIDS THESE DAYS HAVE NO RESPECT FOR YOUR ELDERS"
@@ -962,6 +987,7 @@ label viko_help:
     # RETURN TO MAIN MUSIC
     play music "audio/Viko.mp3" fadein 2.0
     # BG: Grocery Store
+    scene grocery store with fade
     mc "Ow…Are you okay? Are you hurt anywhere?"
 
     viko "I don't think so… Thanks- uh I appreciate y-you asking, um…"
@@ -1016,6 +1042,7 @@ label viko_employees:
     play sound "audio/Victory!.mp3"
     # RETURN TO MAIN MUSIC
     play music "audio/Viko.mp3"
+    scene grocery store with fade
     viko "We won! Uh…who are you?"
 
     mc "Oh- sorry! I'm Emcie, we matched from a dating form."
@@ -1059,6 +1086,7 @@ label viko_nah:
             pass
 
     # BG: Grocery store
+    scene grocery store with fade
     # SFX: Victory! / Victory!.m4a
     play sound "audio/Victory!.mp3"
     # RETURN TO MAIN MUSIC
@@ -1082,10 +1110,12 @@ label viko_nah:
     viko "Sorry for the bad date…"
     viko "This was m-my first time fi-fighting someone- a person, for food."
     viko "Actually, s-speaking of food, I was thinking m-maybe we cou-could uh… eat- erm, get dinner at my place?"
+    # dont use Date Choice3_Viko_Voiceline 7.mp3, skip to Date Choice3_Viko_Voiceline 8.mp3 instead.
     viko "After we get the groceries, of course!!"
 
     mc "I'm okay with that! I could help you out too. What do you need?"
 
+    # using "After_Viko_Voiceline 3"
     viko "U-uh, let's see.."
 
     jump viko_grocery_shopping
@@ -1093,7 +1123,8 @@ label viko_nah:
 label viko_grocery_shopping:
     # (Item appears on screen, and it scrolls up for like 2-3 seconds)
     mc "{i}This is gonna take a while.{/i}"
-
+    scene black with fade
+    scene grocery store with fade
     # (Fade in fade out)
     mc "Ok i'm done with my part…"
     mc "{i}Damn where did my twi- I mean Viko go? No way he already left me behind.{/i}"
@@ -1107,6 +1138,7 @@ label viko_grocery_shopping:
     mc "{i}Without wasting any more time, we both head to his apartment hand in hand.{/i}"
 
     # BG: Apartment
+    scene apartement with fade
     mc "{i}When we arrived, we immediately unpacked and started cooking. We made his favourite dish,{/i}"
 
     # (Pic slide up)
@@ -1124,11 +1156,13 @@ label viko_grocery_shopping:
     mc "Uh sure?"
 
     # (Black Screen)
+    show black with moveintop
     mc "{i}I can feel the sofa shift with the added weight, is that Viko sitting down?{/i}"
 
     # SFX: bell / Bell.mp3
     play sound "audio/BELL.mp3"
     viko "Uhm, y-you can open your eyes now…"
+    scene viko confess1 with fade
 
     # (Viko in an age appropriate maid outfit)
     # MUSIC: Viko's Confession.mp3
@@ -1137,10 +1171,11 @@ label viko_grocery_shopping:
 
     mc "Oh. My. God."
     mc "{i}I'm SO glad I stuck around.{/i}"
+    scene viko confess2 with dissolve
+    viko "I, uhm, do cosplay, and stuff… Maybe you knew- or n-not."
+    viko "I hope you don't mind. I wanted to be honest with you and…!"
 
-    viko "I, uhm, do cosplay, and stuff… Maybe you knew- or n-not. I hope you don't mind."
-    viko "I wanted to be honest with you and…!"
-
+    scene viko confess3 with dissolve
     # (Now he's handing out a pink envelope with a rose stamp)
     viko "D-d-do you want to go to the Hanami Festival with me–!"
     viko "S-sorry! Not to force you on the spot or anything! Just take this as a reminder…"
@@ -1247,8 +1282,8 @@ label act3_choose_laeticia:
 
     mc "Sorry for all that… I really didn't know how to avoid it."
 
-    laeticia "I'll forgive you this time~ But the next time you try to two-time me, you'll regret it."
-    laeticia "I have something sooo fun we can do together tomorrow!"
+    laeticia "I'll forgive you this time~ But the next time you try to two-time me, watch yourself."
+    laeticia "Anyway, i have something sooo fun we can do together tomorrow!"
     laeticia "All you need to know is, bring some snacks!"
     laeticia "See you at 9 tomorrow?"
 
@@ -1326,6 +1361,7 @@ label act3_choose_viko:
     mc "Sorry for all that… I really didn't know how to avoid it."
 
     viko "It's ok, honest! I'm just so relieved you wanted to go with me…"
+    # ignore line
     viko "Thank you, Emcie."
     viko "O-oh, actually… what do you plan to do at the hanami?"
     viko "I've never really been to one before… Do we, um, picnic?"
@@ -1560,6 +1596,7 @@ label ending_laeticia:
     mc "{i}Yeah, this is more than I could ever ask for.{/i}"
 
     laeticia "It's the least I can do for you after that whole ritual at my place~"
+    # ignore line
     laeticia "Hope it's not too tight on this bench with both UMN-kun and me here…"
 
     voice "audio/voiceline/ending_laeticia/Date_MC_Line4.mp3"
@@ -1567,6 +1604,7 @@ label ending_laeticia:
     voice "audio/voiceline/ending_laeticia/Date_MC_Line5.mp3"
     mc "{i}I look towards UMN-kun.{/i}"
 
+    # ignore line
     umn "…"
 
     voice "audio/voiceline/ending_laeticia/Date_MC_Line6.mp3"
@@ -1796,8 +1834,7 @@ label ending_viko:
     mc "{i}Viko is waving his hand to gesture at me to come over.{/i}"
     mc "{i}Without a second thought, I immediately rushed over to him.{/i}"
 
-    viko "E-eh!? Em-Emcie, what are you-!"
-    viko "KY-KYAHHHHH!!"
+    viko "E-eh!? Em-Emcie, what are you-! KY-KYAHHHHH!!"
 
     mc "{i}My body moved by itself, picking Viko up in a swift motion.{/i}"
 

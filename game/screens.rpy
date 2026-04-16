@@ -100,19 +100,25 @@ screen say(who, what):
 
     window:
         id "window"
-
-        if who is not None:
-
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
-
         text what id "what"
 
+    if who is not None:
+        if who == "MC":
+            add "gui/Mc_TextBox.png" xpos 200 ypos -10 zoom 0.3 anchor (0.2, -2.8)
+        elif who == "Viko":
+            add "gui/Viko_TextBox.png" xpos 200 ypos -10 zoom 0.3 anchor (0.2, -2.8)
+        elif who == "Cass":
+            add "gui/Cass_TextBox.png" xpos 200 ypos -10 zoom 0.3 anchor (0.2, -2.8)
+        elif who == "Laeticia":
+            add "gui/Laeticia_TextBox.png" xpos 200 ypos -10 zoom 0.3 anchor (0.2, -2.8)
+        elif who == "Bryan":
+            add "gui/Bryan_TextBox.png" xpos 200 ypos -10 zoom 0.3 anchor (0.2, -2.8)
+        else :
+            add "gui/NPC_TextBox.png" xpos 200 ypos -10 zoom 0.3 anchor (0.2, -2.8)
+        
 
-    ## If there's a side image, display it above the text. Do not display on the
-    ## phone variant - there's no room.
+        text who xpos 270 ypos 755 anchor (0.5, 0.5) size 34 bold True color "#000000"
+
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
 
@@ -138,7 +144,7 @@ style window:
 
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
-style NPC_window:
+style namebox_NPC1:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
@@ -199,13 +205,13 @@ style NPC7_window:
 
     
 
-style MC_window:
-    xalign 0.5
-    xfill True
-    yalign gui.textbox_yalign
-    ysize gui.textbox_height
 
-    background Transform("gui/Mc_TextBox.png", xalign=0.5, yalign=0.53, xysize=(1400, 1000))
+style namebox_mc is namebox:
+    background Transform("gui/Mc_TextBox.png", size=(180, 300))
+    xminimum 150
+    padding (0, 0, 0, 0)
+    yoffset -50
+    
 
 
 style Laeticia_window:
@@ -262,12 +268,14 @@ style say_label:
     yoffset 10
 
 style say_dialogue:
-    outlines [(2, "#000000", 0, 0)]
+    color "#000000"
+    outlines [(2, "#4b2121", 0, 0)]
+    size 35
     properties gui.text_properties("dialogue")
 
-    xpos gui.dialogue_xpos
-    xsize gui.dialogue_width
-    ypos gui.dialogue_ypos
+    xpos 210
+    xsize 1600
+    ypos 10
 
 
 ## Input screen ################################################################

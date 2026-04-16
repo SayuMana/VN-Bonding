@@ -27,6 +27,31 @@ screen choice(items):
             elif i.caption == "Both are equally qualified.":
                 $ img = "gui/button/ui_bryan_competition3.png"
 
+            elif i.caption == "Shinji Ikari from Evangelion":
+                $ img = "gui/button/ui_bryan_competition4.png"
+            elif i.caption == "Denji from Chainsaw Man":
+                $ img = "gui/button/ui_bryan_competition2.png"
+            elif i.caption == "Naoya Zenin from Jujutsu Kaisen":
+                $ img = "gui/button/ui_bryan_competition1.png"
+            elif i.caption == "Okarun from Dandadan":
+                $ img = "gui/button/ui_bryan_competition3.png"
+
+            elif i.caption == "Pay, but ask her to pay for the next date.":
+                $ img = "gui/button/ui_bryan_competition4.png"
+            elif i.caption == "Thank her for letting you pay for everything.":
+                $ img = "gui/button/ui_bryan_competition2.png"
+            elif i.caption == "Create an elaborate dine and dash scheme.":
+                $ img = "gui/button/ui_bryan_competition1.png"
+            elif i.caption == "Cause a scene and flee when she's distracted.":
+                $ img = "gui/button/ui_bryan_competition3.png"
+
+            elif i.caption == "Help your twink":
+                $ img = "gui/button/ui_bryan_competition4.png"
+            elif i.caption == "Hey where did the employees go?":
+                $ img = "gui/button/ui_bryan_competition2.png"
+            elif i.caption == "Nah he got this":
+                $ img = "gui/button/ui_bryan_competition1.png"
+            
 
 
 
