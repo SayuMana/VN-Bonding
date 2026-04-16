@@ -95,7 +95,7 @@ label act_1:
             $ blue += 1
         "A muscle mommy":
             $ red += 1
-        "Guy":
+        "A Guy":
             $ yellow += 1
         "A Catboy":
             $ green += 1
@@ -126,14 +126,14 @@ label pathku2:
     stop music
     if not (blue_done and red_done and yellow_done and green_done):
         menu:
-            "Who's Next ?"
-            "Blue" if not blue_done:
+            "Siapa selanjutnya ?"
+            "A powerful witch" if not blue_done:
                 jump act_2_blue
-            "Red" if not red_done:
+            "A muscle mommy" if not red_done:
                 jump act_2_red
-            "Yellow" if not yellow_done:
+            "A Guy" if not yellow_done:
                 jump act_2_yellow
-            "Green" if not green_done:
+            "A Catboy" if not green_done:
                 jump act_2_green
     else:
         jump act_3
@@ -1241,7 +1241,7 @@ label act3_choose_laeticia:
     viko "I should've stayed at home…"
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
-    play music "audio/doki.mp3" volume 0.6
+    play music "audio/doki.mp3" volume 0.4
     laeticia "YES YES YES!!! Take that, randoms!"
     laeticia "Emcie! I'm so happy!"
 
@@ -1263,7 +1263,7 @@ label act3_choose_cassandra:
     viko "I should've stayed at home…"
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
-    play music "audio/doki.mp3" volume 0.6
+    play music "audio/doki.mp3" volume 0.4
     cassandra "I knew you'd make the right choice."
 
     mc "Sorry for all that… I really didn't know how to avoid it."
@@ -1282,7 +1282,7 @@ label act3_choose_bryan:
     laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     cassandra "…"
     viko "I should've stayed at home…"
-    play music "audio/doki.mp3" volume 0.6
+    play music "audio/doki.mp3" volume 0.4
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
 
@@ -1320,7 +1320,7 @@ label act3_choose_viko:
     bryan "*sigh* Well, I don't mind, as long as you're happy."
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
-    play music "audio/doki.mp3" volume 0.6
+    play music "audio/doki.mp3" volume 0.4
     viko "OH! Oh my god- Y-you really chose me! I- I'm so happy, wait- let me process this please!!!!"
 
     mc "Sorry for all that… I really didn't know how to avoid it."
@@ -1547,10 +1547,12 @@ label ending_bryan_normal_release:
 label ending_laeticia:
     # MUSIC: ending music
     # SFX: Crowd noises
+    scene black with fade
 
     laeticia "I got an awesome spot, didn't I?"
 
     voice "audio/voiceline/ending_laeticia/Date_MC_Line1.mp3"
+    scene laeticia end_talk
     mc "{i}We're on an incredibly small bench.{/i}"
     voice "audio/voiceline/ending_laeticia/Date_MC_Line2.mp3"
     mc "{i}Well, I don't mind sitting so close next to her. I'm just a bit distracted from where we're touching…{/i}"
@@ -1584,6 +1586,7 @@ label ending_laeticia:
 
     # (MC laughing)
     voice "audio/voiceline/ending_laeticia/Date_MC_Line9.mp3"
+    scene laeticia end_bicker with dissolve
     mc "You did it on purpose, didn't you? Let me see that phone!"
 
     # (Laeticia laugh)
@@ -1591,10 +1594,12 @@ label ending_laeticia:
 
     # (MC laughing)
     # SFX: Thud
+    play sound "audio/thud-ouch.mp3"
     voice "audio/voiceline/ending_laeticia/Date_MC_Line10.mp3"
     mc "{i}We wrestled on the bench until she pushed too hard, and I fell backwards on UMN's lap.{/i}"
 
     # (Laeticia smirk)
+    scene laeticia pin_smile with fade
     laeticia "Hehe, I got you."
 
     # (MC blush)
@@ -1609,17 +1614,21 @@ label ending_laeticia:
 
 # end 1
 label ending_laeticia_smooch:
+    scene black with fade
     # SFX: Smooch
-
+    play sound "audio/smoochykiss.mp3"
     # ignore line (this comment line is skipped – no voice)
-    mc "{i}She softly pecked me on the lips.{/i}"   # No voice file for End1_Line1
+    #mc "{i}She softly pecked me on the lips.{/i}"   # No voice file for End1_Line1
 
     # (Laeticia smirk)
+    scene laeticia pin_umn blusl with fade
     laeticia "I really like you, Emcie."
     laeticia "Will you go out with me?"
     laeticia "…And UMN-kun?"
 
     # FADE TO BLACK, THEN ENDING CG
+    scene black with fade
+    scene narration cg with fade
     voice "audio/voiceline/ending_laeticia/End1_MC_Line2.mp3"
     mc "{i}After that, Laeticia and I became official.{/i}"
     voice "audio/voiceline/ending_laeticia/End1_MC_Line3.mp3"
@@ -1645,11 +1654,14 @@ label ending_laeticia_umn:
     voice "audio/voiceline/ending_laeticia/End2_MC_Line2.mp3"
     mc "{i}Without thinking, I grabbed UMN's tie and pulled down REALLY hard.{/i}"
 
+    scene laeticia pin_umn pulled with dissolve
+    play sound "audio/smoochykiss.mp3"
     # SFX: Smooch
     voice "audio/voiceline/ending_laeticia/End2_MC_Line3.mp3"
     mc "{i}I smooched his… face? Logo? Either way, he looks really embarrassed.{/i}"
 
     # (UMN blush)
+    scene laeticia pin_umn blusl with dissolve
     umn "Y-you!!"
 
     # (Laeticia smirk)
@@ -1658,6 +1670,8 @@ label ending_laeticia_umn:
 
     # FADE TO BLACK, THEN ENDING CG
     # MUSIC: after non-kiss option music
+    scene black with fade
+    scene narration cg with fade
     voice "audio/voiceline/ending_laeticia/End2_MC_Line5.mp3"
     mc "{i}And that's how me, UMN, and Laeticia became a throuple.{/i}"
     voice "audio/voiceline/ending_laeticia/End2_MC_Line6.mp3"

@@ -317,7 +317,7 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
-        $ colors = ["#46b2ff", "#ff8282", "#ffff53", "#64ff7b"]
+        
 
         for idx, i in enumerate(items):
             textbutton i.caption:
