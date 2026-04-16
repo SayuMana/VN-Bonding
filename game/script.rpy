@@ -49,6 +49,7 @@ label act_1:
     play sound "<from 06.0>audio/RECORD DISC SCRATCH.mp3"
     # gian line1 (ignored)
     scene mc2
+    voice "audio/voiceline/act1/act1_Gian_line1.mp3"
     gian "Ew, no."
 
     voice "audio/voiceline/act1/Act 1_MC_Line 8.wav"
@@ -56,11 +57,15 @@ label act_1:
     play sound "audio/Nature sounds.mp3" volume 1.5
 
     # gian line2-5 (ignored)
-    scene mc3
+    scene mc3   
+    voice "audio/voiceline/act1/act1_Gian_line2.mp3"
     gian "You think I want to go out with YOU?"
+    voice "audio/voiceline/act1/act1_Gian_line3.mp3"
     gian "You are CHOPPED and BROKE, nandayo."
+    voice "audio/voiceline/act1/act1_Gian_line4.mp3"
     gian "You'll be lucky if a baddie like me even BLINKS in your direction lol"
     scene mc4
+    voice "audio/voiceline/act1/act1_Gian_line5.mp3"
     gian "Bye loser LMFAOOOO"
     stop sound
 
@@ -995,7 +1000,7 @@ label viko_help:
     voice "audio/voiceline/act2_green/Date Choice1_Viko_Voiceline 2.wav"
     viko "Eh-! H-how did you know my nam-"
     stop music
-    play music "audio/Viko battle section.mp3"
+    play music "audio/Viko battle section.mp3" volume 0.2
     announcer "A wild Enci appeared!"
 
     enci "OH YOU CALLED YOUR FRIEND TO GANG UP ON ME TOO HUH??"

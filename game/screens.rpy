@@ -269,7 +269,6 @@ style say_label:
 
 style say_dialogue:
     color "#000000"
-    outlines [(2, "#4b2121", 0, 0)]
     size 35
     properties gui.text_properties("dialogue")
 
