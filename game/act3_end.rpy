@@ -241,7 +241,7 @@ label ending_bryan_performative_smooch:
     mc "{i}Anyways, Bryan and I are planning our 5th trip to Tokyo next week, so I gotta go.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline9 act_3.mp3"
     mc "{i}Thanks for playing with us!{/i}"
-    return
+    jump credits
 
 label ending_bryan_performative_smack:
     # SFX: Smack noise
@@ -276,7 +276,7 @@ label ending_bryan_performative_smack:
     mc "{i}Well, that was a disaster.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline18 act_3.mp3"
     mc "{i}Thanks for playing with us!{/i}"
-    return
+    jump credits
 
 # Bryan Normal
 label ending_bryan_normal:
@@ -357,7 +357,7 @@ label ending_bryan_normal_holdit:
     mc "{i}Tomorrow will be our 6-month anniversary. Or is it 7 months?{/i}"
     # ignore line
     mc "{i}Thank you for playing with us!{/i}"
-    return
+    jump credits
 
 label ending_bryan_normal_release:
     voice "audio/voiceline/ending_bryan/MC bryan voiceline38 act_3.mp3"
@@ -391,7 +391,7 @@ label ending_bryan_normal_release:
     mc "{i}That's until, I suddenly see a notification from a very familiar username…{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline43 act_3.mp3"
     mc "{i}Thank you for playing with us!{/i}"
-    return
+    jump credits
 
 # -------------------------------------------------------
 # LAETICIA ENDING
@@ -498,7 +498,7 @@ label ending_laeticia_smooch:
     voice "audio/voiceline/ending_laeticia/End1_MC_Line8.mp3"
     mc "{i}Thanks for playing with us!{/i}"
 
-    return
+    jump credits
 
 # end 2
 label ending_laeticia_umn:
@@ -537,7 +537,7 @@ label ending_laeticia_umn:
     voice "audio/voiceline/ending_laeticia/End2_MC_Line9.mp3"
     mc "{i}Thanks for playing with us!{/i}"
 
-    return
+    jump credits
 
 # -------------------------------------------------------
 
@@ -603,7 +603,7 @@ label ending_cassandra_smooch:
     mc "{i}All promo banners for Cass and her company now include me, too.{/i}"
     mc "{i}Thanks for playing with us!{/i}"
 
-    return
+    jump credits
 
 label ending_cassandra_jump:
     # MUSIC: after non-kiss option music
@@ -621,7 +621,7 @@ label ending_cassandra_jump:
     mc "{i}…And apparently, this location is owned by Cass too.{/i}"
     mc "{i}Thanks for playing with us!{/i}"
 
-    return
+    jump credits
 
 # -------------------------------------------------------
 
@@ -696,7 +696,7 @@ label ending_viko_smooch:
     mc "{i}Before you know it, Viko and I became one of the top couple cosplayers of the year! Our next event is apparently in May at Comic Frontier 22.{/i}"
     mc "{i}Thanks for playing with us!{/i}"
 
-    return
+    jump credits
 
 label ending_viko_spine:
     mc "ICANTHOLDHIMMUCHLONGER–!"
@@ -721,4 +721,20 @@ label ending_viko_spine:
 
     mc "{i}Thanks for playing with us!{/i}"
 
+    jump credits
+
+label credits:
+    scene credits 1 with fade
+    pause 5.0
+    
+    scene credits 2 with fade
+    pause 5.0
+    
+    scene credits 3 with fade
+    pause 5.0
+
+    scene black with fade
+    pause 3.0
+    
     return
+    
