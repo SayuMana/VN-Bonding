@@ -61,6 +61,12 @@ screen choice(items):
                 $ img = "gui/button/ui_bryan_competition2.png"
             elif i.caption == "Nah he got this":
                 $ img = "gui/button/ui_bryan_competition1.png"
+
+            elif i.caption == "Smooch her":
+                $ img = "gui/button/ui_bryan_competition4.png"
+            elif i.caption == "Smooch UMN instead":
+                $ img = "gui/button/ui_bryan_competition2.png"
+            
             
 
 

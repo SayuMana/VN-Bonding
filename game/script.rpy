@@ -81,14 +81,27 @@ label act_1:
 
     # SFX: wet slapping noise
     voice "audio/voiceline/act1/Act 1_MC_Line 11.wav"
+    show job shadow with dissolve:
+        rotate 20
+        zoom 0.9
+        xpos 0.2
     mc "Ew… What the Freak! Why is it so wet…"
 
     # SFX: peeling off wet paper
     voice "audio/voiceline/act1/Act 1_MC_Line 12.wav"
+    show job application with dissolve:
+        rotate 20
+        zoom 0.9
+        xpos 0.2
     mc "*Screams* OH HELL NO!-"
 
     play sound "<from 02.0>audio/Page_turn.mp3" volume 1.0
     voice "audio/voiceline/act1/Act 1_MC_Line 13.wav"
+    hide job with dissolve
+    show form qr with dissolve:
+        ypos 0.1
+        zoom 0.6
+        xpos 0.4
     mc "-oh wait, what's this? A form to meet your soulmate?"
 
     voice "audio/voiceline/act1/Act 1_MC_Line 14.wav"
@@ -97,9 +110,11 @@ label act_1:
     mc "I might as well try!"
 
     play music "audio/Form_Time.mp3" volume 0.3
+    
 
     "Question! You're walking out at night and a 7 foot tall clown is chasing you. Whose arm are you running to?"
-    menu:
+    hide form with dissolve
+    menu :
         "A powerful witch":
             $ blue += 1
         "A muscle mommy":
@@ -260,7 +275,17 @@ label act_2_blue:
 
     play sound "audio/metal-pipe.mp3"
     stop music
+    show nirmana jatoh:
+        ypos -0.1
+        xpos -0.1
+        zoom 1.2
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 10
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 10
     mc "…"
+    hide nirmana with dissolve
+    
 
     show laeticia angry 1 at right:
         zoom 0.53
@@ -272,22 +297,26 @@ label act_2_blue:
         ypos 1.52
     voice "audio/voiceline/act2_blue/Date_Lae_Line 18.mp3"
     laeticia "That took me 2 weeks."
+    show kotak maaf  lebih keras with dissolve
+    ""
 
-    menu:
-        "I'm so sorry!!":
-            pass
-
+    # menu:
+    #     "I'm so sorry!!":
+    #         pass
+    hide kotak with dissolve
     voice "audio/voiceline/act2_blue/Date_Lae_Line 19.mp3"
     laeticia "I DON'T THINK I CAN HEAR YOU!"
+    show kotak maaf with dissolve
 
-    menu:
-        "I'M SO SORRY!!!!!!":
-            pass
+    # menu:
+    #     "I'M SO SORRY!!!!!!":
+    #         pass
 
     show laeticia disappointed at right:
         zoom 0.53
         ypos 1.52
     with dissolve
+    hide kotak
     voice "audio/voiceline/act2_blue/Date_Lae_Line 20.mp3"
     laeticia "I guess accidents just happen. It's alright…"
     voice "audio/voiceline/act2_blue/Date_Lae_Line 21.mp3"
