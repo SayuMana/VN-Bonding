@@ -7,8 +7,11 @@ label act_2_green:
     scene grocery store with fade
     play sound "audio/Grocery Store Ambience.mp3" volume 0.25
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 1.mp3"
     mc "My date should be around here… a guy named Viko with an ita bag…"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 2.mp3"
     mc "{i}That's weird. Why would he put his name on an anonymous form?{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 3.mp3"
     mc "{i}And why a grocery store?{/i}"
 
     voice "audio/voiceline/act2_green/Date_Viko_Voiceline 1.wav"
@@ -16,12 +19,15 @@ label act_2_green:
     voice "audio/voiceline/act2_green/Date_Viko_Voiceline 2.wav"
     viko "P-please! *sobs* G-give me my chicken!"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 4.mp3"
     mc "WHAT WAS THAT!!"
     stop music
     play music "audio/Tense Moments!.mp3" volume 0.35
     play sound "audio/1 PERSON RUNNING.mp3"
     scene cikin cg with fade
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 5.mp3"
     mc "{i}That guy looks like he's in trouble!… Wait a sec….{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 6.mp3"
     mc "{i}Is THAT my date???????{/i}"
     stop sound fadeout 2.
 
@@ -35,6 +41,7 @@ SHAME ON HER AND YOUR ANCESTORS!
     voice "audio/voiceline/act2_green/Date_Viko_Voiceline 3.wav"
     viko "I'm sorry- r-really! *sob* B-but I grabbed it first…"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 7.mp3"
     mc "{i}There's no way he can fight her off by himself! I need to do something!{/i}"
 
     menu:
@@ -47,11 +54,13 @@ SHAME ON HER AND YOUR ANCESTORS!
 
 label viko_help:
     $ viko_help = True
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 8.mp3"
     mc "{i}With the grace of a giraffe, I swooped in between the two.{/i}"
 
     voice "audio/voiceline/act2_green/Date Choice1_Viko_Voiceline 1.wav"
     viko "*sobs* Wh-who…? N-n-no i-it's alright I-"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 9.mp3"
     mc "Shh, it's okay, Viko! No one hurts my date when I'm around!!"
 
     voice "audio/voiceline/act2_green/Date Choice1_Viko_Voiceline 2.wav"
@@ -66,15 +75,22 @@ label viko_help:
     enci "I HAVE YOU KNOW THE STORE MANAGER IS FRIENDS WITH MY SWEET SON"
     enci "I CAN GET YOU BANNED IN SECONDS!"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 10.mp3"
     mc "You're going down, granny! Let's do this, Viko!"
 
     voice "audio/voiceline/act2_green/Date Choice1_Viko_Voiceline 3.wav"
     viko "Y-yeah! W-wait why does it say she's lvl99-"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 11.mp3"
     mc "{i}I need to pick the right moves according to her weakness… BUT I HAVE NO IDEA WHAT IT IS{/i}"
-    mc "{i}I can't do this alone… Hey, you players!! Could you help me out?{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 12.mp3"
+    mc "{i}I can't do this alone… Hey, you players!!{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 13.mp3"
     mc "{i}I'm gonna show you a series of moves and you better help me by posing alright!!{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 14.mp3"
     mc "Here goes nothing!"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 15.mp3"
+    mc "Ready? GO!"
 
     show help with dissolve
 
@@ -102,6 +118,7 @@ label viko_help:
     ""
     scene black with fade
     play sound "audio/Fighting.mp3"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 16.mp3"
     mc "{i}That ended terribly. We both got wiped by her sandal move almost immediately.{/i}"
     stop sound
     play music "audio/Viko.mp3" fadein 2.0
@@ -110,6 +127,7 @@ label viko_help:
         zoom 0.4
         ypos 1.1
     with dissolve
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 17.mp3"
     mc "Ow…Are you okay? Are you hurt anywhere?"
 
     show viko sad at right:
@@ -120,6 +138,7 @@ label viko_help:
     voice "audio/voiceline/act2_green/Date Choice1_Viko_Voiceline 4.mp3"
     viko "I don't think so… Thanks- uh I appreciate y-you asking, um…"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 18.mp3"
     mc "I'm Emcie, and I didn't mean for it to get out of hand… We even lost the chicken, I'm sorry, Viko.."
 
     show viko happy at right:
@@ -134,6 +153,7 @@ label viko_help:
         zoom 0.4
         ypos 1.1
     with dissolve
+    # ignore line
     mc "{i}He shyly smiled at me.{/i}"
 
     show viko thinking at right:
@@ -155,18 +175,26 @@ label viko_help:
     jump viko_grocery_shopping
 
 label viko_employees:
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 19.mp3"
     mc "{i}That's a good question, actually. It's deadly quiet. Where did everyone go? Bingo?{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 20.mp3"
     mc "{i}Surely the whole store would've heard her and Viko bickering…?{/i}"
 
     play sound "<from 02.0>audio/THUD.mp3"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 21.mp3"
     mc "{i}…Are those staff members hiding in the shelves??{/i}"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 22.mp3"
     mc "Excuse me! Can you please do something about her?"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 23.mp3"
     mc "Are you letting that defenceless string-bean fight her off all alone??"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 24.mp3"
     mc "{i}They both nod in tandem, so much for great customer service.{/i}"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 25.mp3"
     mc "Fine! I'll help him myself."
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 26.mp3"
     mc "Hey lady!"
 
     voice "audio/voiceline/act2_green/Date Choice2_Viko_Voiceline 1.wav"
@@ -175,9 +203,13 @@ label viko_employees:
     stop music
     scene street fight with fade
     play music "audio/Viko battle section.mp3"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 27.mp3"
     mc "{i}I need to pick the right moves to help him from here… BUT I HAVE NO IDEA WHAT TO DO{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 34.mp3"
     mc "{i}I can't do this alone… Hey, you chuds!! Help an MC out, will ya?{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 13.mp3"
     mc "{i}I'm gonna show you a series of moves and you better help me by posing alright!!{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 14.mp3"
     mc "Here goes nothing!"
 
     show help with dissolve
@@ -217,7 +249,9 @@ label viko_employees:
         zoom 0.4
         ypos 1.1
     with dissolve
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 28.mp3"
     mc "Oh- sorry! I'm Emcie, we matched from a dating form."
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 29.mp3"
     mc "Your name is Viko, right? It was on the form-"
 
     show viko sad at right:
@@ -231,6 +265,7 @@ label viko_employees:
         zoom 0.4
         ypos 1.1
     with dissolve
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 30.mp3"
     mc "Not at all, I thought the employees could help but…"
 
 
@@ -249,8 +284,11 @@ label viko_employees:
 
     jump viko_grocery_shopping
 
+# leave him alone
 label viko_nah:
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 31.mp3"
     mc "{i}Judging from how he's still alive, this is definitely NOT his first rodeo. He can handle her no problem alright.{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 32.mp3"
     mc "{i}Right?{/i}"
     scene black with fade
     play audio "audio/Cartoon Fight.mp3"
@@ -259,13 +297,18 @@ label viko_nah:
 
     
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 33.mp3"
     mc "Never mind, I should help him."
 
     play music "audio/Viko battle section.mp3"
     scene persona ui viko nah he got this with fade
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 27.mp3"
     mc "{i}I need to pick the right moves to help him from here… BUT I HAVE NO IDEA WHAT TO DO{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 34.mp3"
     mc "{i}I can't do this alone… Hey, you chuds!! Help a MC out will ya?{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 13.mp3"
     mc "{i}I'm gonna show you a series of moves and you better help me by posing alright!!{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 14.mp3"
     mc "Here goes nothing!"
 
     show help with dissolve
@@ -300,7 +343,9 @@ label viko_nah:
         zoom 0.4
         ypos 1.1
     with dissolve
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 35.mp3"
     mc "{i}The mom walked away, still cursing very loudly. Who cares! We beat her fair and square.{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 36.mp3"
     mc "I'm so glad she finally left you alone."
 
     show viko thinking at right:
@@ -314,7 +359,9 @@ label viko_nah:
         zoom 0.4
         ypos 1.1
     with dissolve
+    # ignore line
     mc "Oh- sorry! I'm Emcie, we matched from a dating form."
+    # ignore line
     mc "Your name is Viko right? It was on the form-"
 
     voice "audio/voiceline/act2_green/Date Choice3_Viko_Voiceline 3.wav"
@@ -338,6 +385,7 @@ label viko_nah:
     voice "audio/voiceline/act2_green/Date Choice3_Viko_Voiceline 8.mp3"
     viko "After we get the groceries, of course!!"
 
+    # ignore line
     mc "I'm okay with that! I could help you out too. What do you need?"
 
     voice "audio/voiceline/act2_green/After_Viko_Voiceline 3.wav"
@@ -347,15 +395,16 @@ label viko_nah:
 
 label viko_grocery_shopping:
     
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 41.mp3"   # was line 37
     mc "{i}Without wasting any more time, we both head to his apartment hand in hand.{/i}"
 
     scene apartement with fade
-    mc "{i}When we arrived, we immediately unpacked and started cooking. We made his favourite dish,{/i}"
     show broccoli ramen:
         ypos 0.1
         xpos 0.34
     with moveinbottom
-    mc "{i}Rosè Broccoli Ramen with Potato Skin Chips.{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 42.mp3"   # was line 38
+    mc "{i}When we arrived, we immediately unpacked and started cooking. We made his favourite dish. Rosè Broccoli Ramen with Potato Skin Chips.{/i}"
     hide broccoli with dissolve
 
     voice "audio/voiceline/act2_green/After_Viko_Voiceline 6.wav"
@@ -373,14 +422,17 @@ label viko_grocery_shopping:
         ypos 1.1
     with dissolve
     play sound "audio/Door Slam.mp3"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 43.mp3"   # was line 39
     mc "Oookay…?"
 
     voice "audio/voiceline/act2_green/After_Viko_Voiceline 8.wav"
     viko "(Muffled) Uh- Emcie? C-can you close your eyes, pl-please?"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 44.mp3"   # was line 40
     mc "Uh sure?"
 
     show black with moveintop
+    # ignore line
     mc "{i}I can feel the sofa shift with the added weight, is that Viko sitting down?{/i}"
 
     play sound "audio/BELL.mp3"
@@ -393,7 +445,9 @@ label viko_grocery_shopping:
     stop music
     play music "audio/Viko's Confession.mp3"
 
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 45.mp3"   # was line 41
     mc "Oh. My. God."
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 46.mp3"   # was line 42
     mc "{i}I'm SO glad I stuck around.{/i}"
     scene viko confess2 with dissolve
     voice "audio/voiceline/act2_green/After_Viko_Voiceline 10.mp3"
@@ -416,7 +470,9 @@ label viko_grocery_shopping:
     with fade
 
     play sound "audio/Door Slam.mp3"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 47.mp3"   # was line 43
     mc "{i}Before I could get a word in, Viko had already pushed me out of his apartment.{/i}"
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 48.mp3"   # was line 44
     mc "{i}SDC huh? I'll think about it…{/i}"
     $ green_done = True
     jump pathku2

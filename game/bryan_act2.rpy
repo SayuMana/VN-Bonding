@@ -33,7 +33,7 @@ label act_2_yellow:
 
     voice "audio/voiceline/act2_yellow/Date_Bryan_Voiceline 1.wav"
     bryan "Oh- Oh! You were talking to me! Thank you so much, and yeah! This green one was a limited edition.
- I’m so sorry about that. I was too engrossed in this feminist literature that I didn’t hear you. You need something?"
+I’m so sorry about that. I was too engrossed in this feminist literature that I didn’t hear you. You need something?"
 
     voice "audio/voiceline/act2_yellow/MC bryan voiceline5 act_2.mp3"
     mc "I'm from a dating form, it said we're a match. My name is Emcie, sorry for startling you."

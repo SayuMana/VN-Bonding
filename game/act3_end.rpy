@@ -186,7 +186,7 @@ label act3_choose_viko:
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 1.wav"
     viko "OH! Oh my god- Y-you really chose me? I- I'm so happy, wait- let me process this please!!!!"
 
-    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 1.wav"
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 1.mp3"
     mc "Sorry for all that… I really didn't know how to avoid it."
 
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 2.mp3"
@@ -198,15 +198,15 @@ label act3_choose_viko:
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 4.mp3"
     viko "I've never really been to one before… Do we, um, picnic?"
 
-    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 2.wav"
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 2.mp3"
     mc "We can do that, but I think I have a better idea."
-    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 3.wav"
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 3.mp3"
     mc "{i}I lean closer to him and whisper something into his ear{/i}"
 
     # line 4 is unused, skip to Line 5
 
     # (Viko blushing sprite)
-    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 5.wav"
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 5.mp3"
     mc "I'll see you tomorrow at 9 then?"
 
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 5.wav"
