@@ -186,21 +186,27 @@ label act3_choose_viko:
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 1.wav"
     viko "OH! Oh my god- Y-you really chose me? I- I'm so happy, wait- let me process this please!!!!"
 
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 1.wav"
     mc "Sorry for all that… I really didn't know how to avoid it."
 
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 2.mp3"
     viko "It's ok, honest! I'm just so relieved you wanted to go with me…"
     # ignore line
     viko "Thank you, Emcie."
-    voice "audio/voiceline/act3/Chosen_Viko_Voiceline 3.mp3
+    voice "audio/voiceline/act3/Chosen_Viko_Voiceline 3.mp3"
     viko "O-oh, actually… what do you plan to do at the hanami?"
-    voice "audio/voiceline/act3/Chosen_Viko_Voiceline 4.mp3
+    voice "audio/voiceline/act3/Chosen_Viko_Voiceline 4.mp3"
     viko "I've never really been to one before… Do we, um, picnic?"
 
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 2.wav"
     mc "We can do that, but I think I have a better idea."
-    mc "I lean closer to him and whisper something into his ear,"
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 3.wav"
+    mc "{i}I lean closer to him and whisper something into his ear{/i}"
+
+    # line 4 is unused, skip to Line 5
 
     # (Viko blushing sprite)
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 5.wav"
     mc "I'll see you tomorrow at 9 then?"
 
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 5.wav"
@@ -720,6 +726,7 @@ label ending_viko:
         "MY SPINEEEE!!!":
             jump ending_viko_spine
 
+# end 1
 label ending_viko_smooch:
     mc "{i}With all of my remaining strength, I manage to pull Viko closer to me.{/i}"
     mc "{i}We both close our eyes in anticipation.{/i}"
@@ -731,15 +738,22 @@ label ending_viko_smooch:
     # SFX: Anime sound / ANIME WOW.mp3
 
     # GOOD ENDING CG
+    # Ignore line
     mc "{i}Well, my life after that has been a non-stop whirlwind.{/i}"
+    # Ignore line
     mc "{i}Apparently there was a famous cosplayer photographer on site that got to snap our very lovely moment together…{/i}"
+    # Ignore line
     mc "{i}He said that we had a lot of chemistry together in cosplay, so he invited us to take some more photos in his studio.{/i}"
+    # Ignore line
     mc "{i}Viko was a bit hesitant but somehow he was the one that managed to convince me to go at the end.{/i}"
+    # Ignore line
     mc "{i}Before you know it, Viko and I became one of the top couple cosplayers of the year! Our next event is apparently in May at Comic Frontier 22.{/i}"
+    # Ignore line
     mc "{i}Thanks for playing with us!{/i}"
 
     jump credits
 
+# end 2
 label ending_viko_spine:
     mc "ICANTHOLDHIMMUCHLONGER–!"
     mc "VIKO I'M SORRY!!!"
@@ -752,16 +766,22 @@ label ending_viko_spine:
 
     # BAD ENDING CG
     # MUSIC: after non-kiss option music
+    # Ignore line
     mc "{i}I couldn't face Viko after that, or anyone in campus.{/i}"
+    # Ignore line
     mc "{i}I never really got to return that outfit he made… It gave me a brilliant idea though!{/i}"
+    # Ignore line
     mc "{i}That cosplay he tailored was so good, I got enough money from renting it online to move to Slovenia, where I lived out my life as a humble farmer.{/i}"
+    # Ignore line
     mc "{i}What? No way in heck I'm coming back from that okay…{/i}"
+    # Ignore line
     mc "{i}Sometimes, when the internet signal allows me, I like to check back to what Viko is doing, just for fun.{/i}"
 
     # SECRET ENDING CG — only if picked "Hey where did the employees go?" OR "Nah he got this!"
     if not viko_help:
+        # Ignore line
         mc "{i}Seems like he's doing just fine…{/i}"
-
+    # Ignore line
     mc "{i}Thanks for playing with us!{/i}"
 
     jump credits
