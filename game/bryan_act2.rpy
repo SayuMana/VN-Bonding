@@ -6,7 +6,7 @@ label act_2_yellow:
     
     play music "audio/Bryan's date.mp3" fadein 2.0 volume 0.2
     play sound "audio/shop-bell.mp3"
-    scene bryan date cafe with fade
+    scene b date cafe with fade
 
     voice "audio/voiceline/act2_yellow/MC bryan voiceline1 act_2.mp3"
     mc "My date should be around here…"
@@ -151,7 +151,15 @@ It’s simple. All you need to do is answer quickly for the next 4 questions. To
 
     menu:
         "The man - men are better at all manual labour jobs.":
-            host "Incorrect! The correct answer is B."
+            show incorrect:
+                xpos 0.45
+                ypos 0.3
+                zoom 0.0
+                easein 0.4 zoom 1.5
+                easeout 0.15 zoom 1.3
+                pause 1.0
+                easein 0.15 zoom 1.5
+                easeout  0.4 zoom 0.0
         "The woman - she is most qualified in this situation.":
             $ bryan_score += 1
             show correct:
@@ -165,20 +173,60 @@ It’s simple. All you need to do is answer quickly for the next 4 questions. To
                 easeout  0.4 zoom 0.0
             
         "The woman - women are generally better at most jobs.":
-            host "Incorrect! The correct answer is B."
+            show incorrect:
+                xpos 0.45
+                ypos 0.3
+                zoom 0.0
+                easein 0.4 zoom 1.5
+                easeout 0.15 zoom 1.3
+                pause 1.0
+                easein 0.15 zoom 1.5
+                easeout  0.4 zoom 0.0
         "Both are equally qualified.":
-            host "Incorrect! The correct answer is B."
+            show incorrect:
+                xpos 0.45
+                ypos 0.3
+                zoom 0.0
+                easein 0.4 zoom 1.5
+                easeout 0.15 zoom 1.3
+                pause 1.0
+                easein 0.15 zoom 1.5
+                easeout  0.4 zoom 0.0
     pause 1.5
     voice "audio/voiceline/act2_yellow/Host_Voiceline4.wav"
     host "Second question!... Who is the most feminist character of all fiction?"
 
     menu:
         "Shinji Ikari from Evangelion":
-            host "Incorrect! The correct answer is D."
+            show incorrect:
+                xpos 0.45
+                ypos 0.3
+                zoom 0.0
+                easein 0.4 zoom 1.5
+                easeout 0.15 zoom 1.3
+                pause 1.0
+                easein 0.15 zoom 1.5
+                easeout  0.4 zoom 0.0
         "Denji from Chainsaw Man":
-            host "Incorrect! The correct answer is D."
+            show incorrect:
+                xpos 0.45
+                ypos 0.3
+                zoom 0.0
+                easein 0.4 zoom 1.5
+                easeout 0.15 zoom 1.3
+                pause 1.0
+                easein 0.15 zoom 1.5
+                easeout  0.4 zoom 0.0
         "Naoya Zenin from Jujutsu Kaisen":
-            host "Incorrect! The correct answer is D."
+            show incorrect:
+                xpos 0.45
+                ypos 0.3
+                zoom 0.0
+                easein 0.4 zoom 1.5
+                easeout 0.15 zoom 1.3
+                pause 1.0
+                easein 0.15 zoom 1.5
+                easeout  0.4 zoom 0.0
         "Okarun from Dandadan":
             $ bryan_score += 1
             show correct:
@@ -197,7 +245,15 @@ It’s simple. All you need to do is answer quickly for the next 4 questions. To
 
     menu:
         "Pay, but ask her to pay for the next date.":
-            host "Incorrect! The correct answer is B."
+            show incorrect:
+                xpos 0.45
+                ypos 0.3
+                zoom 0.0
+                easein 0.4 zoom 1.5
+                easeout 0.15 zoom 1.3
+                pause 1.0
+                easein 0.15 zoom 1.5
+                easeout  0.4 zoom 0.0
         "Thank her for letting you pay for everything.":
             $ bryan_score += 1
             show correct:
@@ -210,9 +266,25 @@ It’s simple. All you need to do is answer quickly for the next 4 questions. To
                 easein 0.15 zoom 0.5
                 easeout  0.4 zoom 0.0
         "Create an elaborate dine and dash scheme.":
-            host "Incorrect! The correct answer is B."
+            show incorrect:
+                xpos 0.45
+                ypos 0.3
+                zoom 0.0
+                easein 0.4 zoom 1.5
+                easeout 0.15 zoom 1.3
+                pause 1.0
+                easein 0.15 zoom 1.5
+                easeout  0.4 zoom 0.0
         "Cause a scene and flee when she's distracted.":
-            host "Incorrect! The correct answer is B."
+            show incorrect:
+                xpos 0.45
+                ypos 0.3
+                zoom 0.0
+                easein 0.4 zoom 1.5
+                easeout 0.15 zoom 1.3
+                pause 1.0
+                easein 0.15 zoom 1.5
+                easeout  0.4 zoom 0.0
 
     play audio "audio/drum-roll-gaming-sound-effect-hd.mp3"
 

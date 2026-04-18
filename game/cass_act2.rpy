@@ -38,6 +38,9 @@ label act_2_red:
 
     # SFX: Knock knock
     play audio "audio/Knock Knock.mp3"
+    pause 0.7
+    play audio "audio/Door Open.mp3"
+
     scene cass appear with fade
     # (Insert CG of CHAD CASS opening the door)
 
@@ -63,11 +66,17 @@ label act_2_red:
 
     # (Cass whips her hair)
     cassandra "Now…Shall we indulge?"
+    scene black with fade
 
     mc "{i}Her strong, muscly firm arm guides me gently to the couch…{/i}"
     mc "{i}Before I see her{/i}"
     mc "{i}…{/i}"
     mc "{i}…eating s-sushi on the couch..??{/i}"
+    scene hotel room:
+        xpos 0.0
+        ypos 0.0
+        zoom 2.9
+    with fade
 
     cassandra "Entertain me… delicate one…"
 
@@ -146,6 +155,10 @@ label cass_date_continues:
 
     scene black with fade
     mc "{i}I closed my eyes and felt a blindfold- what the heck is she going to do?!{/i}"
+    show cloth: 
+        zoom 0.4
+        xpos 0.0
+    with dissolve
     mc "{i}Am I getting picked up?! She's so strong… I think she's holding me with only her arm.{/i}"
 
     # SFX: door open
@@ -160,6 +173,10 @@ label cass_date_continues:
 
     # SFX: crowd noise
     play audio "audio/Mall Crowd Ambiance.mp3"
+    scene department store:
+        zoom 0.36
+        ypos -0.09
+    with fade
     # (CG silhouette Cass and MC looking at her bodyguards and store staff handing them clothes)
     
     mc "Is this SMS?? How did we get here so fast?? Heh- Are these clothes?"
@@ -167,8 +184,12 @@ label cass_date_continues:
 
     cassandra "Of course, Kitten. Unless you're bold enough to resist me… then I'll have no choice but to discipline you."
 
-    mc "I mean, i wouldn't- That's not to say i dont like- oh wow look at those ireallygottagotrythemonnow-"
-
+    
+    scene dressing room with fade
+    pause 1.5
+    scene changing:
+        zoom 1.0
+    with fade
     # SFX: fast footsteps then curtains closing, photo click
     play audio "audio/running-footsteps-sound-effect-hd.mp3"
     ""
@@ -186,6 +207,8 @@ label cass_date_continues:
     # SFX: pushed noise
     play audio "audio/pushing-someone.mp3"
     mc "{i}Dang I really hope it's just me overthinking.{/i}"
+    play sound "audio/curtain.mp3"
+    scene cloth with dissolve
 
     # SFX: curtains slammed open
     play audio "audio/household_curtains_draw_hotel_003"
@@ -197,6 +220,7 @@ label cass_date_continues:
     mc "Cass! Please tell me you saw this…"
 
     # BG: Cinema (eye blink animation?)
+    scene cinema bg with fade
     mc "{i}Agh… Am I tied to a cinema XXI chair? Seriously?{/i}"
     mc "What do you want from me??"
 
@@ -219,6 +243,9 @@ label cass_date_continues:
     play audio "audio/click-sound-for-gd.mp3"
     # (Video plays)
     mc "Huh."
+    scene black with fade
+    play movie "images/background/Act2/Cass/twerking.webm" 
+    scene cinema bg with fade
     mc "…"
     mc "{i}I can feel my brain bleeding out of my ears.{/i}"
     mc "{i}Oh help me Cass…! You're my only hope…!{/i}"
@@ -227,13 +254,20 @@ label cass_date_continues:
     play music "audio/heavy-footstep.mp3"
     ""
     stop music
-    scene cinema bg with fade
-    play audio "audio/roblox-explosion-sound.mp3"
-    show cass cinema:
-        zoom 0.3
-        xpos 0.33
-        ypos 0.4
+    scene theater duar:
+        zoom 1.1
+        xpos -0.03
+        ypos -0.1
         linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 10
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 10
+    play audio "audio/roblox-explosion-sound.mp3"
+    show cass jumpscare:
+        zoom 0.2
+        xpos 0.432
+        ypos 0.2
+        linear 0.09 xoffset 10 yoffset -10
         linear 0.09 xoffset 10 yoffset 10
         linear 0.09 xoffset -10 yoffset -10
         linear 0.09 xoffset 10 yoffset 10
@@ -246,18 +280,18 @@ label cass_date_continues:
 
     mc "Cass!!"
 
-    show cass cinema:
-        zoom 0.3
-        xpos 0.33
-        ypos 0.4
-        easein 13 zoom 1.5  xpos -0.3 ypos -2
+    show cass jumpscare:
+        zoom 0.2
+        xpos 0.432
+        ypos 0.2
+        easeout 13 zoom 1.5  xpos -0.3 ypos -2
     
     # (Same CG of Cass but her sprite jumpscares us)
     play audio "audio/heavy-footstep.mp3" volume 1.5
     # SFX: thundering footsteps APPROACHING
     "....."
     stop audio
-    show cass cinema:
+    show cass jumpscare:
         zoom 3.0
         xpos -1.05
         ypos 0.0
@@ -271,16 +305,26 @@ label cass_date_continues:
     voice "audio/voiceline/act2_red/Kidnapper_Voiceline5.wav"
     kidnapper "BUSET!!!!!!!!!!!!!!"
     scene black with fade
+    play movie "images/CGs/Act2/Cass/fight.webm" 
     # (Add video of the fight scene)
-
+    
     # (Cinema bg again with hole in the back, Cass on right side MC on left)
     stop music fadeout 2.0
-    play music "audio/Cass's date.mp3" fadein 2.0
+    
 
+    scene theater duar:
+        zoom 1.1
+        xpos -0.03
+        ypos -0.1
+    with fade
+    
+    
     cassandra "Well, that's my cardio for the week…"
+    play music "audio/Cass's date.mp3" fadein 2.0
     cassandra "Emcie, I'm glad you're safe. Despite the setbacks, I quite enjoyed the time we spent together."
     cassandra "However, it seems our time is up… for now."
     cassandra "Come meet me at SDC, and then I can finally make you mine."
+    scene black with fade
     stop music
     $ red_done = True
 

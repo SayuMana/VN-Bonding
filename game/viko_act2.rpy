@@ -359,9 +359,9 @@ label viko_nah:
         zoom 0.4
         ypos 1.1
     with dissolve
-    # ignore line
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 28.mp3"
     mc "Oh- sorry! I'm Emcie, we matched from a dating form."
-    # ignore line
+    voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 29.mp3"
     mc "Your name is Viko right? It was on the form-"
 
     voice "audio/voiceline/act2_green/Date Choice3_Viko_Voiceline 3.wav"

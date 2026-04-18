@@ -223,6 +223,11 @@ label act3_choose_viko:
 label ending_bryan_performative:
     # MUSIC: ending music
     # SFX: Crowd noises
+    scene hanami:
+        zoom 2.23
+        xpos 0.0
+        ypos -0.2
+    with fade
     play music "audio/smoochy route!.mp3" 
     play sound "audio/Crowd Talking.mp3"
     voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 1.wav"
@@ -317,6 +322,11 @@ label ending_bryan_performative_smack:
 label ending_bryan_normal:
     # MUSIC: ending music
     # SFX: Crowd noises
+    scene hanami:
+        zoom 2.23
+        xpos 0.0
+        ypos -0.2
+    with fade
     play music "audio/smoochy route!.mp3"
     play sound "audio/Crowd Talking.mp3"
     voice "audio/voiceline/act3/Ending_normal_Bryan_Voiceline 1.wav"
@@ -440,15 +450,20 @@ label ending_bryan_normal_release:
 label ending_laeticia:
     # MUSIC: ending music
     # SFX: Crowd noises
+    scene hanami:
+        zoom 2.23
+        xpos 0.0
+        ypos -0.2
+    with fade
     play music "audio/smoochy route!.mp3"
     play sound "audio/Crowd Talking.mp3"
-    scene black with fade
+    
 
     voice "audio/voiceline/ending_laeticia/END_Lae_Line1.mp3"
     laeticia "I got an awesome spot, didn't I?"
 
     voice "audio/voiceline/ending_laeticia/Date_MC_Line1.mp3"
-    scene laeticia end_talk
+    scene laeticia end_talk with fade
     mc "{i}We're on an incredibly small bench.{/i}"
     voice "audio/voiceline/ending_laeticia/Date_MC_Line2.mp3"
     mc "{i}Well, I don't mind sitting so close next to her. I'm just a bit distracted from where we're touching…{/i}"
@@ -600,6 +615,11 @@ label ending_laeticia_umn:
 label ending_cassandra:
     # MUSIC: ending music
     play music "audio/smoochy route!.mp3"
+    scene hanami:
+        zoom 2.23
+        xpos 0.0
+        ypos -0.2
+    with fade
 
     mc "{i}I hope these clothes are good enough to show Cass.{/i}"
     mc "{i}…Wait, did I ever tell her where I live?{/i}"

@@ -276,6 +276,8 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 30.mp3"
     laeticia "Remember that, alright?"
     hide 4 lae with dissolve
+    show ritual start with dissolve
+    ""
 
     
     scene bedroom 
@@ -345,14 +347,19 @@ label act_2_blue:
         xpos -0.03
         ypos -0.1
     
-
-    play sound "audio/door-slamming-sound-effect-no-repeats-or-silence-2016.mp3"
+    
+    
+    play sound "audio/Wilhelm scream Sound.mp3" volume 0.3
+    
     show mc neutral:
         zoom 0.4
         rotate 280
         xpos 1. ypos -0.1
         easein 0.4 xpos -0.9 ypos 0.2
+    pause 0.6
+    play sound "audio/door-slamming-sound-effect-no-repeats-or-silence-2016.mp3"
     # ignore line
+    
     mc "…"   # no voice (ignored)
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 28.mp3"
     mc "{i}Did she just… kick me out…?{/i}"

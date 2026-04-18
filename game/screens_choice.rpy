@@ -66,6 +66,16 @@ screen choice(items):
                 $ img = "gui/button/ui_bryan_competition4.png"
             elif i.caption == "Smooch UMN instead":
                 $ img = "gui/button/ui_bryan_competition2.png"
+
+            elif i.caption == "Smooch Viko":
+                $ img = "gui/button/ui_bryan_competition4.png"
+            elif i.caption == "MY SPINEEEE!!!s":
+                $ img = "gui/button/ui_bryan_competition2.png"
+
+            elif i.caption == "Smooch him":
+                $ img = "gui/button/ui_bryan_competition4.png"
+            elif i.caption == "Smack the digicam away":
+                $ img = "gui/button/ui_bryan_competition2.png"
             
             
 
