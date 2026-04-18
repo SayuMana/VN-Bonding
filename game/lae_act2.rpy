@@ -240,17 +240,51 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 29.mp3"
     laeticia "I'll teach you the moves real quick. Watch me, kay?"
 
-    menu:
-        "Got it!":
-            pass
+    show pose lae with dissolve
+    ""
+    hide pose lae with dissolve
+    scene bedroom with fade
+
+    show 1 lae:
+        zoom 1.3
+        xpos 0.25
+        ypos -0.1
+    with dissolve
+    ""
+    hide 1 lae with dissolve
+    show 2 lae:
+        zoom 1.3
+        xpos 0.25
+        ypos -0.1
+    with dissolve
+    ""
+    hide 2 lae with dissolve
+    show 3 lae:
+        zoom 1.3
+        xpos 0.25
+        ypos -0.1
+    with dissolve
+    ""
+    hide 3 lae with dissolve
+    show 4 lae:
+        zoom 1.3
+        xpos 0.25
+        ypos -0.1
+    with dissolve
+    ""
 
     voice "audio/voiceline/act2_blue/Date_Lae_Line 30.mp3"
     laeticia "Remember that, alright?"
+    hide 4 lae with dissolve
 
-    menu:
-        "Here goes nothing…":
-            pass
-
+    
+    scene bedroom 
+    ""
+    show smoke:
+        zoom 1.3
+        xpos -0.2
+        ypos 0.0
+    with dissolve
     voice "audio/voiceline/act2_blue/Date_Lae_Line 31.mp3"
     laeticia "I- I think it worked!!"
 
@@ -258,26 +292,32 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_UMN_Voiceline1.wav"
     umn "*chuckle* Who dares summon me?~"
 
-    show umn:
-        zoom 0.7
-        xpos 0.3
-        ypos 0.1
-    play sound "audio/spotlight-sound.mp3"
-    ""
 
     voice "audio/voiceline/act2_blue/Date_UMN_Voiceline2.wav"
     umn "In me, students dedicate their work to their country through the Three Pillars of Education! Allowing them to take their steps towards success through MY alma mater…"
 
-    scene jcafe vn snapshot with fade
+    play sound "audio/spotlight-sound.mp3"
+    scene jcafe vn snapshot 
+
     voice "audio/voiceline/act2_blue/Date_UMN_Voiceline3.wav"
-    umn "I, Universitas Multimedia Nusantara, in flesh and bone, have waited for this day to come!"
+    umn "I, Universitas Multimedia Nusantara, in flesh and bone, have waited for this day to come!
+    Why have you summoned me here? To learn? I must warn you, knowledge comes with a price.... and that doesn’t include SKS.
+"
     # ignore line (no voice for "Why have you summoned me here?...")
 
     scene bedroom with fade
-    show laeticia surprised at right:
+    show laeticia surprised at left:
         zoom 0.53
         ypos 1.52
+        xpos 0.1
     with dissolve
+    show mc neutral at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
+    show umn at right:
+        zoom 0.7
+        ypos 1.3
     voice "audio/voiceline/act2_blue/Date_Lae_Line 32.mp3"
     laeticia "Oh…. Oh my god…"
     voice "audio/voiceline/act2_blue/Date_Lae_Line 33.mp3"
@@ -290,15 +330,28 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 27.mp3"
     mc "Uhh what–"
 
-    show laeticia sparkle at right:
+    show laeticia sparkle at left:
         zoom 0.53
         ypos 1.52
+        xpos 0.1
     with dissolve
     voice "audio/voiceline/act2_blue/Date_Lae_Line 34.mp3"
     laeticia "—GET OUT OF MY APARTMENT! I'LL TEXT YOU LATER, THANKS FOR THE HELP, LOVE YOU, BYE!"
+    
 
-    scene black
+
+    scene apt hallway:
+        zoom 0.4
+        xpos -0.03
+        ypos -0.1
+    
+
     play sound "audio/door-slamming-sound-effect-no-repeats-or-silence-2016.mp3"
+    show mc neutral:
+        zoom 0.4
+        rotate 280
+        xpos 1. ypos -0.1
+        easein 0.4 xpos -0.9 ypos 0.2
     # ignore line
     mc "…"   # no voice (ignored)
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 28.mp3"
