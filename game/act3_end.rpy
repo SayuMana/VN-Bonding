@@ -672,35 +672,49 @@ label ending_viko:
     # MUSIC: ending music
     # SFX: Crowd noises
 
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 1.wav"
     mc "{i}The day of the Hanami…{/i}"
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 2.wav"
     mc "{i}It's about 38° Celsius right now, I feel like I'm melting, but I promised Viko that we would be wearing…{/i}"
 
     # (MC in Loid Forger cosplay)
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 3.wav"
     mc "Matching cosplays!"
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 4.wav"
     mc "{i}People have been staring at me but if it makes him happy I'll gladly do it! Especially when he tailored it to fit me!{/i}"
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 5.wav"
     mc "{i}Hmmm, he said to meet under the cardboard cherry trees, somewhere towards the middle of the festival.{/i}"
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 6.wav"
     mc "{i}Oh! I think I see him over there.{/i}"
 
     # (CG: make Viko look beautiful from far away)
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 7.wav"
     mc "{i}Goodness gracious.{/i}"
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 8.wav"
     mc "{i}My jaw immediately dropped to the floor.{/i}"
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 9.wav"
     mc "{i}He looks… So stunning, so captivating, he looks beautiful in that Yor cosplay…{/i}"
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 10.wav"
     mc "{i}As if he could hear my thoughts, he locked eyes with me.{/i}"
 
     voice "audio/voiceline/ending_viko/END_Viko_Voiceline 1.wav"
     viko "Ah- Emcie over here!!"
 
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 11.wav"
     mc "{i}Viko is waving his hand to gesture at me to come over.{/i}"
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 12.wav"
     mc "{i}Without a second thought, I immediately rushed over to him.{/i}"
 
     voice "audio/voiceline/ending_viko/END_Viko_Voiceline 2.wav"
     viko "E-eh!? Em-Emcie, what are you-! KY-KYAHHHHH!!"
 
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 13.wav"
     mc "{i}My body moved by itself, picking Viko up in a swift motion.{/i}"
 
     # (The CG.)
     # SFX: bone cracking / Ouchie.mp3
 
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 14.wav"
     mc "URGH- MY BACK"
 
     voice "audio/voiceline/ending_viko/END_Viko_Voiceline 3.mp3"
@@ -713,11 +727,14 @@ label ending_viko:
     viko "M-my.. A-actually this is exactly like that scene in that anime I liked…"
 
     # (MC straining)
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 15.wav"
     mc "V-viko…"
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 16.wav"
     mc "{i}He's looking at me expectantly… I think- I think this is our moment to-!{/i}"
 
     # SFX: more bone cracking / Ouchie.mp3
 
+    voice "audio/voiceline/ending_viko/END_MC Viko_Line 17.wav"
     mc "UHHH BETTER MAKE THAT DECISION QUICK!!"
 
     menu:
@@ -728,11 +745,14 @@ label ending_viko:
 
 # end 1
 label ending_viko_smooch:
+    voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 1.wav"
     mc "{i}With all of my remaining strength, I manage to pull Viko closer to me.{/i}"
+    voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 2.wav"
     mc "{i}We both close our eyes in anticipation.{/i}"
 
     # SFX: Smooch
 
+    voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 3.wav"
     mc "{i}When it happened, it felt like the spirit of slice of life romance anime bloomed between us.{/i}"
 
     # SFX: Anime sound / ANIME WOW.mp3
@@ -755,7 +775,9 @@ label ending_viko_smooch:
 
 # end 2
 label ending_viko_spine:
+    voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 1.wav"
     mc "ICANTHOLDHIMMUCHLONGER–!"
+    voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 2.wav"
     mc "VIKO I'M SORRY!!!"
 
     voice "audio/voiceline/ending_viko/Ending2_Viko_Voiceline 1.wav"
