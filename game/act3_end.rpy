@@ -38,6 +38,7 @@ label act_3:
         voice "audio/voiceline/act3/Final Choice_normal_Bryan_Voiceline.wav"
         bryan "Calm down, guys. I'm sure Emcie here will explain everything. Right, Emcie?"
 
+    voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 1.wav"
     viko "I'm incredibly uncomfortable."
 
     mc "G-guys…"
@@ -48,6 +49,7 @@ label act_3:
     cassandra "…"
     cassandra "Are you serious?"
 
+    voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 2.wav"
     viko "I do remember being the one to invite you here…"
 
     voice "audio/voiceline/act3/Final Choice_performative&normal_Bryan_Voiceline.wav"
@@ -60,6 +62,7 @@ label act_3:
 
     cassandra "Foolish. Emcie already has reservations with me."
 
+    voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 3.wav"
     viko "H-hey, that's not fair. I also invited them! Don't Emcie get a say in all t-this…"
 
     voice "audio/voiceline/act3/Final Choice_harmony_Bryan_Voiceline.wav"
@@ -85,6 +88,7 @@ label act3_choose_laeticia:
     cassandra "…"
     voice "audio/voiceline/act3/Not chosen_Bryan_Voiceline.wav"
     bryan "*sigh* Well, I don't mind, as long as you're happy."
+    voice "audio/voiceline/act3/Not chosen_Viko_Voiceline.wav"
     viko "I should've stayed at home…"
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
@@ -114,6 +118,7 @@ label act3_choose_cassandra:
     laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     voice "audio/voiceline/act3/Not chosen_Bryan_Voiceline.wav"
     bryan "*sigh* Well, I don't mind, as long as you're happy."
+    voice "audio/voiceline/act3/Not chosen_Viko_Voiceline.wav"
     viko "I should've stayed at home…"
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
@@ -136,6 +141,7 @@ label act3_choose_bryan:
     voice "audio/voiceline/act3/NOT CHOSEN_Lae_Line 1.wav"
     laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     cassandra "…"
+    voice "audio/voiceline/act3/Not chosen_Viko_Voiceline.wav"
     viko "I should've stayed at home…"
     play music "audio/doki.mp3" volume 0.4
 
@@ -177,14 +183,18 @@ label act3_choose_viko:
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
     play music "audio/doki.mp3" volume 0.4
-    viko "OH! Oh my god- Y-you really chose me! I- I'm so happy, wait- let me process this please!!!!"
+    voice "audio/voiceline/act3/Chosen_Viko_Voiceline 1.wav"
+    viko "OH! Oh my god- Y-you really chose me? I- I'm so happy, wait- let me process this please!!!!"
 
     mc "Sorry for all that… I really didn't know how to avoid it."
 
+    voice "audio/voiceline/act3/Chosen_Viko_Voiceline 2.mp3"
     viko "It's ok, honest! I'm just so relieved you wanted to go with me…"
     # ignore line
     viko "Thank you, Emcie."
+    voice "audio/voiceline/act3/Chosen_Viko_Voiceline 3.mp3
     viko "O-oh, actually… what do you plan to do at the hanami?"
+    voice "audio/voiceline/act3/Chosen_Viko_Voiceline 4.mp3
     viko "I've never really been to one before… Do we, um, picnic?"
 
     mc "We can do that, but I think I have a better idea."
@@ -193,6 +203,7 @@ label act3_choose_viko:
     # (Viko blushing sprite)
     mc "I'll see you tomorrow at 9 then?"
 
+    voice "audio/voiceline/act3/Chosen_Viko_Voiceline 5.wav"
     viko "Y-YEAH! I- i'll see you! Hehe.."
 
     jump ending_viko
@@ -670,11 +681,13 @@ label ending_viko:
     mc "{i}He looks… So stunning, so captivating, he looks beautiful in that Yor cosplay…{/i}"
     mc "{i}As if he could hear my thoughts, he locked eyes with me.{/i}"
 
+    voice "audio/voiceline/ending_viko/END_Viko_Voiceline 1.wav"
     viko "Ah- Emcie over here!!"
 
     mc "{i}Viko is waving his hand to gesture at me to come over.{/i}"
     mc "{i}Without a second thought, I immediately rushed over to him.{/i}"
 
+    voice "audio/voiceline/ending_viko/END_Viko_Voiceline 2.wav"
     viko "E-eh!? Em-Emcie, what are you-! KY-KYAHHHHH!!"
 
     mc "{i}My body moved by itself, picking Viko up in a swift motion.{/i}"
@@ -684,9 +697,13 @@ label ending_viko:
 
     mc "URGH- MY BACK"
 
+    voice "audio/voiceline/ending_viko/END_Viko_Voiceline 3.mp3"
     viko "O-oh gosh, I didn't know that you're this strong! Y-you always surprise me, Emcie."
+    voice "audio/voiceline/ending_viko/END_Viko_Voiceline 4.mp3"
     viko "Hehe. You know, this is kinda silly but…"
+    voice "audio/voiceline/ending_viko/END_Viko_Voiceline 5.mp3"
     viko "Thanks to you, I changed for the better… I feel a little bit more like myself now and I'm a lot more comfortable doing what I love…"
+    voice "audio/voiceline/ending_viko/END_Viko_Voiceline 6.mp3"
     viko "M-my.. A-actually this is exactly like that scene in that anime I liked…"
 
     # (MC straining)
@@ -727,6 +744,7 @@ label ending_viko_spine:
     mc "ICANTHOLDHIMMUCHLONGER–!"
     mc "VIKO I'M SORRY!!!"
 
+    voice "audio/voiceline/ending_viko/Ending2_Viko_Voiceline 1.wav"
     viko "WAHH–"
 
     # SFX: thud / THUD.mp3

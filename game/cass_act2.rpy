@@ -41,10 +41,11 @@ label act_2_red:
     scene cass appear with fade
     # (Insert CG of CHAD CASS opening the door)
 
+    # ignore line
     cassandra "Oh well well well… Hello there kitten.."
 
     mc "H-hello…"
-    mc "{i}my heart's beating so fast… I can smell a scent on her that's so.. Distinct{/i}"
+    mc "{i}I can smell a scent on her that's so.. Distinct{/i}"
     mc "{i}So… overwhelming{/i}"
     mc "{i}OH NO SHE'S HOT{/i}"
 
@@ -123,6 +124,7 @@ label cass_bicep:
     mc "{i}My hand stays there…{/i}"
     mc "{i}For just a little longer…{/i}"
 
+    # ignore line
     cassandra "hm?~"
 
     mc "*yelps* S-sorry it's just…"
