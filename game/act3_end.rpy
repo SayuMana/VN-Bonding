@@ -6,7 +6,7 @@ label act_3:
     stop music fadeout 2.0
     # MUSIC: Silence, for now
     scene black with fade
-    play music "audio/single-heatbeat.mp3"
+    play sound "audio/single-heatbeat.mp3"
     # SFX: Heartbeat sounds
 
     mc "Ooook… Here I am. It's almost time…"
@@ -223,6 +223,8 @@ label act3_choose_viko:
 label ending_bryan_performative:
     # MUSIC: ending music
     # SFX: Crowd noises
+    play music "audio/smoochy route!.mp3" 
+    play sound "audio/Crowd Talking.mp3"
     voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 1.wav"
     bryan "This is great! I luckily got the best spot for pictures too~ You look amazing, by the way."
 
@@ -253,6 +255,7 @@ label ending_bryan_performative:
 
 label ending_bryan_performative_smooch:
     # SFX: smooch
+    play sound "smoochykiss.mp3"
     voice "audio/voiceline/act3/Ending1_performative_Bryan_Voiceline 1.wav"
     bryan "*chuckles* I'm so happy, Emcie. I promise I'll make you so so happy, too. Can I soft launch you on my Instagram, please?"
 
@@ -275,6 +278,7 @@ label ending_bryan_performative_smooch:
 
 label ending_bryan_performative_smack:
     # SFX: Smack noise
+    play sound "slap.mp3"
     voice "audio/voiceline/act3/Ending2_performative_Bryan_Voiceline 1.wav"
     bryan "Wh- Hey! What's that for??"
 
@@ -302,6 +306,7 @@ label ending_bryan_performative_smack:
     mc "{i}And you will not believe what his response was…{/i}"
 
     # (Insert CG of Bryan doing ukelele apology)
+    
     voice "audio/voiceline/ending_bryan/MC bryan voiceline17 act_3.mp3"
     mc "{i}Well, that was a disaster.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline18 act_3.mp3"
@@ -312,6 +317,8 @@ label ending_bryan_performative_smack:
 label ending_bryan_normal:
     # MUSIC: ending music
     # SFX: Crowd noises
+    play music "audio/smoochy route!.mp3"
+    play sound "audio/Crowd Talking.mp3"
     voice "audio/voiceline/act3/Ending_normal_Bryan_Voiceline 1.wav"
     bryan "How's the view? I made sure to get the best spot, just for you. You look amazing, by the way."
 
@@ -365,6 +372,7 @@ label ending_bryan_normal_holdit:
     mc "LORD GIVE ME STRENGTH"
 
     # SFX: aggressive smooch/bonk
+    play sound "audio/bonk.mp3"
     voice "audio/voiceline/act3/Ending1_normal_Bryan_Voiceline 1.wav"
     bryan "Ouch! Eh? Emcie, where are you going??"
 
@@ -375,6 +383,7 @@ label ending_bryan_normal_holdit:
     scene black with fade
     scene normal good with fade
     # MUSIC: after non-kiss option music
+    play music "audio/bad route!.mp3"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline33 act_3.mp3"
     mc "{i}Fortunately, I had enough willpower to hold it all in, and not traumatize him.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline34 act_3.mp3"
@@ -394,6 +403,7 @@ label ending_bryan_normal_release:
     mc "Yea it's coming out"
 
     # SFX: incredibly loud disgusting fart noise
+    play sound "audio/fart.ogg"
     voice "audio/voiceline/act3/Ending2_normal_Bryan_Voiceline 1.wav"
     bryan "…Uh-"
 
@@ -411,6 +421,7 @@ label ending_bryan_normal_release:
     scene black with fade
     scene normal bad with fade
     # MUSIC: after non-kiss option music
+    play music "audio/bad route!.mp3"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline39 act_3.mp3"
     mc "{i}(Sigh) Well, that was embarrassing.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline40 act_3.mp3"
@@ -429,6 +440,8 @@ label ending_bryan_normal_release:
 label ending_laeticia:
     # MUSIC: ending music
     # SFX: Crowd noises
+    play music "audio/smoochy route!.mp3"
+    play sound "audio/Crowd Talking.mp3"
     scene black with fade
 
     voice "audio/voiceline/ending_laeticia/END_Lae_Line1.mp3"
@@ -586,6 +599,7 @@ label ending_laeticia_umn:
 # CASSANDRA ENDING
 label ending_cassandra:
     # MUSIC: ending music
+    play music "audio/smoochy route!.mp3"
 
     mc "{i}I hope these clothes are good enough to show Cass.{/i}"
     mc "{i}…Wait, did I ever tell her where I live?{/i}"
@@ -634,6 +648,7 @@ label ending_cassandra:
 
 label ending_cassandra_smooch:
     # SFX: smooch
+    play sound "audio/smoochykiss.mp3"
 
     mc "{i}How could I ever refuse?{/i}"
     mc "{i}I can smell her alpha scent.{/i}"
@@ -669,10 +684,19 @@ label ending_cassandra_jump:
 
 # VIKO ENDING
 label ending_viko:
+    stop music fadeout 1.5
+    play music "audio/smoochy route!.mp3"
+    play sound "audio/Crowd Talking.mp3"
     # MUSIC: ending music
     # SFX: Crowd noises
-
+    
+    scene hanami:
+        zoom 2.23
+        xpos 0.0
+        ypos -0.2
+    with fade
     voice "audio/voiceline/ending_viko/END_MC Viko_Line 1.wav"
+    
     mc "{i}The day of the Hanami…{/i}"
     voice "audio/voiceline/ending_viko/END_MC Viko_Line 2.wav"
     mc "{i}It's about 38° Celsius right now, I feel like I'm melting, but I promised Viko that we would be wearing…{/i}"
@@ -707,12 +731,19 @@ label ending_viko:
 
     voice "audio/voiceline/ending_viko/END_Viko_Voiceline 2.wav"
     viko "E-eh!? Em-Emcie, what are you-! KY-KYAHHHHH!!"
+    scene pre end viko with fade
 
     voice "audio/voiceline/ending_viko/END_MC Viko_Line 13.wav"
     mc "{i}My body moved by itself, picking Viko up in a swift motion.{/i}"
 
     # (The CG.)
     # SFX: bone cracking / Ouchie.mp3
+    scene pre end viko:
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 10
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 1
+    play sound "audio/Ouchie.mp3"
 
     voice "audio/voiceline/ending_viko/END_MC Viko_Line 14.wav"
     mc "URGH- MY BACK"
@@ -733,7 +764,7 @@ label ending_viko:
     mc "{i}He's looking at me expectantly… I think- I think this is our moment to-!{/i}"
 
     # SFX: more bone cracking / Ouchie.mp3
-
+    play sound "audio/Ouchie.mp3"
     voice "audio/voiceline/ending_viko/END_MC Viko_Line 17.wav"
     mc "UHHH BETTER MAKE THAT DECISION QUICK!!"
 
@@ -748,15 +779,19 @@ label ending_viko_smooch:
     voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 1.wav"
     mc "{i}With all of my remaining strength, I manage to pull Viko closer to me.{/i}"
     voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 2.wav"
+    scene black with fade
     mc "{i}We both close our eyes in anticipation.{/i}"
+    
 
     # SFX: Smooch
-
+    play sound "audio/smoochykiss.mp3"
     voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 3.wav"
     mc "{i}When it happened, it felt like the spirit of slice of life romance anime bloomed between us.{/i}"
 
     # SFX: Anime sound / ANIME WOW.mp3
-
+    
+    scene gud end viko with fade
+    play sound "audio/anime-wow-sound-effect-mp3cut.mp3"
     # GOOD ENDING CG
     # Ignore line
     mc "{i}Well, my life after that has been a non-stop whirlwind.{/i}"
@@ -779,13 +814,16 @@ label ending_viko_spine:
     mc "ICANTHOLDHIMMUCHLONGER–!"
     voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 2.wav"
     mc "VIKO I'M SORRY!!!"
-
+    play sound "audio/THUD.mp3"
+    scene black 
+    
     voice "audio/voiceline/ending_viko/Ending2_Viko_Voiceline 1.wav"
     viko "WAHH–"
+    play sound "audio/CHRUCH BELL.mp3"
 
     # SFX: thud / THUD.mp3
     # SFX: church bell / CHURCH BELL.mp3
-
+    scene bad end viko with fade
     # BAD ENDING CG
     # MUSIC: after non-kiss option music
     # Ignore line
