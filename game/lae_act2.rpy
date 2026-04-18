@@ -15,17 +15,20 @@ label act_2_blue:
     play music "audio/Laeticia's date.mp3"
     play sound "audio/Crowd Talking.mp3" loop volume 0.5
     scene bazaar with fade
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 1.mp3"
     mc "Looks like there's an open booth!"
 
     scene booth_bg with fade
     
     show lae neutral
     play sound "audio/shop-bell.mp3"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 2.mp3"
     mc "{i}OH NO SHES HOT{/i}"
     show lae talk
     voice "audio/voiceline/act2_blue/Date_Lae_Line 1.mp3"
     laeticia "Oho~, another customer I see?"
 
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 3.mp3"
     mc "Ah, I'm actually here because we matched on the soulmate form thing."
 
     show lae smile
@@ -35,20 +38,25 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 3.mp3"
     laeticia "I'm Laeticia. A pleasure to meet you~"
     show lae neutral
-    mc "Thanks. I'm… Emcie…"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 4.mp3"
+    mc "Thanks! Thanks. I'm… Emcie…"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 5.mp3"
     mc "{i}We shook hands on it. Her hands are cold.{/i}"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 6.mp3"
     mc "{i}The thought of it is ridiculous when she's so hot.{/i}"
 
     show lae talk
     voice "audio/voiceline/act2_blue/Date_Lae_Line 4.mp3"
     laeticia "Emcie hmm…? Would you like me to do a tarot reading? Free of charge, just for you~"
 
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 7.mp3"
     mc "Oh… um, sorry, I don't think this whole thing is for me."
 
     show lae upset
     voice "audio/voiceline/act2_blue/Date_Lae_Line 5.mp3"
     laeticia "Well, that's unfortunate. People who visit this booth are always so mean~"
 
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 8.mp3"
     mc "What— that's not what I meant—"
 
     show lae talk
@@ -59,8 +67,11 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 7.mp3"
     laeticia "If only this cute… adorable Emcie… could help me out~"
 
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 9.mp3"
     mc "{i}Zooweemama!!!{/i}"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 10.mp3"
     mc "{i}She tried to kabedon me in the air. SHE'S NOT EVEN CLOSE TO MY FACE!{/i}"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 11.mp3"
     mc "FINE, I'LL DO IT!"
 
     show lae tease with dissolve
@@ -92,6 +103,7 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 12.mp3"
     laeticia "So how did I do?"
 
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 12.mp3"
     mc "I'm both impressed and creeped out."
 
     voice "audio/voiceline/act2_blue/Date_Lae_Line 13.mp3"
@@ -101,12 +113,17 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 15.mp3"
     laeticia "Oh man… I brought so much stuff… It's going to be hard carrying this to my apartment."
 
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 13.mp3"
     mc "I'll help carry them all!"
 
     voice "audio/voiceline/act2_blue/Date_Lae_Line 16.mp3"
     laeticia "Really? There's a lot of stuff in my booth, though!"
 
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 14.mp3"
+    mc "Don't worry! I can do this!"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 15.mp3"
     mc "{i}As she cleaned up the booth, I stacked up and scooped all the items into my arms.{/i}"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 16.mp3"
     mc "{i}This is going great so fa—{/i}"
 
     play sound "audio/metal-pipe.mp3"
@@ -119,7 +136,9 @@ label act_2_blue:
         linear 0.09 xoffset 10 yoffset 10
         linear 0.09 xoffset -10 yoffset -10
         linear 0.09 xoffset 10 yoffset 10
-    mc "…"
+    
+    # Ignore line (Dont comment it, same for the other ignore line)
+    mc "…"   # no voice (ignored)
     hide nirmana with dissolve
     
 
@@ -158,8 +177,11 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 21.mp3"
     laeticia "I…. Let's just… let's just clean it up…"
 
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 17.mp3"
     mc "{i}I can't believe I just did that… stupid baka…{/i}"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 18.mp3"
     mc "{i}With no other words exchanged, we cleaned up the mess I made.{/i}"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 19.mp3"
     mc "{i}I really… really hope I don't drop it this time…{/i}"
 
     scene bedroom with fade
@@ -168,6 +190,7 @@ label act_2_blue:
         zoom 0.4
         ypos 1.1
     with dissolve
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 20.mp3"
     mc "{i}Damn girl you live like this???{/i}"
     show laeticia smile at right:
         zoom 0.53
@@ -177,6 +200,7 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 22.mp3"
     laeticia "I'm so glad you're helping, Emcie. I really needed extra hands on this one."
 
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 21.mp3"
     mc "I'd be happy to help! What do you need me to do?"
 
     voice "audio/voiceline/act2_blue/Date_Lae_Line 23.mp3"
@@ -187,15 +211,22 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 24.mp3"
     laeticia "Wouldn't it be fantastic if we… could talk to UMN himself?"
 
-    mc "…What—"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 22.mp3"
+    mc "…huh?"
 
     voice "audio/voiceline/act2_blue/Date_Lae_Line 25.mp3"
     laeticia "Come on, Emcie, I NEED THIS. Can you help poor little ol' me~?"
 
-    mc "…"
+    # ignore line
+    mc "…"   # no voice (ignored)
+
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 23.mp3"
     mc "{i}Everything is telling me to run away right now.{/i}"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 24.mp3"
     mc "{i}But… I'm in too deep.{/i}"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 25.mp3"
     mc "{i}Summoning THE UMN? I can ask him why the food bazaars left us…{/i}"
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 26.mp3"
     mc "Okie dokie."
 
     voice "audio/voiceline/act2_blue/Date_Lae_Line 26.mp3"
@@ -256,6 +287,7 @@ label act_2_blue:
         zoom 0.4
         ypos 1.1
     with dissolve
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 27.mp3"
     mc "Uhh what–"
 
     show laeticia sparkle at right:
@@ -267,9 +299,12 @@ label act_2_blue:
 
     scene black
     play sound "audio/door-slamming-sound-effect-no-repeats-or-silence-2016.mp3"
-    mc "…"
+    # ignore line
+    mc "…"   # no voice (ignored)
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 28.mp3"
     mc "{i}Did she just… kick me out…?{/i}"
     stop music fadeout 2.0
+    voice "audio/voiceline/act2_blue/Date_MC Lae_Line 29.mp3"
     mc "{i}I wanna ask UMN questions too…{/i}"
     
     $ blue_done = True

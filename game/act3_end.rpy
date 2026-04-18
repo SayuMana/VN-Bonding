@@ -26,7 +26,8 @@ label act_3:
     # MUSIC: Pre-Act 3 bickering.mp3
     play music "audio/Pre3.mp3" volume 0.4
 
-    laeticia "Emcie! Do you know these people?!"
+    voice "audio/voiceline/act3/FINAL CHOICE_Lae_Line 1.wav"
+    laeticia "What the freak, Emcie! Do you know these people?!"
 
     cassandra "Explain yourself."
 
@@ -52,7 +53,9 @@ label act_3:
     voice "audio/voiceline/act3/Final Choice_performative&normal_Bryan_Voiceline.wav"
     bryan "Yeah, I did the same thing!"
 
+    voice "audio/voiceline/act3/FINAL CHOICE_Lae_Line 2.wav.wav"
     laeticia "Hah! Well, that doesn't matter."
+    voice "audio/voiceline/act3/FINAL CHOICE_Lae_Line 3.wav"
     laeticia "Emcie, you're going with me, right? You basically already promised me!"
 
     cassandra "Foolish. Emcie already has reservations with me."
@@ -64,6 +67,7 @@ label act_3:
 
     # (All of them in harmony)
     voice "audio/voiceline/act3/Final Choice_harmony_Bryan_Voiceline.wav"
+    voice "audio/voiceline/act3/Harmony_Lae.mp3"
     stop music fadeout 2.0
     everyone "So, who are you choosing?"
 
@@ -85,14 +89,20 @@ label act3_choose_laeticia:
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
     play music "audio/doki.mp3" volume 0.4
-    laeticia "YES YES YES!!! Take that, randoms!"
+    voice "audio/voiceline/act3/CHOSEN_Lae_Line 1.wav"
+    laeticia "YES!!! Take that, randoms!"
+    voice "audio/voiceline/act3/CHOSEN_Lae_Line 2.wav"
     laeticia "Emcie! I'm so happy!"
 
     mc "Sorry for all that… I really didn't know how to avoid it."
 
+    voice "audio/voiceline/act3/CHOSEN_Lae_Line 3.wav"
     laeticia "I'll forgive you this time~ But the next time you try to two-time me, watch yourself."
+    voice "audio/voiceline/act3/CHOSEN_Lae_Line 4.wav"
     laeticia "Anyway, i have something sooo fun we can do together tomorrow!"
+    voice "audio/voiceline/act3/CHOSEN_Lae_Line 5.wav"
     laeticia "All you need to know is, bring some snacks!"
+    voice "audio/voiceline/act3/CHOSEN_Lae_Line 6.wav"
     laeticia "See you at 9 tomorrow?"
 
     mc "I'll look forward to it~~"
@@ -100,6 +110,7 @@ label act3_choose_laeticia:
     jump ending_laeticia
 
 label act3_choose_cassandra:
+    voice "audio/voiceline/act3/NOT CHOSEN_Lae_Line 1.wav"
     laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     voice "audio/voiceline/act3/Not chosen_Bryan_Voiceline.wav"
     bryan "*sigh* Well, I don't mind, as long as you're happy."
@@ -122,6 +133,7 @@ label act3_choose_cassandra:
     jump ending_cassandra
 
 label act3_choose_bryan:
+    voice "audio/voiceline/act3/NOT CHOSEN_Lae_Line 1.wav"
     laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     cassandra "…"
     viko "I should've stayed at home…"
@@ -157,6 +169,7 @@ label act3_choose_bryan:
         jump ending_bryan_normal
 
 label act3_choose_viko:
+    voice "audio/voiceline/act3/NOT CHOSEN_Lae_Line 1.wav"
     laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
     cassandra "…"
     voice "audio/voiceline/act3/Not chosen_Bryan_Voiceline.wav"
@@ -401,6 +414,7 @@ label ending_laeticia:
     # SFX: Crowd noises
     scene black with fade
 
+    voice "audio/voiceline/ending_laeticia/END_Lae_Line1.mp3"
     laeticia "I got an awesome spot, didn't I?"
 
     voice "audio/voiceline/ending_laeticia/Date_MC_Line1.mp3"
@@ -411,9 +425,10 @@ label ending_laeticia:
     voice "audio/voiceline/ending_laeticia/Date_MC_Line3.mp3"
     mc "{i}Yeah, this is more than I could ever ask for.{/i}"
 
-    laeticia "It's the least I can do for you after that whole ritual at my place~"
-    # ignore line
+    voice "audio/voiceline/ending_laeticia/END_Lae_Line2.mp3"
     laeticia "Hope it's not too tight on this bench with both UMN-kun and me here…"
+    voice "audio/voiceline/ending_laeticia/END_Lae_Line3.mp3"
+    laeticia "It's the least I can do for you after that whole ritual at my place~"
 
     voice "audio/voiceline/ending_laeticia/Date_MC_Line4.mp3"
     mc "Nah, It's all good."
@@ -429,6 +444,7 @@ label ending_laeticia:
     mc "So… you've read my texts right?"
 
     # (Laeticia confused)
+    voice "audio/voiceline/ending_laeticia/END_Lae_Line4.mp3"
     laeticia "What texts?"
 
     # (MC annoyed)
@@ -436,6 +452,7 @@ label ending_laeticia:
     mc "You know… I wanted to ask UMN some questions too! You left me on read."
 
     # (Laeticia pouting)
+    voice "audio/voiceline/ending_laeticia/END_Lae_Line5.mp3"
     laeticia "Oh, those texts? It totally didn't go through~"
 
     # (MC laughing)
@@ -444,6 +461,7 @@ label ending_laeticia:
     mc "You did it on purpose, didn't you? Let me see that phone!"
 
     # (Laeticia laugh)
+    voice "audio/voiceline/ending_laeticia/END_Lae_Line6.mp3"
     laeticia "Hahaha! You can't have it!"
 
     # (MC laughing)
@@ -454,6 +472,7 @@ label ending_laeticia:
 
     # (Laeticia smirk)
     scene laeticia pin_smile with fade
+    voice "audio/voiceline/ending_laeticia/END_Lae_Line7.mp3"
     laeticia "Hehe, I got you."
 
     # (MC blush)
@@ -476,8 +495,11 @@ label ending_laeticia_smooch:
 
     # (Laeticia smirk)
     scene laeticia pin_umn blusl with fade
+    voice "audio/voiceline/ending_laeticia/End1_Lae_Line1.mp3"
     laeticia "I really like you, Emcie."
+    voice "audio/voiceline/ending_laeticia/End1_Lae_Line2.mp3"
     laeticia "Will you go out with me?"
+    voice "audio/voiceline/ending_laeticia/End1_Lae_Line3.mp3"
     laeticia "…And UMN-kun?"
 
     # FADE TO BLACK, THEN ENDING CG
@@ -516,10 +538,13 @@ label ending_laeticia_umn:
 
     # (UMN blush)
     scene laeticia pin_umn blusl with dissolve
+    voice "audio/voiceline/ending_laeticia/Date_UMN_Voiceline.wav"
     umn "Y-you!!"
 
     # (Laeticia smirk)
+    voice "audio/voiceline/ending_laeticia/End2_Lae_Line1.mp3"
     laeticia "…Well, I can't say I'm against it!"
+    voice "audio/voiceline/ending_laeticia/End2_Lae_Line2.mp3"
     laeticia "Room for one more?"
 
     # FADE TO BLACK, THEN ENDING CG

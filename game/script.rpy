@@ -161,11 +161,3 @@ label pathku2:
                 jump act_2_green
     else:
         jump act_3
-
-
-
-
-
-
-
-
