@@ -31,12 +31,11 @@ label act_2_green:
     mc "{i}Is THAT my date???????{/i}"
     stop sound fadeout 2.
 
-    enci "KIDS THESE DAYS HAVE NO RESPECT FOR YOUR ELDERS 
-YOU WHIPPERSNAPPERS SHOULD BE MUCH KINDER TO THE PEOPLE WHO FOUGHT FOR THIS LUXURY YOU TAKE FOR GRANTED
-YOUR MOTHER NEVER TAUGHT YOU ANY MANNERS
-SHAME ON HER AND YOUR ANCESTORS!
-"
+    voice "audio/voiceline/act2_green/Act2_VikoEnci_Line1.wav"    
+    enci "KIDS THESE DAYS HAVE NO RESPECT FOR YOUR ELDERS YOU WHIPPERSNAPPERS SHOULD BE MUCH KINDER TO THE PEOPLE WHO FOUGHT FOR THIS LUXURY YOU TAKE FOR GRANTED YOUR MOTHER NEVER TAUGHT YOU ANY MANNERS SHAME ON HER AND YOUR ANCESTORS!"
     
+    sound "audio/undying-appear-sound.mp3"
+    "A wild Enci appeared!"
 
     voice "audio/voiceline/act2_green/Date_Viko_Voiceline 3.wav"
     viko "I'm sorry- r-really! *sob* B-but I grabbed it first…"
@@ -70,10 +69,8 @@ label viko_help:
     scene enci vs viko poke with fade
     announcer "A wild Enci appeared!"
 
-    enci "OH YOU CALLED YOUR FRIEND TO GANG UP ON ME TOO HUH??"
-    enci "DAMN YOU MISCREANTS MULTIPLYING LIKE FILTH"
-    enci "I HAVE YOU KNOW THE STORE MANAGER IS FRIENDS WITH MY SWEET SON"
-    enci "I CAN GET YOU BANNED IN SECONDS!"
+    voice "audio/voiceline/act2_green/Act2_VikoEnci_Line1_Choice1.wav"
+    enci "OH YOU CALLED YOUR FRIEND TO GANG UP ON ME TOO HUH? DAMN YOU MISCREANTS MULTIPLYING LIKE FILTH! I HAVE YOU KNOW THE STORE MANAGER IS FRIENDS WITH MY SWEET SON! I CAN GET YOU BANNED IN SECONDS!"
 
     voice "audio/voiceline/act2_green/Act 2_MC Viko_Line 10.mp3"
     mc "You're going down, granny! Let's do this, Viko!"
@@ -153,8 +150,6 @@ label viko_help:
         zoom 0.4
         ypos 1.1
     with dissolve
-    # ignore line
-    mc "{i}He shyly smiled at me.{/i}"
 
     show viko thinking at right:
         zoom 1.0
@@ -337,6 +332,7 @@ label viko_nah:
     stop music
     play music "audio/Viko.mp3" fadein 2.0
 
+    voice "audio/voiceline/act2_green/Act2_VikoEnci_Line1_Choice3.wav"
     enci "GRRR YOU’RE LUCKY SOME DIVINE GOD IS STOPPING ME FROM RIPPING THIS CHICKEN OUT OF YOUR HAND NEXT TIME YOU WONT BE SO LUCKY YOU GODDARN HOODLUM MARK MY WORDS!!"
     
     show mc happy at left:
@@ -385,9 +381,6 @@ label viko_nah:
     voice "audio/voiceline/act2_green/Date Choice3_Viko_Voiceline 8.mp3"
     viko "After we get the groceries, of course!!"
 
-    # ignore line
-    mc "I'm okay with that! I could help you out too. What do you need?"
-
     voice "audio/voiceline/act2_green/After_Viko_Voiceline 3.wav"
     viko "U-uh, let's see.."
 
@@ -432,8 +425,6 @@ label viko_grocery_shopping:
     mc "Uh sure?"
 
     show black with moveintop
-    # ignore line
-    mc "{i}I can feel the sofa shift with the added weight, is that Viko sitting down?{/i}"
 
     play sound "audio/BELL.mp3"
     voice "audio/voiceline/act2_green/After_Viko_Voiceline 9.wav"

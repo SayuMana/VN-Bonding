@@ -231,7 +231,8 @@ label cass_bicep:
         zoom 0.4
         ypos 1.1
     with dissolve
-    mc "{i}She's just sitting there, menacingly.{/i}"
+    voice "audio/voiceline/act2_red/Date_Squeeze_CassMC_Voiceline 1.wav"
+    mc "{i}She's just sitting there.{/i}"
     voice "audio/voiceline/act2_red/Date_Squeeze_CassMC_Voiceline 2.wav"
     mc "{i}I wonder what's going on inside her head…{/i}"
     voice "audio/voiceline/act2_red/Date_Squeeze_CassMC_Voiceline 3.wav"
@@ -379,8 +380,6 @@ label cass_date_continues:
     play audio "audio/cass kidnapped!!.mp3" volume 0.5
     voice "audio/voiceline/act2_red/Date_CassMC_Voiceline 27.wav"
     mc "*oomph* What the- hey! LET ME GO!! CASS! *muffled*"
-    # ignore line
-    mc "Cass! Please tell me you saw this…"
 
     # BG: Cinema (eye blink animation?)
     scene cass theater:

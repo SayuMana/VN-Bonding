@@ -82,7 +82,6 @@ label act_2_blue:
     laeticia "Shuffle these cards for me, hmm?"
 
     play sound "audio/card-shuffle.mp3"
-    # ignore line (no voice for "Let's see who you REALLY are~")
     show card reveal with dissolve
     play sound "audio/card-swap.mp3"
     ""
@@ -172,7 +171,7 @@ label act_2_blue:
         linear 0.09 xoffset 10 yoffset 10
     
     # Ignore line (Dont comment it, same for the other ignore line)
-    mc "…"   # no voice (ignored)
+    mc "…" 
     hide nirmana with dissolve
     show mc worried at left:
         zoom 0.4
@@ -249,7 +248,8 @@ label act_2_blue:
     laeticia "*smirks* So I've been thinking…"
 
     play music "audio/UMN's Awakening.mp3" volume 0.4
-    # ignore line (no voice for "So, you know how UMN is the best university around here?")
+    voice "audio/voiceline/act2_blue/Date_Lae_Line 23a.wav"
+    laeticia "So, i've been thinking. You know how UMN is the best university around here?"
     voice "audio/voiceline/act2_blue/Date_Lae_Line 24.mp3"
     laeticia "Wouldn't it be fantastic if we… could talk to UMN himself?"
 
@@ -366,10 +366,10 @@ label act_2_blue:
     scene jcafe vn snapshot 
 
     voice "audio/voiceline/act2_blue/Date_UMN_Voiceline3.wav"
-    umn "I, Universitas Multimedia Nusantara, in flesh and bone, have waited for this day to come!
-    Why have you summoned me here? To learn? I must warn you, knowledge comes with a price.... and that doesn’t include SKS.
-"
-    # ignore line (no voice for "Why have you summoned me here?...")
+    umn "I, Universitas Multimedia Nusantara, in flesh and bone, have waited for this day to come!"
+
+    voice "audio/voiceline/act2_blue/Date_UMN_Voiceline4.wav"
+    umn "Why have you summoned me here? To learn? I must warn you, knowledge comes with a price.... and that doesn’t include SKS."
 
     scene bedroom with fade
     show laeticia surprised at left:

@@ -18,10 +18,6 @@ label act_2_yellow:
 
     bryan "…"
 
-    # ignore
-    mc "{i}Maybe he didn't hear me?{/i}"
-    # ignore
-    mc "{i}…Is that a goddamn labubu on his totebag.{/i}"
     voice "audio/voiceline/act2_yellow/MC bryan voiceline4 act_2.mp3"
     show labubu:
         ypos 0.1
