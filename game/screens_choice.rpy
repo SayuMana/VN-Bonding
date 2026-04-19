@@ -15,7 +15,7 @@ screen choice(items):
 
             elif i.caption == "Tell her a joke, you silly goose <3":
                 $ img = "gui/button/ui_bryan_competition4.png"
-            elif i.caption == "Squeeze her bicep (feed ego)":
+            elif i.caption == "Squeeze her bicep":
                 $ img = "gui/button/ui_bryan_competition2.png"
 
             elif i.caption == "The man - men are better at all manual labour jobs.":
@@ -75,6 +75,11 @@ screen choice(items):
             elif i.caption == "Smooch him":
                 $ img = "gui/button/ui_bryan_competition4.png"
             elif i.caption == "Smack the digicam away":
+                $ img = "gui/button/ui_bryan_competition2.png"
+
+            elif i.caption == "Hold it in!!!":
+                $ img = "gui/button/ui_bryan_competition4.png"
+            elif i.caption == "RELEASE THE BEAST":
                 $ img = "gui/button/ui_bryan_competition2.png"
             
             

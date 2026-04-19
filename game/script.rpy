@@ -49,6 +49,7 @@ label act_1:
     play sound "<from 06.0>audio/RECORD DISC SCRATCH.mp3"
     # gian line1 (ignored)
     scene mc2
+    
     voice "audio/voiceline/act1/act1_Gian_line1.mp3"
     gian "Ew, no."
 
@@ -58,15 +59,20 @@ label act_1:
 
     # gian line2-5 (ignored)
     scene mc3   
+    
     voice "audio/voiceline/act1/act1_Gian_line2.mp3"
     gian "You think I want to go out with YOU?"
+    
     voice "audio/voiceline/act1/act1_Gian_line3.mp3"
     gian "You are CHOPPED and BROKE, nandayo."
+    
     voice "audio/voiceline/act1/act1_Gian_line4.mp3"
     gian "You'll be lucky if a baddie like me even BLINKS in your direction lol"
     scene mc4
+    
     voice "audio/voiceline/act1/act1_Gian_line5.mp3"
     gian "Bye loser LMFAOOOO"
+    
     stop sound
 
     play music "audio/Opening act + flashback.mp3" volume 1.0
@@ -109,11 +115,12 @@ label act_1:
     voice "audio/voiceline/act1/Act 1_MC_Line 15.wav"
     mc "I might as well try!"
 
-    play music "audio/Form_Time.mp3" volume 0.3
-    
-
-    "Question! You're walking out at night and a 7 foot tall clown is chasing you. Whose arm are you running to?"
+    play music "audio/Form_Time.mp3" volume 0.29
     hide form with dissolve
+    "Question! Pada malam hari, ada TUYUL raksasa mengejar kamu! Cepat, siapakah yang akan kamu pilih untuk melindungi kamu!!!
+"
+    hide form with dissolve
+    show form cg with dissolve
     menu :
         "A powerful witch":
             $ blue += 1
@@ -125,6 +132,7 @@ label act_1:
             $ green += 1
 
     voice "audio/voiceline/act1/Act 1_MC_Line 16.wav"
+    hide form with dissolve
     mc "Done! *mumbling* Now I just need to fill in my number… and email…"
     stop music
     play sound "audio/harikitte_ikou_kitasan.mp3"

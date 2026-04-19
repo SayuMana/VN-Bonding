@@ -12,7 +12,7 @@ label act_2_blue:
     image lae close = "images/CGs/Act2/laeticia/closeup.png"
     image card reveal ="images/CGs/Act2/laeticia/Cards popup.png"
     image card stay ="images/CGs/Act2/laeticia/Cards on table.png"
-    play music "audio/Laeticia's date.mp3"
+    play music "audio/Laeticia's date.mp3" volume 0.6
     play sound "audio/Crowd Talking.mp3" loop volume 0.5
     scene bazaar with fade
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 1.mp3"
@@ -93,37 +93,71 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 11.mp3"
     laeticia "In all seriousness, you just went through a disaster didn't you. Considering a certain event coming up… you just got rejected, didn't you~? Poor Emcie…"
     scene bazaar no laeticia with fade  
-    show laeticia smile at right:
+    show laeticia talk at right:
         zoom 0.53
         ypos 1.52
+    with dissolve
     show mc neutral at left:
         zoom 0.4
         ypos 1.1
+    with dissolve
 
     voice "audio/voiceline/act2_blue/Date_Lae_Line 12.mp3"
     laeticia "So how did I do?"
 
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 12.mp3"
+    show mc talk at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     mc "I'm both impressed and creeped out."
+    show mc neutral at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
 
     voice "audio/voiceline/act2_blue/Date_Lae_Line 13.mp3"
+    show laeticia smile at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
     laeticia "Hehe~ I read you like a book, didn't I?"
     voice "audio/voiceline/act2_blue/Date_Lae_Line 14.mp3"
+    show laeticia talk at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
     laeticia "Oh! It's almost 5 PM. I should start packing up."
     voice "audio/voiceline/act2_blue/Date_Lae_Line 15.mp3"
     laeticia "Oh man… I brought so much stuff… It's going to be hard carrying this to my apartment."
 
+    show mc happy at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 13.mp3"
     mc "I'll help carry them all!"
 
+    show laeticia surprised at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
     voice "audio/voiceline/act2_blue/Date_Lae_Line 16.mp3"
     laeticia "Really? There's a lot of stuff in my booth, though!"
 
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 14.mp3"
     mc "Don't worry! I can do this!"
+    show mc neutral at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 15.mp3"
     mc "{i}As she cleaned up the booth, I stacked up and scooped all the items into my arms.{/i}"
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 16.mp3"
+    show mc smile at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     mc "{i}This is going great so fa—{/i}"
 
     play sound "audio/metal-pipe.mp3"
@@ -140,6 +174,10 @@ label act_2_blue:
     # Ignore line (Dont comment it, same for the other ignore line)
     mc "…"   # no voice (ignored)
     hide nirmana with dissolve
+    show mc worried at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     
 
     show laeticia angry 1 at right:
@@ -192,7 +230,7 @@ label act_2_blue:
     with dissolve
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 20.mp3"
     mc "{i}Damn girl you live like this???{/i}"
-    show laeticia smile at right:
+    show laeticia talk at right:
         zoom 0.53
         ypos 1.52
     with dissolve
@@ -200,13 +238,17 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_Lae_Line 22.mp3"
     laeticia "I'm so glad you're helping, Emcie. I really needed extra hands on this one."
 
+    show mc talk at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 21.mp3"
     mc "I'd be happy to help! What do you need me to do?"
 
     voice "audio/voiceline/act2_blue/Date_Lae_Line 23.mp3"
     laeticia "*smirks* So I've been thinking…"
 
-    play music "audio/UMN's Awakening.mp3"
+    play music "audio/UMN's Awakening.mp3" volume 0.4
     # ignore line (no voice for "So, you know how UMN is the best university around here?")
     voice "audio/voiceline/act2_blue/Date_Lae_Line 24.mp3"
     laeticia "Wouldn't it be fantastic if we… could talk to UMN himself?"
@@ -214,10 +256,18 @@ label act_2_blue:
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 22.mp3"
     mc "…huh?"
 
+    show laeticia smile at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
     voice "audio/voiceline/act2_blue/Date_Lae_Line 25.mp3"
     laeticia "Come on, Emcie, I NEED THIS. Can you help poor little ol' me~?"
 
     # ignore line
+    show mc neutral at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     mc "…"   # no voice (ignored)
 
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 23.mp3"
@@ -226,12 +276,24 @@ label act_2_blue:
     mc "{i}But… I'm in too deep.{/i}"
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 25.mp3"
     mc "{i}Summoning THE UMN? I can ask him why the food bazaars left us…{/i}"
+    show mc talk at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 26.mp3"
     mc "Okie dokie."
 
+    show laeticia happy at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
     voice "audio/voiceline/act2_blue/Date_Lae_Line 26.mp3"
     laeticia "PERFECT! Let's prep for everything!"
     show book with dissolve
+    show laeticia talk at right:
+        zoom 0.53
+        ypos 1.52
+    with dissolve
     voice "audio/voiceline/act2_blue/Date_Lae_Line 27.mp3"
     laeticia "So, I found this super old book in our library, tucked under the BI corner sofas…"
     voice "audio/voiceline/act2_blue/Date_Lae_Line 28.mp3"
@@ -282,6 +344,8 @@ label act_2_blue:
     
     scene bedroom 
     ""
+
+    play sound "audio/Smoke Clone Naruto Sound Effect.mp3"
     show smoke:
         zoom 1.3
         xpos -0.2
@@ -313,7 +377,7 @@ label act_2_blue:
         ypos 1.52
         xpos 0.1
     with dissolve
-    show mc neutral at left:
+    show mc worried at left:
         zoom 0.4
         ypos 1.1
     with dissolve
@@ -348,7 +412,7 @@ label act_2_blue:
         ypos -0.1
     
     
-    
+    stop music 
     play sound "audio/Wilhelm scream Sound.mp3" volume 0.3
     
     show mc neutral:
@@ -366,6 +430,7 @@ label act_2_blue:
     stop music fadeout 2.0
     voice "audio/voiceline/act2_blue/Date_MC Lae_Line 29.mp3"
     mc "{i}I wanna ask UMN questions too…{/i}"
+    scene black with fade
     
     $ blue_done = True
     jump pathku2
