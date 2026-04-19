@@ -81,6 +81,11 @@ screen choice(items):
                 $ img = "gui/button/ui_bryan_competition4.png"
             elif i.caption == "RELEASE THE BEAST":
                 $ img = "gui/button/ui_bryan_competition2.png"
+
+            elif i.caption == "Smooch Cass":
+                $ img = "gui/button/ui_bryan_competition4.png"
+            elif i.caption == "Jump out the Helicopter":
+                $ img = "gui/button/ui_bryan_competition2.png"
             
             
 
@@ -104,7 +109,7 @@ screen choice(items):
                     yalign 0.5
                     size 30
                     color "#000000"
-                    outlines [(2, "#FFFFFF", 0, 0)]
+                    
 
 # screen kahoot_menu(options):
 #     style_prefix "choice"

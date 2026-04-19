@@ -8,76 +8,195 @@ label act_3:
     scene black with fade
     play sound "audio/single-heatbeat.mp3"
     # SFX: Heartbeat sounds
-
-    mc "Ooook… Here I am. It's almost time…"
-    mc "To pick…. A date."
-    stop music
     scene mekdi2: 
         zoom 2.9
         xpos 0.0
-    
-    
     with fade
+    show mc neutral:
+        zoom 0.4
+        
+    with dissolve
+    
+    voice "audio/voiceline/act3/MC/Final Choice_MC_Line 1.mp3"
+    mc "Ooook… Here I am. It's almost time…"
+    voice "audio/voiceline/act3/MC/Final Choice_MC_Line 2.mp3"
+    mc "To pick…. A date."
+    stop music
+    show mc happy:
+        zoom 0.4
+        
+    with dissolve
     play sound "audio/short-drumroll.mp3"
     # SFX: Short drumroll
+    voice "audio/voiceline/act3/MC/Final Choice_MC_Line 3.mp3"
     mc "{i}Hopefully… everyone I don't choose is a good sport about it.{/i}"
-
+    hide mc with dissolve
     # SFX: All LI VAs bickering
     # MUSIC: Pre-Act 3 bickering.mp3
     play music "audio/Pre3.mp3" volume 0.4
 
+    show laeticia angry 2 at left:
+        zoom 0.53
+        ypos 1.52
+        xpos 0.1
+    with dissolve
     voice "audio/voiceline/act3/FINAL CHOICE_Lae_Line 1.wav"
     laeticia "What the freak, Emcie! Do you know these people?!"
 
+    show cass annoyed at right:
+        zoom 0.6
+        ypos 1.52
+    with dissolve
+    show laeticia angry 2 at left:
+        zoom 0.53
+        ypos 1.52
+        xpos 0.1
+        easeout 0.5 zoom 0.47 xpos -0.02
+    
     voice "audio/voiceline/act3/Final choice_Cass_Voiceline 1.wav"
     cassandra "Explain yourself."
 
     if bryan_score >= 3:
+        show cass annoyed at right:
+            zoom 0.6
+            ypos 1.52
+            easeout 0.5 zoom 0.49 xpos 0.6
         voice "audio/voiceline/act3/Final Choice_performative_Bryan_Voiceline 1.wav"
         bryan "Ladies! Ladies!, calm down. I'm sure Emcie here will explain everything. Right, babe?"
     else:
+        show cass annoyed at right:
+            zoom 0.6
+            ypos 1.52
+            easeout 0.5 zoom 0.49 xpos 0.6
+        
+
+        show  bryan surprised at right:
+            zoom 0.5
+            ypos 1.3
+        with dissolve
         voice "audio/voiceline/act3/Final Choice_normal_Bryan_Voiceline 1.wav"
         bryan "Calm down, guys. I'm sure Emcie here will explain everything. Right, Emcie?"
+        show  bryan surprised at right:
+            zoom 0.5
+            ypos 1.3
+            easeout 0.5 zoom 0.4 xpos 0.8
 
+    
+    
     voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 1.wav"
+    show viko nervous at right:
+        zoom 1.0
+        ypos 1.54
+    with dissolve
     viko "I'm incredibly uncomfortable."
+    show viko nervous at right:
+        zoom 1.0
+        ypos 1.54
+        easeout 0.5 zoom 0.84
 
+    voice "audio/voiceline/act3/MC/Final Choice_MC_Line 4.mp3"
     mc "G-guys…"
+    voice "audio/voiceline/act3/MC/Final Choice_MC_Line 5.mp3"
     mc "This is genuinely just one crazy coincidence, I swear!"
+    voice "audio/voiceline/act3/MC/Final Choice_MC_Line 6.mp3"
     mc "I mean, you guys were the ones who invited me out here for my answer!"
+    voice "audio/voiceline/act3/MC/Final Choice_MC_Line 7.mp3"
     mc "On the exact same day… and at the exact same time…"
 
     cassandra "…"
+    show cass annoyed at right:
+        zoom 0.49
+        ypos 1.52
+        xpos 0.6
+        easeout 0.5 zoom 0.6
     voice "audio/voiceline/act3/Final choice_Cass_Voiceline 2.wav"
     cassandra "Are you serious?"
 
+    show cass annoyed at right:
+        zoom 0.6
+        ypos 1.52
+        xpos 0.6
+        easeout 0.5 zoom 0.49
+
+    show viko nervous at right:
+        zoom 0.84
+        ypos 1.54
+        easeout 0.5 zoom 1.0
     voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 2.wav"
     viko "I do remember being the one to invite you here…"
+    show viko nervous at right:
+        zoom 1.0
+        ypos 1.54
+        easeout 0.5 zoom 0.84
 
+    show  bryan surprised at right:
+        zoom 0.4
+        ypos 1.3
+        xpos 0.8
+        easeout 0.5 zoom 0.5 
     voice "audio/voiceline/act3/Final Choice_performative&normal_Bryan_Voiceline 1.wav"
     bryan "Yeah, I did the same thing!"
+    show  bryan surprised at right:
+        zoom 0.5
+        ypos 1.3
+        xpos 0.8
+        easeout 0.5 zoom 0.4
 
-    voice "audio/voiceline/act3/FINAL CHOICE_Lae_Line 2.wav.wav"
+    show laeticia angry 2 at left:
+        zoom 0.47
+        ypos 1.52
+        xpos -0.02
+        easeout 0.5 zoom 0.53
+    voice "audio/voiceline/act3/FINAL CHOICE_Lae_Line 2.wav"
     laeticia "Hah! Well, that doesn't matter."
     voice "audio/voiceline/act3/FINAL CHOICE_Lae_Line 3.wav"
     laeticia "Emcie, you're going with me, right? You basically already promised me!"
+    show laeticia angry 2 at left:
+        zoom 0.5
+        ypos 1.52
+        xpos -0.02
+        easeout 0.5 zoom 0.47
 
+    show cass annoyed at right:
+        zoom 0.49
+        ypos 1.52
+        xpos 0.6
+        easeout 0.5 zoom 0.6
+    voice "audio/voiceline/act3/Final choice_Cass_Voiceline 3.wav"
     cassandra "Foolish. Emcie already has reservations with me."
+    show cass annoyed at right:
+        zoom 0.6
+        ypos 1.52
+        xpos 0.6
+        easeout 0.5 zoom 0.49
 
+    show viko nervous at right:
+        zoom 0.84
+        ypos 1.54
+        easeout 0.5 zoom 1.0
     voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 3.wav"
     viko "H-hey, that's not fair. I also invited them! Don't Emcie get a say in all t-this…"
+    show viko nervous at right:
+        zoom 1.0
+        ypos 1.54
+        easeout 0.5 zoom 0.84
 
+    show  bryan surprised at right:
+        zoom 0.4
+        ypos 1.3
+        xpos 0.8
+        easeout 0.5 zoom 0.5
     voice "audio/voiceline/act3/Final Choice_performative&normal_Bryan_Voiceline 2.wav"
     bryan "That's right. Emcie should be the one to decide who they want to go with."
 
-    # (All of them in harmony)
     voice "audio/voiceline/act3/Final Choice_harmony_Bryan_Voiceline.wav"
-    voice "audio/voiceline/act3/Harmony_Lae.mp3"
-    # viko missing
-    # cass missing
     stop music fadeout 2.0
-    everyone "So, who are you choosing?"
-
+    bryan "So, who are you choosing?"
+    show  bryan surprised at right:
+        zoom 0.5
+        ypos 1.3
+        xpos 0.8
+        easeout 0.5 zoom 0.4
     menu:
         "Laeticia":
             jump act3_choose_laeticia
@@ -89,23 +208,68 @@ label act_3:
             jump act3_choose_viko
 
 label act3_choose_laeticia:
+    show cass annoyed at right:
+        zoom 0.49
+        ypos 1.52
+        xpos 0.6
+        easeout 1.4 xpos -0.6
     cassandra "…"
+    hide cass
     voice "audio/voiceline/act3/Not chosen_Bryan_Voiceline.wav"
+
+    show  bryan surprised at right:
+        zoom 0.4
+        ypos 1.3
+        xpos 0.8
+        easeout 0.5 zoom 0.5
     bryan "*sigh* Well, I don't mind, as long as you're happy."
+    show  bryan surprised at right:
+        zoom 0.5
+        ypos 1.3
+        xpos 0.8
+        easeout 1.4 xpos 2.4
+
+    show viko nervous at right:
+        zoom 0.84
+        ypos 1.54
+        easeout 0.5 zoom 1.0
     voice "audio/voiceline/act3/Not chosen_Viko_Voiceline.wav"
     viko "I should've stayed at home…"
-
+    show viko nervous at right:
+        zoom 1.0
+        ypos 1.54
+        easeout 1.5 xpos 1.54
+    hide viko
+    hide normal
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
     play music "audio/doki.mp3" volume 0.4
+    show laeticia happy at left:
+        zoom 0.47
+        ypos 1.52
+        xpos -0.02
+        easeout 0.9 zoom 0.53 xpos 0.25
+    with dissolve
     voice "audio/voiceline/act3/CHOSEN_Lae_Line 1.wav"
     laeticia "YES!!! Take that, randoms!"
     voice "audio/voiceline/act3/CHOSEN_Lae_Line 2.wav"
     laeticia "Emcie! I'm so happy!"
 
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 1.mp3"
     mc "Sorry for all that… I really didn't know how to avoid it."
 
+    show laeticia angry 1 at left:
+        zoom 0.53
+        ypos 1.52
+        xpos 0.25
+    with dissolve
     voice "audio/voiceline/act3/CHOSEN_Lae_Line 3.wav"
     laeticia "I'll forgive you this time~ But the next time you try to two-time me, watch yourself."
+
+    show laeticia happy at left:
+        zoom 0.53
+        ypos 1.52
+        xpos 0.25
+    with dissolve
     voice "audio/voiceline/act3/CHOSEN_Lae_Line 4.wav"
     laeticia "Anyway, i have something sooo fun we can do together tomorrow!"
     voice "audio/voiceline/act3/CHOSEN_Lae_Line 5.wav"
@@ -113,36 +277,81 @@ label act3_choose_laeticia:
     voice "audio/voiceline/act3/CHOSEN_Lae_Line 6.wav"
     laeticia "See you at 9 tomorrow?"
 
+    voice "audio/voiceline/act3/MC/Final Choice_MC_Line 9.mp3"
     mc "I'll look forward to it~~"
 
     jump ending_laeticia
 
 label act3_choose_cassandra:
+
+    show laeticia angry 2 at left:
+        zoom 0.47
+        ypos 1.52
+        xpos -0.02
+        easeout 0.5 zoom 0.53
+        pause 1.9
+        easeout 0.9 xpos -1.2
     voice "audio/voiceline/act3/NOT CHOSEN_Lae_Line 1.wav"
     laeticia "Seriously?! This is totally unfair! Whatever, let's go UMN-kun."
+
+    show  bryan surprised at right:
+        zoom 0.4
+        ypos 1.3
+        xpos 0.8
+        easeout 0.5 zoom 0.5
     voice "audio/voiceline/act3/Not chosen_Bryan_Voiceline.wav"
     bryan "*sigh* Well, I don't mind, as long as you're happy."
+    show  bryan surprised at right:
+        zoom 0.5
+        ypos 1.3
+        xpos 0.8
+        easeout 1.4 xpos 2.4
+
+    show viko nervous at right:
+        zoom 0.84
+        ypos 1.54
+        easeout 0.5 zoom 1.0
     voice "audio/voiceline/act3/Not chosen_Viko_Voiceline.wav"
     viko "I should've stayed at home…"
+    show viko nervous at right:
+        zoom 1.0
+        ypos 1.54
+        easeout 1.5 xpos 1.54
 
+    
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
     play music "audio/doki.mp3" volume 0.4
+    show cass soft at right:
+        zoom 0.49
+        ypos 1.52
+        xpos 0.6
+        easeout 0.5 zoom 0.6 xpos 0.75
+    with dissolve
     voice "audio/voiceline/act3/Chosen_Cass_Voiceline 1.wav"
     cassandra "I knew you'd make the right choice."
 
+    voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 1.mp3"
     mc "Sorry for all that… I really didn't know how to avoid it."
-    mc "But anyway, what are we doing tomorrow?"
 
+    show cass smug at right:
+        zoom 0.6
+        ypos 1.52
+        xpos 0.75
+    with dissolve
+        
     voice "audio/voiceline/act3/Chosen_Cass_Voiceline 2.wav"
     cassandra "I already made reservations, naturally."
     voice "audio/voiceline/act3/Chosen_Cass_Voiceline 3.wav"
     cassandra "And trust me, I only reserved the best for you, my sweet."
     voice "audio/voiceline/act3/Chosen_Cass_Voiceline 4.wav"
     cassandra "I'll pick you up at 9. I already have a hold of your home address."
+    show cass soft at right:
+        zoom 0.6
+        ypos 1.52
+        xpos 0.75
+    with dissolve
     voice "audio/voiceline/act3/Chosen_Cass_Voiceline 5.wav"
     cassandra "Wear something pretty for me, won't you?"
-
-    mc "Gulp. Yes, maam…"
 
     jump ending_cassandra
 
@@ -160,13 +369,14 @@ label act3_choose_bryan:
         voice "audio/voiceline/act3/Chosen_performative_Bryan_Voiceline 1.wav"
         bryan "Thank you. I never doubted you for a second. Sorry, guys, you heard them! Haha~"
 
+        voice "audio/voiceline/act3/MC/Act 3_MC Viko_Line 1.mp3"
         mc "Sorry for all that… I really didn't know how to avoid it."
-        mc "But anyway, what are we doing tomorrow?"
 
         voice "audio/voiceline/act3/Chosen_performative_Bryan_Voiceline 2.wav"
         bryan "Well~ It's more of a surprise. *chuckle* Don't worry your pretty little head about it, just make sure to wear something stylish, alright? I'll do the rest. See you tomorrow at 9?"
 
-        mc "I'll see you."
+        voice "audio/voiceline/act3/MC/Final Choice_MC_Line 9.mp3"
+        mc "I'll look forward to it."
 
         jump ending_bryan_performative
 
@@ -174,12 +384,11 @@ label act3_choose_bryan:
         voice "audio/voiceline/act3/Chosen_normal_Bryan_Voiceline 1.wav"
         bryan "W-wait, me? Really? After that mess yesterday?"
 
-        mc "You promised me you'll show me the real you, right?"
-
         voice "audio/voiceline/act3/Chosen_normal_Bryan_Voiceline 2.wav"
         bryan "*chuckles* I'm so happy. Thank you so much. Ah, I actually did have something in mind for our date, but I want to keep it as a surprise. Would you be alright meeting me tomorrow at 9?"
 
-        mc "Yeah. I'll see you."
+        voice "audio/voiceline/act3/MC/Final Choice_MC_Line 7.mp3"
+        mc "I'll look forward to it."
 
         jump ending_bryan_normal
 
@@ -199,9 +408,7 @@ label act3_choose_viko:
     mc "Sorry for all that… I really didn't know how to avoid it."
 
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 2.mp3"
-    viko "It's ok, honest! I'm just so relieved you wanted to go with me…"
-    # ignore line
-    viko "Thank you, Emcie."
+    viko "It's ok, honest! I'm just so relieved you wanted to go with me."
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 3.mp3"
     viko "O-oh, actually… what do you plan to do at the hanami?"
     voice "audio/voiceline/act3/Chosen_Viko_Voiceline 4.mp3"
@@ -282,9 +489,9 @@ label ending_bryan_performative_smooch:
     mc "{i}Surprisingly, more people began following him for our couple's content, and he convinced me to make a public account too.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline8 act_3.mp3"
     mc "{i}Now, we both post mukbangs on our shared YouTube channel.{/i}"
-    # ignore line
+    voice "audio/voiceline/ending_bryan/MC bryan voiceline8a act_3.mp3"
     mc "{i}We script out some drama here and there, but the money is really good. Who knew you could get a retirement plan from larping online?{/i}"
-    # ignore line
+    voice "audio/voiceline/ending_bryan/MC bryan voiceline8b act_3.mp3"
     mc "{i}Anyways, Bryan and I are planning our 5th trip to Tokyo next week, so I gotta go.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline9 act_3.mp3"
     mc "{i}Thanks for playing with us!{/i}"
@@ -413,7 +620,7 @@ label ending_bryan_normal_holdit:
     mc "{i}Anyway, I've been regularly going on more dates with Bryan, and he's so much more honest and self-assured now.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline37 act_3.mp3"
     mc "{i}Tomorrow will be our 6-month anniversary. Or is it 7 months?{/i}"
-    # ignore line
+    voice "audio/voiceline/ending_bryan/MC bryan voiceline43 act_3.mp3"
     mc "{i}Thank you for playing with us!{/i}"
     jump credits
 
@@ -542,10 +749,9 @@ label ending_laeticia:
 # end 1
 label ending_laeticia_smooch:
     scene black with fade
-    # SFX: Smooch
     play sound "audio/smoochykiss.mp3"
-    # ignore line (this comment line is skipped – no voice)
-    #mc "{i}She softly pecked me on the lips.{/i}"   # No voice file for End1_Line1
+    voice "audio/voiceline/ending_laeticia/End1_MC Lae_Line1.wav"
+    mc "{i}She softly pecked me on the lips.{/i}" 
 
     # (Laeticia smirk)
     scene laeticia pin_umn blusl with fade
@@ -624,50 +830,87 @@ label ending_laeticia_umn:
 label ending_cassandra:
     # MUSIC: ending music
     play music "audio/smoochy route!.mp3"
-    scene hanami:
+    # scene hanami:
+    #     zoom 2.23
+    #     xpos 0.0
+    #     ypos -0.2
+    # with fade
+    scene emcie bedroom:
         zoom 2.23
         xpos 0.0
-        ypos -0.2
+        ypos 0.0
     with fade
-
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 1.wav"
     mc "{i}I hope these clothes are good enough to show Cass.{/i}"
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 2.wav"
     mc "{i}…Wait, did I ever tell her where I live?{/i}"
+    play sound "audio/tire-screechh.mp3"
+    ""
 
     # SFX: car tires screeching and people marching
 
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 3.wav"
     mc "What is going on out there??"
-
+    scene window cass with fade
     # (CG Window view)
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 4.wav"
     mc "{i}Wait, aren't those the bodyguards from our date??{/i}"
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 5.wav"
     mc "{i}What the heck are they doing blocking the road?{/i}"
-
+    scene window cass bodyguard with dissolve
     # (CG Window view but there's an angry old lady)
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 6.wav"
     mc "{i}Whose grandma is that{/i}"
 
     # (Enci muffled)
+    voice "audio/voiceline/ending_cass/Act2_CassEnci_Line1_Choice3.wav"
     enci "WHAT DO YOU BOYS THINK YOU'RE DOING! I CAN'T BELIEVE THE AUDACITY OF YOU YOUNGINS. DON'T YOU KNOW WHAT PUBLIC SPACES ARE FOR??? PUBLIC. ACTIVITIES. YOUR DAMN CARS ARE BLOCKING MY WAY-"
 
     # SFX: helicopter sounds (constant, quieter after first 3 seconds)
-
+    play sound "audio/Helicopter Sound Effect - Flying 5 minutes.mp3" 
+    pause 3.0
+    stop sound
+    play sound "audio/Helicopter Sound Effect - Flying 5 minutes.mp3" volume 0.3
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 7.wav"
     mc "What the freak???"
+    scene black with fade
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 8.wav"
     mc "{i}I immediately look out the window to see…{/i}"
+    scene heli with fade
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 9.wav"
     mc "{i}Cass hanging from the helicopter ladder??{/i}"
 
     voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 1.wav"
     cassandra "Emcie, it's time for our sweet getaway."
 
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 10.wav"
     mc "Isn't this kind of dangerous??"
 
     voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 2.wav"
     cassandra "Come now, dear, won't you trust me? Won't you show your devotion and jump into my arms?"
 
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 11 half.wav"
     mc "{i}She's right. Compared to kidnapping, this is nothing. I open the window and jump into her arms.{/i}"
 
     voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 3.wav"
     cassandra "Very good, Kitten."
+    scene heli_interior:
+        zoom 0.36
+        xpos -0.1
+        ypos -0.2
+    with fade
 
+    show mc talk at left:
+        zoom 0.4
+        ypos 1.1
+    with dissolve
+    voice "audio/voiceline/ending_cass/Ending_CassMC_Voiceline 12.wav"
     mc "So where are we going? You're taking me to the hanami, right?"
 
+    show cass neutral at right:
+        zoom 0.6
+        ypos 1.52
+    with dissolve
     voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 4.wav"
     cassandra "The hanami? Of course. After that, we will go somewhere better."
     voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 5.wav"
@@ -683,16 +926,29 @@ label ending_cassandra:
 
 label ending_cassandra_smooch:
     # SFX: smooch
+    scene black with fade
     play sound "audio/smoochykiss.mp3"
-
+    pause 1.0
+    scene happy ed cass:
+        zoom 2.8
+        xpos 0.0
+        ypos 0.0
+    with fade
+    voice "audio/voiceline/ending_cass/Ending1_CassMC_Voiceline 1.wav"
     mc "{i}How could I ever refuse?{/i}"
+    voice "audio/voiceline/ending_cass/Ending1_CassMC_Voiceline 2.wav"
     mc "{i}I can smell her alpha scent.{/i}"
+    voice "audio/voiceline/ending_cass/Ending1_CassMC_Voiceline 3.wav"
     mc "{i}I gave her a small peck on the lips and then…{/i}"
 
     # CUT TO BLACK, THEN ENDING CG
+    voice "audio/voiceline/ending_cass/Narration 1.wav"
     mc "{i}In the end, I became Cass's trophy wife and lived in luxury.{/i}"
+    voice "audio/voiceline/ending_cass/Narration 2.wav"
     mc "{i}I had to get used to some very public displays of affection…{/i}"
+    voice "audio/voiceline/ending_cass/Narration 3.wav"
     mc "{i}All promo banners for Cass and her company now include me, too.{/i}"
+    voice "audio/voiceline/ending_cass/thanks.wav"
     mc "{i}Thanks for playing with us!{/i}"
 
     jump credits
@@ -700,17 +956,30 @@ label ending_cassandra_smooch:
 label ending_cassandra_jump:
     # MUSIC: after non-kiss option music
 
+    voice "audio/voiceline/ending_cass/Ending2_CassMC_Voiceline 1.wav"
     mc "{i}Oh god, is she going to lock me down in her mansion? I don't want to be kept as her asset!!!{/i}"
+    voice "audio/voiceline/ending_cass/Ending2_CassMC_Voiceline 2.wav"
     mc "{i}I gotta get outta here!{/i}"
+    voice "audio/voiceline/ending_cass/Ending2_CassMC_Voiceline 3 half.wav"
     mc "{i}I shove Cass back… not that it would do anything, but in a moment of weakness, Cass lets me go.{/i}"
+    voice "audio/voiceline/ending_cass/Ending2_CassMC_Voiceline 4.wav"
     mc "{i}I access the door and jump out towards freedom.{/i}"
+    voice "audio/voiceline/ending_cass/Ending2_CassMC_Voiceline 5.wav"
     mc "{i}Thankfully, a sakura tree cushioned my fall. Not that I was OK after that.{/i}"
 
     # (CG of MC working at McDonald's)
+    stop music
+    scene bad ed cass with fade
+    play music "audio/bad route!.mp3"
+    voice "audio/voiceline/ending_cass/Ending2_CassMC_Narration 1.wav"
     mc "{i}The doctors told me I broke 5 ribs.{/i}"
+    voice "audio/voiceline/ending_cass/Ending2_CassMC_Narration 2.wav"
     mc "{i}Since my BPJS didn't cover my fees, I had to get a job to pay them off…{/i}"
+    voice "audio/voiceline/ending_cass/Ending2_CassMC_Narration 3 half.wav"
     mc "{i}After sending in around 100 applications, the only place that hired me was the McDonald's at SDC.{/i}"
+    voice "audio/voiceline/ending_cass/Ending2_CassMC_Narration 4.wav"
     mc "{i}…And apparently, this location is owned by Cass too.{/i}"
+    voice "audio/voiceline/ending_cass/thanks.wav"
     mc "{i}Thanks for playing with us!{/i}"
 
     jump credits
@@ -828,17 +1097,17 @@ label ending_viko_smooch:
     scene gud end viko with fade
     play sound "audio/anime-wow-sound-effect-mp3cut.mp3"
     # GOOD ENDING CG
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 4.mp3"
     mc "{i}Well, my life after that has been a non-stop whirlwind.{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 5.mp3"
     mc "{i}Apparently there was a famous cosplayer photographer on site that got to snap our very lovely moment together…{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 6.mp3"
     mc "{i}He said that we had a lot of chemistry together in cosplay, so he invited us to take some more photos in his studio.{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 7.mp3"
     mc "{i}Viko was a bit hesitant but somehow he was the one that managed to convince me to go at the end.{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 8.mp3"
     mc "{i}Before you know it, Viko and I became one of the top couple cosplayers of the year! Our next event is apparently in May at Comic Frontier 22.{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 1_MC Viko_Line 9.mp3"
     mc "{i}Thanks for playing with us!{/i}"
 
     jump credits
@@ -861,22 +1130,22 @@ label ending_viko_spine:
     scene bad end viko with fade
     # BAD ENDING CG
     # MUSIC: after non-kiss option music
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 3.mp3"
     mc "{i}I couldn't face Viko after that, or anyone in campus.{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 4.mp3"
     mc "{i}I never really got to return that outfit he made… It gave me a brilliant idea though!{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 5.mp3"
     mc "{i}That cosplay he tailored was so good, I got enough money from renting it online to move to Slovenia, where I lived out my life as a humble farmer.{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 6.mp3"
     mc "{i}What? No way in heck I'm coming back from that okay…{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 7.mp3"
     mc "{i}Sometimes, when the internet signal allows me, I like to check back to what Viko is doing, just for fun.{/i}"
 
     # SECRET ENDING CG — only if picked "Hey where did the employees go?" OR "Nah he got this!"
     if not viko_help:
-        # Ignore line
+        voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 8.mp3"
         mc "{i}Seems like he's doing just fine…{/i}"
-    # Ignore line
+    voice "audio/voiceline/ending_viko/END 2_MC Viko_Line 9.mp3"
     mc "{i}Thanks for playing with us!{/i}"
 
     jump credits

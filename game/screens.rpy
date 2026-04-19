@@ -332,7 +332,7 @@ screen choice(items):
                 action i.action
                 text_color colors[idx % len(colors)]
                 text_hover_color "#FFFFFF"
-                text_outlines [(2, "#c5c5c5", 0, 0)]
+                
             
 
 
