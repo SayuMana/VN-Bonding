@@ -60,7 +60,7 @@ label act_2_red:
     voice "audio/voiceline/act2_red/Date_CassMC_Voiceline 9.wav"
     mc "H-hello…"
     voice "audio/voiceline/act2_red/Date_CassMC_Voiceline 10.wav"
-    mc "{i}I can smell a scent on her that's so.. Distinct{/i}"
+    mc "{i}My heart's beating so fast, I can smell a scent on her that's so.. Distinct{/i}"
     voice "audio/voiceline/act2_red/Date_CassMC_Voiceline 11.wav"
     mc "{i}So… overwhelming{/i}"
     voice "audio/voiceline/act2_red/Date_CassMC_Voiceline 12.wav"
@@ -377,7 +377,7 @@ label cass_date_continues:
     stop music
     ""
     # MUSIC: action bgm
-    play audio "audio/cass kidnapped!!.mp3" volume 0.5
+    play audio "audio/cass kidnapped!!.mp3" volume 0.2
     voice "audio/voiceline/act2_red/Date_CassMC_Voiceline 27.wav"
     mc "*oomph* What the- hey! LET ME GO!! CASS! *muffled*"
 
@@ -414,6 +414,7 @@ label cass_date_continues:
     voice "audio/voiceline/act2_red/Date_CassMC_Voiceline 31.wav"
     mc "Huh."
     scene black with fade
+    stop music
     play movie "images/background/Act2/Cass/twerking.webm" 
     scene cinema bg with fade
     # ignore line
@@ -450,10 +451,7 @@ label cass_date_continues:
     voice "audio/voiceline/act2_red/Date_Cass_Voiceline 15.wav"
     cassandra "My sweet, baby girl. I'm here to save you!"
 
-    voice "audio/voiceline/act2_red/Date_CassMC_Voiceline 33.wav"
-    mc "Cass!!"
-    voice "audio/voiceline/act2_red/Date_CassMC_Voiceline 34.wav"
-    mc "*Sob* Cass!!"
+    
 
     show cass jumpscare:
         zoom 0.2
@@ -486,7 +484,7 @@ label cass_date_continues:
     # (Cinema bg again with hole in the back, Cass on right side MC on left)
     stop music fadeout 2.0
     
-
+    pause 13.0
     scene theater duar:
         zoom 1.1
         xpos -0.03
@@ -495,9 +493,6 @@ label cass_date_continues:
     
     
     voice "audio/voiceline/act2_red/Date_Cass_Voiceline 16.wav"
-    
-
-    
     
     cassandra "Well, that's my cardio for the week…"
     show cass flirt at right:

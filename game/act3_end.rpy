@@ -61,8 +61,17 @@ label act_3:
             zoom 0.6
             ypos 1.52
             easeout 0.5 zoom 0.49 xpos 0.6
+
+        show  bryan surprised at right:
+            zoom 0.5
+            ypos 1.3
+        with dissolve
         voice "audio/voiceline/act3/Final Choice_performative_Bryan_Voiceline 1.wav"
         bryan "Ladies! Ladies!, calm down. I'm sure Emcie here will explain everything. Right, babe?"
+        show  bryan surprised at right:
+            zoom 0.5
+            ypos 1.3
+            easeout 0.5 zoom 0.4 xpos 0.8
     else:
         show cass annoyed at right:
             zoom 0.6
@@ -270,9 +279,9 @@ label act3_choose_laeticia:
         ypos 1.52
         xpos 0.25
     with dissolve
-    voice "audio/voiceline/act3/CHOSEN_Lae_Line 4.wav"
+    voice "audio/voiceline/act3/CHOSEN_Lae_Line 4.mp3"
     laeticia "Anyway, i have something sooo fun we can do together tomorrow!"
-    voice "audio/voiceline/act3/CHOSEN_Lae_Line 5.wav"
+    voice "audio/voiceline/act3/CHOSEN_Lae_Line 5.mp3"
     laeticia "All you need to know is, bring some snacks!"
     voice "audio/voiceline/act3/CHOSEN_Lae_Line 6.wav"
     laeticia "See you at 9 tomorrow?"
@@ -445,7 +454,7 @@ label ending_bryan_performative:
         ypos -0.2
     with fade
     play music "audio/smoochy route!.mp3" 
-    play sound "audio/Crowd Talking.mp3"
+    play sound "audio/Crowd Talking.mp3" volume 0.3
     voice "audio/voiceline/act3/Ending_performative_Bryan_Voiceline 1.wav"
     bryan "This is great! I luckily got the best spot for pictures too~ You look amazing, by the way."
 
@@ -514,7 +523,7 @@ label ending_bryan_performative_smack:
     # FADE TO BLACK, THEN ENDING CG
     scene black with fade
     # MUSIC: after non-kiss option music
-    scene performative bad with fade
+    
     voice "audio/voiceline/ending_bryan/MC bryan voiceline12 act_3.mp3"
     mc "{i}After I got home from that date, I saw notifications on my phone that Bryan had posted something.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline13 act_3.mp3"
@@ -523,6 +532,7 @@ label ending_bryan_performative_smack:
     mc "{i}I unfollowed him, naturally. Yet I did stalk him once in a while, though.{/i}"
     voice "audio/voiceline/ending_bryan/MC bryan voiceline15 act_3.mp3"
     mc "{i}That's how I found out, a few weeks later, he got cancelled on Twitter for trying to smooch and record me at the hanami.{/i}"
+    scene performative bad with fade
     voice "audio/voiceline/ending_bryan/MC bryan voiceline16 act_3.mp3"
     mc "{i}And you will not believe what his response was…{/i}"
 
@@ -544,7 +554,7 @@ label ending_bryan_normal:
         ypos -0.2
     with fade
     play music "audio/smoochy route!.mp3"
-    play sound "audio/Crowd Talking.mp3"
+    play sound "audio/Crowd Talking.mp3" volume 0.3
     voice "audio/voiceline/act3/Ending_normal_Bryan_Voiceline 1.wav"
     bryan "How's the view? I made sure to get the best spot, just for you. You look amazing, by the way."
 
@@ -672,7 +682,7 @@ label ending_laeticia:
         ypos -0.2
     with fade
     play music "audio/smoochy route!.mp3"
-    play sound "audio/Crowd Talking.mp3"
+    play sound "audio/Crowd Talking.mp3" volume 0.3
     
 
     voice "audio/voiceline/ending_laeticia/END_Lae_Line1.mp3"
@@ -929,10 +939,7 @@ label ending_cassandra_smooch:
     scene black with fade
     play sound "audio/smoochykiss.mp3"
     pause 1.0
-    scene happy ed cass:
-        zoom 2.8
-        xpos 0.0
-        ypos 0.0
+    
     with fade
     voice "audio/voiceline/ending_cass/Ending1_CassMC_Voiceline 1.wav"
     mc "{i}How could I ever refuse?{/i}"
@@ -942,6 +949,10 @@ label ending_cassandra_smooch:
     mc "{i}I gave her a small peck on the lips and then…{/i}"
 
     # CUT TO BLACK, THEN ENDING CG
+    scene happy ed cass:
+        zoom 2.8
+        xpos 0.0
+        ypos 0.0
     voice "audio/voiceline/ending_cass/Narration 1.wav"
     mc "{i}In the end, I became Cass's trophy wife and lived in luxury.{/i}"
     voice "audio/voiceline/ending_cass/Narration 2.wav"
@@ -962,6 +973,14 @@ label ending_cassandra_jump:
     mc "{i}I gotta get outta here!{/i}"
     voice "audio/voiceline/ending_cass/Ending2_CassMC_Voiceline 3 half.wav"
     mc "{i}I shove Cass back… not that it would do anything, but in a moment of weakness, Cass lets me go.{/i}"
+    scene aerial shot:
+        zoom 1.5
+        pause 0.2
+        linear 0.09 xoffset -10 yoffset -10
+        linear 0.09 xoffset 10 yoffset 10
+        linear 0.09 xoffset -10 yoffset -10
+        
+        zoom 1.5
     voice "audio/voiceline/ending_cass/Ending2_CassMC_Voiceline 4.wav"
     mc "{i}I access the door and jump out towards freedom.{/i}"
     voice "audio/voiceline/ending_cass/Ending2_CassMC_Voiceline 5.wav"
@@ -990,7 +1009,7 @@ label ending_cassandra_jump:
 label ending_viko:
     stop music fadeout 1.5
     play music "audio/smoochy route!.mp3"
-    play sound "audio/Crowd Talking.mp3"
+    play sound "audio/Crowd Talking.mp3" volume 0.3
     # MUSIC: ending music
     # SFX: Crowd noises
     
@@ -1158,6 +1177,9 @@ label credits:
     pause 5.0
     
     scene credits 3 with fade
+    pause 5.0
+
+    scene credits 4 with fade
     pause 5.0
 
     scene black with fade

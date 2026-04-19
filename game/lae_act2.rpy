@@ -340,10 +340,11 @@ label act_2_blue:
     hide 4 lae with dissolve
     show ritual start with dissolve
     ""
+    
 
     
     scene bedroom 
-    ""
+    pause 5.0
 
     play sound "audio/Smoke Clone Naruto Sound Effect.mp3"
     show smoke:
