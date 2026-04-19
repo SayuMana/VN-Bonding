@@ -32,10 +32,10 @@ label act_3:
     cassandra "Explain yourself."
 
     if bryan_score >= 3:
-        voice "audio/voiceline/act3/Final Choice_performative_Bryan_Voiceline.wav"
+        voice "audio/voiceline/act3/Final Choice_performative_Bryan_Voiceline 1.wav"
         bryan "Ladies! Ladies!, calm down. I'm sure Emcie here will explain everything. Right, babe?"
     else:
-        voice "audio/voiceline/act3/Final Choice_normal_Bryan_Voiceline.wav"
+        voice "audio/voiceline/act3/Final Choice_normal_Bryan_Voiceline 1.wav"
         bryan "Calm down, guys. I'm sure Emcie here will explain everything. Right, Emcie?"
 
     voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 1.wav"
@@ -52,7 +52,7 @@ label act_3:
     voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 2.wav"
     viko "I do remember being the one to invite you here…"
 
-    voice "audio/voiceline/act3/Final Choice_performative&normal_Bryan_Voiceline.wav"
+    voice "audio/voiceline/act3/Final Choice_performative&normal_Bryan_Voiceline 1.wav"
     bryan "Yeah, I did the same thing!"
 
     voice "audio/voiceline/act3/FINAL CHOICE_Lae_Line 2.wav.wav"
@@ -65,7 +65,7 @@ label act_3:
     voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 3.wav"
     viko "H-hey, that's not fair. I also invited them! Don't Emcie get a say in all t-this…"
 
-    voice "audio/voiceline/act3/Final Choice_harmony_Bryan_Voiceline.wav"
+    voice "audio/voiceline/act3/Final Choice_performative&normal_Bryan_Voiceline 2.wav"
     bryan "That's right. Emcie should be the one to decide who they want to go with."
 
     # (All of them in harmony)
