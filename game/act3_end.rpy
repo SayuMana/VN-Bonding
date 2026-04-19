@@ -29,6 +29,7 @@ label act_3:
     voice "audio/voiceline/act3/FINAL CHOICE_Lae_Line 1.wav"
     laeticia "What the freak, Emcie! Do you know these people?!"
 
+    voice "audio/voiceline/act3/Final choice_Cass_Voiceline 1.wav"
     cassandra "Explain yourself."
 
     if bryan_score >= 3:
@@ -47,6 +48,7 @@ label act_3:
     mc "On the exact same day… and at the exact same time…"
 
     cassandra "…"
+    voice "audio/voiceline/act3/Final choice_Cass_Voiceline 2.wav"
     cassandra "Are you serious?"
 
     voice "audio/voiceline/act3/Final Choice_Viko_Voiceline 2.wav"
@@ -71,6 +73,8 @@ label act_3:
     # (All of them in harmony)
     voice "audio/voiceline/act3/Final Choice_harmony_Bryan_Voiceline.wav"
     voice "audio/voiceline/act3/Harmony_Lae.mp3"
+    # viko missing
+    # cass missing
     stop music fadeout 2.0
     everyone "So, who are you choosing?"
 
@@ -123,14 +127,19 @@ label act3_choose_cassandra:
 
     # MUSIC: Doki Doki Literature Club! OST - Daijoubu!.mp3
     play music "audio/doki.mp3" volume 0.4
+    voice "audio/voiceline/act3/Chosen_Cass_Voiceline 1.wav"
     cassandra "I knew you'd make the right choice."
 
     mc "Sorry for all that… I really didn't know how to avoid it."
     mc "But anyway, what are we doing tomorrow?"
 
+    voice "audio/voiceline/act3/Chosen_Cass_Voiceline 2.wav"
     cassandra "I already made reservations, naturally."
+    voice "audio/voiceline/act3/Chosen_Cass_Voiceline 3.wav"
     cassandra "And trust me, I only reserved the best for you, my sweet."
+    voice "audio/voiceline/act3/Chosen_Cass_Voiceline 4.wav"
     cassandra "I'll pick you up at 9. I already have a hold of your home address."
+    voice "audio/voiceline/act3/Chosen_Cass_Voiceline 5.wav"
     cassandra "Wear something pretty for me, won't you?"
 
     mc "Gulp. Yes, maam…"
@@ -644,20 +653,26 @@ label ending_cassandra:
     mc "{i}I immediately look out the window to see…{/i}"
     mc "{i}Cass hanging from the helicopter ladder??{/i}"
 
+    voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 1.wav"
     cassandra "Emcie, it's time for our sweet getaway."
 
     mc "Isn't this kind of dangerous??"
 
+    voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 2.wav"
     cassandra "Come now, dear, won't you trust me? Won't you show your devotion and jump into my arms?"
 
     mc "{i}She's right. Compared to kidnapping, this is nothing. I open the window and jump into her arms.{/i}"
 
+    voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 3.wav"
     cassandra "Very good, Kitten."
 
     mc "So where are we going? You're taking me to the hanami, right?"
 
+    voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 4.wav"
     cassandra "The hanami? Of course. After that, we will go somewhere better."
+    voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 5.wav"
     cassandra "Does it matter, though? You're mine now. You can't escape me, Emcie. You belong to me."
+    voice "audio/voiceline/ending_cass/Ending_Cass_Voiceline 6.wav"
     cassandra "Why don't you give me a kiss, Kitten?"
 
     menu:
